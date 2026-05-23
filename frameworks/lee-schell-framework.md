@@ -2,7 +2,7 @@
 
 **Version:** 1.0 · 2026-05-19  
 **ADR basis:** ADR 0005 (structural validation separate), ADR 0009 (novelty signature, freshness anchors), ADR 0024 (Layer B additive 5 items; two-state denominator)  
-**Status:** HITL draft — teacher audit required before first scored evaluation (ADR 0011)
+**Status:** Teacher-approved 2026-05-23 — no changes required (ADR 0011 / F2.6)
 
 ---
 

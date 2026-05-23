@@ -1,6 +1,6 @@
 ---
 instruction_version: "F4.0"
-hitl_status: "HITL draft — awaiting teacher audit (F4.4, J6)"
+hitl_status: "Teacher-approved 2026-05-23 — no changes required (F4.4, J6)"
 ---
 
 # Shared Taxonomy

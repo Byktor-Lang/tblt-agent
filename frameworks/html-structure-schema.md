@@ -1,5 +1,7 @@
 # HTML Structure Schema
 
+**Status:** Teacher-approved 2026-05-23 — no changes required (F6.1, J6)
+
 The structural conformance schema for rendered HTML artifacts produced by the
 TBLT pipeline. This file is the single source of truth for the structural
 validator (F6): a hand-authored declaration of the required elements, classes,
