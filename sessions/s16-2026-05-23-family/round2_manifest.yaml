@@ -1,0 +1,71 @@
+---
+session_id: s16-2026-05-23-family
+round: 2
+pedagogical_stage: Pre-Task
+course_id: spanish_general
+class_id: spanish_general_9th
+specialist: tblt-pretask-specialist
+timestamp: "2026-05-23T00:00:00Z"
+
+# ADB consumed (from Gate B extraction)
+adb_consumed:
+  activity_pvs_items_used:
+    - "el abuelo"
+    - "el esposo"
+    - "la familia"
+    - "la hermana"
+    - "el hijo"
+    - "la madre"
+    - "el primo"
+    - "el sobrino"
+    - "el suegro"
+    - "la tía"
+  confirmed_complication: "Both partners must negotiate exactly two agreed adjectives to describe el suegro (Papá Roberto) — Student A has 'estricto pero justo'; Student B has no description. Neither description alone satisfies both students."
+  confirmed_outcome: "Pairs produce a consensus two-adjective description of el suegro and present a complete family portrait (Paso 5) referencing the negotiated description."
+  gap_summary: "Student A holds descriptions of el abuelo, la madre, el hijo, la hermana, and el suegro. Student B holds descriptions of el esposo, la tía, el primo, el sobrino, and la familia overall. Neither student can complete their recording table without the partner. The complication arises in Paso 4 when both must negotiate a consensus description of el suegro — a values-conflict complication requiring Spanish negotiation to resolve."
+
+# Round 2 outputs
+files:
+  pretask_student: pretask_student.html
+  pretask_teacher: pretask_teacher.html
+
+# Exercise types (canonical F4 labels)
+exercise_types:
+  - TF
+  - MATCH
+  - WB
+
+# Canonical taxonomy labels
+canonical_taxonomy_labels:
+  exercise_types: ["TF", "MATCH", "WB"]
+
+# F7 Coherence Audit
+coherence_audit:
+  coverage:
+    activity_pvs_items_used:
+      addressed: true
+      rationale: "All ten ADB PVS items appear in Pre-Task exercises. El abuelo, la tía, el primo, la hermana, el sobrino, el suegro used in Exercises 1 and 3; el esposo, el hijo, la madre, la familia appear in Exercise 2 matching descriptions. Students encounter every item before the Main Task."
+    confirmed_complication:
+      addressed: true
+      rationale: "Exercise 2 distractors F and G specifically test el tío vs el suegro — priming the distinction that creates the Paso 4 negotiation complication. Students who confuse these are identifiable before the Main Task begins."
+    confirmed_outcome:
+      addressed: true
+      rationale: "Exercise 3 (bridge) rehearses the exact question form ¿Cómo es el/la [familiar]? that students need in Paso 3 to exchange information and reach the Paso 5 consensus outcome. The bridge note names the connection to the Main Task explicitly."
+    gap_summary:
+      addressed: true
+      rationale: "The bridge exercise in Exercise 3 visibly references the gap structure: students practise the type of question Student A must ask Student B in the Main Task information exchange. The gap_summary's core exchange pattern (¿Cómo es...? → Su [familiar] es ___.) is directly rehearsed."
+
+# F6 / F7 validation
+f7_passed: true
+f6_passed: true
+structural_validation_passed: true
+dialect_excluded_feature_detected: false
+
+# Phase 5a feedback
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+
+# Phase 5b write status
+log_write: ok
+cross_course_feed_write: ok

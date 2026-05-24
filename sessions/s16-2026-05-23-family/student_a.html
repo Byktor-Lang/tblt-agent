@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student A — Describe Members of the Family</title>
+  <style>
+    :root {
+      --font-family: 'Segoe UI', Arial, sans-serif;
+      --page-width: 21cm;
+      --primary-color: #2E5FA3;
+      --border-color: #BFCFE8;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    @media print {
+      body { font-size: 11pt; }
+      .no-print { display: none; }
+    }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      color: #1a1a1a;
+    }
+    .activity-header {
+      border-bottom: 3px solid var(--primary-color);
+      margin-bottom: 0.8cm;
+      padding-bottom: 0.4cm;
+    }
+    .activity-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.2em 0;
+    }
+    .activity-subtitle {
+      font-size: 0.95em;
+      color: #444;
+      margin: 0;
+    }
+    .student-role-badge {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      font-weight: bold;
+      padding: 0.2em 0.7em;
+      border-radius: 4px;
+      font-size: 1em;
+      margin-bottom: 0.5cm;
+    }
+    .step-container {
+      border: 1.5px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 0.6cm;
+      padding: 0.5cm;
+    }
+    .step-header {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 1.05em;
+      margin-bottom: 0.3em;
+    }
+    .step-instruction {
+      margin-bottom: 0.4em;
+      font-size: 0.95em;
+    }
+    .resource-panel {
+      background: #EEF4FF;
+      border: 1.5px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.5cm;
+      margin-bottom: 0.6cm;
+    }
+    .resource-panel-title {
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.3em;
+      font-size: 1em;
+    }
+    .family-card {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 0.3em 0.5em;
+      margin-bottom: 0.3em;
+      background: white;
+    }
+    .family-member-name {
+      font-weight: bold;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3cm;
+      margin-top: 0.3em;
+    }
+    .col-label {
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 0.2em;
+      font-size: 0.9em;
+    }
+    .col-box {
+      min-height: 2.5cm;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 0.3em;
+      background: white;
+    }
+    .match-grid {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.3em;
+      font-size: 0.9em;
+    }
+    .match-grid th {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.3em 0.5em;
+      text-align: left;
+    }
+    .match-grid td {
+      border: 1px solid var(--border-color);
+      padding: 0.3em 0.5em;
+    }
+    .match-grid tr:nth-child(even) td { background: #F5F8FF; }
+    .sentence-frame {
+      background: #FFF8E6;
+      border-left: 4px solid #F5A623;
+      padding: 0.3em 0.6em;
+      margin: 0.3em 0;
+      font-style: italic;
+      font-size: 0.95em;
+    }
+    .write-line {
+      border-bottom: 1px solid #aaa;
+      min-height: 1.2em;
+      margin: 0.2em 0 0.4em 0;
+    }
+    .complication-box {
+      background: #FFF3F3;
+      border: 2px solid #E06060;
+      border-radius: 6px;
+      padding: 0.4cm;
+      margin: 0.3em 0;
+    }
+    .complication-label {
+      font-weight: bold;
+      color: #B00020;
+      margin-bottom: 0.2em;
+    }
+    .synthesis-frame {
+      background: #F0FFF4;
+      border: 1.5px solid #4CAF50;
+      border-radius: 6px;
+      padding: 0.4cm;
+    }
+  </style>
+</head>
+<body>
+
+<div class="activity-header">
+  <p class="activity-title">Describe Members of the Family — Main Task</p>
+  <p class="activity-subtitle">9th Grade Spanish · 2026-05-23 · Novice-Mid · Session s16</p>
+</div>
+
+<div class="student-role-badge">STUDENT A</div>
+
+<!-- RESOURCE PANEL — Student A holds these family descriptions -->
+<div class="resource-panel">
+  <div class="resource-panel-title">Your Information Cards — <em lang="es">Tu información</em></div>
+  <p style="font-size:0.88em; color:#555; margin:0 0 0.3em 0;">
+    <strong>DO NOT show this panel to your partner.</strong> Use it to answer their questions and to complete your tasks.
+  </p>
+  <div class="family-card">
+    <span class="family-member-name"><em lang="es">El abuelo</em> — Abuelo Carlos:</span>
+    <em lang="es"> Es alto y serio. Tiene el pelo blanco.</em>
+  </div>
+  <div class="family-card">
+    <span class="family-member-name"><em lang="es">La madre</em> — Mamá Elena:</span>
+    <em lang="es"> Es simpática y trabajadora. Tiene el pelo negro.</em>
+  </div>
+  <div class="family-card">
+    <span class="family-member-name"><em lang="es">El hijo</em> — Diego (el hijo mayor):</span>
+    <em lang="es"> Es inteligente y creativo. Tiene los ojos marrones.</em>
+  </div>
+  <div class="family-card">
+    <span class="family-member-name"><em lang="es">La hermana</em> — Sofía:</span>
+    <em lang="es"> Es extrovertida y generosa. Tiene el pelo rubio.</em>
+  </div>
+  <div class="family-card">
+    <span class="family-member-name"><em lang="es">El suegro</em> — Papá Roberto:</span>
+    <em lang="es"> Es estricto pero justo. Es alto y serio también.</em>
+  </div>
+</div>
+
+<!-- PASO 1 -->
+<div class="step-container">
+  <div class="step-header">Paso 1 — Categorize the Family Members <em lang="es">(Categoriza a los miembros de la familia)</em></div>
+  <p class="step-instruction">
+    Look at your information cards above. Sort each family member into the correct column below.
+    Write the Spanish term (e.g., <em lang="es">el abuelo</em>) in the column that fits.
+  </p>
+  <div class="two-col">
+    <div>
+      <div class="col-label">Immediate Family <em lang="es">(familia inmediata)</em></div>
+      <div class="col-box"></div>
+    </div>
+    <div>
+      <div class="col-label">Extended Family <em lang="es">(familia extendida)</em></div>
+      <div class="col-box"></div>
+    </div>
+  </div>
+  <p style="font-size:0.88em; margin-top:0.3em; color:#555;">
+    You will use these categories when you present your family profile in Paso 5.
+  </p>
+</div>
+
+<!-- PASO 2 -->
+<div class="step-container">
+  <div class="step-header">Paso 2 — Share One Description Per Member <em lang="es">(Comparte una descripción)</em></div>
+  <p class="step-instruction">
+    Take turns with your partner. Describe the family members on your cards using the sentence frames below.
+    Your partner will record what you say. Then listen as your partner describes their members — record their descriptions in the table.
+  </p>
+  <div class="sentence-frame">
+    <em lang="es">Mi [familiar] es [adjetivo].</em><br>
+    <em lang="es">Mi [familiar] es [adjetivo] y [adjetivo].</em>
+  </div>
+  <table class="match-grid">
+    <thead>
+      <tr>
+        <th>Family Member <em lang="es">(familiar)</em></th>
+        <th>Description from your partner <em lang="es">(descripción de tu compañero/a)</em></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><em lang="es">El esposo</em> — Papá Jorge</td>
+        <td class="write-line"></td>
+      </tr>
+      <tr>
+        <td><em lang="es">La tía</em> — Tía Carmen</td>
+        <td class="write-line"></td>
+      </tr>
+      <tr>
+        <td><em lang="es">El primo</em> — Andrés</td>
+        <td class="write-line"></td>
+      </tr>
+      <tr>
+        <td><em lang="es">El sobrino</em> — Luisito</td>
+        <td class="write-line"></td>
+      </tr>
+      <tr>
+        <td><em lang="es">La familia</em> (overall)</td>
+        <td class="write-line"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PASO 3 -->
+<div class="step-container">
+  <div class="step-header">Paso 3 — Live Interview: Discover and Record <em lang="es">(Entrevista: descubre y registra)</em></div>
+  <p class="step-instruction">
+    Now ask your partner directly about each family member you need to know about.
+    Use the question frames. Record their answers. Then answer their questions about your cards.
+  </p>
+  <div class="sentence-frame">
+    <em lang="es">¿Cómo es el/la [familiar]?</em><br>
+    <em lang="es">Su [familiar] es _____.</em> (to record what you learn)
+  </div>
+  <p style="font-size:0.88em; color:#555; margin:0.2em 0;">
+    Ask about each person you need — record their description using <em lang="es">"Su [familiar] es ___."</em>
+    Your partner will also ask you questions — answer from your cards. Speak only in Spanish!
+  </p>
+  <table class="match-grid">
+    <thead>
+      <tr>
+        <th>Who I need to find out about</th>
+        <th>Question I asked <em lang="es">(pregunta)</em></th>
+        <th>Answer I received <em lang="es">(respuesta)</em></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><em lang="es">El esposo</em> (Papá Jorge)</td>
+        <td></td>
+        <td class="write-line"></td>
+      </tr>
+      <tr>
+        <td><em lang="es">La tía</em> (Tía Carmen)</td>
+        <td></td>
+        <td class="write-line"></td>
+      </tr>
+      <tr>
+        <td><em lang="es">El primo</em> (Andrés)</td>
+        <td></td>
+        <td class="write-line"></td>
+      </tr>
+      <tr>
+        <td><em lang="es">El sobrino</em> (Luisito)</td>
+        <td></td>
+        <td class="write-line"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PASO 4 — COMPLICATION -->
+<div class="step-container">
+  <div class="step-header">Paso 4 — Negotiate the Complication <em lang="es">(Negocia la descripción)</em></div>
+  <div class="complication-box">
+    <div class="complication-label">Challenge / <em lang="es">Desafío</em></div>
+    <p style="margin:0; font-size:0.93em;">
+      You described <em lang="es">el suegro</em> (Papá Roberto) as <em lang="es">estricto pero justo</em>.
+      Your partner has no physical description of him. Together you must choose <strong>exactly two adjectives</strong>
+      that you both agree describe Papá Roberto completely and accurately.
+      You must both be satisfied with the final description — discuss and negotiate in Spanish!
+    </p>
+  </div>
+  <div class="sentence-frame">
+    <em lang="es">Creo que el suegro es ___ porque ___.</em><br>
+    <em lang="es">¿Estás de acuerdo con ___?</em>
+  </div>
+  <p style="margin:0.3em 0 0.2em 0; font-size:0.93em;">
+    Our agreed description of <em lang="es">el suegro</em> (Papá Roberto):
+  </p>
+  <div class="write-line"></div>
+  <p style="font-size:0.88em; color:#555; margin-top:0.2em;">
+    Write: <em lang="es">El suegro de Jorge es ___ y ___.</em> (Both partners write this on their cards.)
+  </p>
+</div>
+
+<!-- PASO 5 -->
+<div class="step-container">
+  <div class="step-header">Paso 5 — Class Synthesis: Family Portrait <em lang="es">(Síntesis: el retrato de la familia)</em></div>
+  <div class="synthesis-frame">
+    <p style="margin:0 0 0.3em 0; font-size:0.93em;">
+      Using your Paso 3 notes AND your Paso 4 consensus description of <em lang="es">el suegro</em>,
+      prepare a short presentation of the full family profile. Use the frame:
+    </p>
+    <div class="sentence-frame" style="margin:0.2em 0;">
+      <em lang="es">La familia [apellido] es ___ porque ___. El/La [familiar] es ___ y ___.</em>
+    </div>
+    <p style="margin:0.3em 0 0; font-size:0.88em; color:#555;">
+      Present to the class. After all pairs share, the class votes: "¿Cuál es la característica más interesante?"
+    </p>
+  </div>
+  <p style="font-size:0.9em; margin-top:0.4em;">
+    My presentation notes (3–5 sentences):
+  </p>
+  <div class="write-line"></div>
+  <div class="write-line"></div>
+  <div class="write-line"></div>
+</div>
+
+</body>
+</html>

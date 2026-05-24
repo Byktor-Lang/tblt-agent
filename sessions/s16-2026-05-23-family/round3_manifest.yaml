@@ -1,0 +1,84 @@
+---
+session_id: s16-2026-05-23-family
+round: 3
+pedagogical_stage: Post-Task
+course_id: spanish_general
+class_id: spanish_general_9th
+specialist: tblt-reflective-specialist
+timestamp: "2026-05-23T00:00:00Z"
+
+# SCB-frozen genre/register (read from frozen SCB; NOT chosen here — Q12 resolution)
+writing_genre: formal_email
+register_shift_pattern: informal_to_formal_verb_phrase
+
+# ADB consumed (from Gate B extraction, same block as Round 2)
+adb_consumed:
+  activity_pvs_items_used:
+    - "el abuelo"
+    - "el esposo"
+    - "la familia"
+    - "la hermana"
+    - "el hijo"
+    - "la madre"
+    - "el primo"
+    - "el sobrino"
+    - "el suegro"
+    - "la tía"
+  confirmed_complication: "Both partners must negotiate exactly two agreed adjectives to describe el suegro (Papá Roberto) — Student A has 'estricto pero justo'; Student B has no description. Neither description alone satisfies both students."
+  confirmed_outcome: "Pairs produce a consensus two-adjective description of el suegro and present a complete family portrait (Paso 5) referencing the negotiated description."
+  gap_summary: "Student A holds descriptions of el abuelo, la madre, el hijo, la hermana, and el suegro. Student B holds descriptions of el esposo, la tía, el primo, el sobrino, and la familia overall. The complication: both must negotiate a consensus description of el suegro — a values-conflict complication requiring Spanish negotiation to resolve."
+
+# ADB anchoring in writing prompt
+transfer_goal_echoed: true
+confirmed_complication_referenced: true
+confirmed_outcome_referenced: true
+
+# Prompt anchoring note:
+# - confirmed_complication referenced verbatim: "you needed to agree on exactly two adjectives to
+#   describe el suegro (Papá Roberto), because each of you had different information"
+# - confirmed_outcome referenced near-verbatim: "your pair reached a consensus description /
+#   include the description of el suegro that you and your partner agreed on in Paso 4"
+
+# Round 3 output files
+posttask_html_path: posttask.html
+posttask_teacher_path: posttask_teacher.html
+
+# Canonical taxonomy labels (from frozen SCB — pass-through only)
+canonical_taxonomy_labels:
+  writing_genre: formal_email
+  register_shift_pattern: informal_to_formal_verb_phrase
+
+# F7 Coherence Audit
+coherence_audit:
+  coverage:
+    activity_pvs_items_used:
+      addressed: true
+      rationale: "All ten ADB PVS items appear in the Post-Task writing prompt or register-shift table. El abuelo, la hermana, el primo, el suegro, la tía appear in register-shift sentences. El esposo, la madre, el hijo, el sobrino, la familia are referenced in the model scenario and the prompt requirements. Students draw on the full ADB PVS set when composing their email."
+    confirmed_complication:
+      addressed: true
+      rationale: "The writing prompt names the complication verbatim: 'you needed to agree on exactly two adjectives to describe el suegro (Papá Roberto), because each of you had different information — after negotiating, your pair reached a consensus description.' The email must include this consensus, keeping the complication resolution central to the post-task output."
+    confirmed_outcome:
+      addressed: true
+      rationale: "The outcome (consensus description reached in Paso 4 + Paso 5 family portrait) is explicitly required in the prompt: 'Include the description of el suegro that you and your partner agreed on in Paso 4.' The model response also demonstrates integrating the Paso 5 outcome into formal email prose."
+    gap_summary:
+      addressed: true
+      rationale: "The register-shift table rehearses exactly the ser + adjective constructions that drove the gap exchange (each student described their card's family members using ser + adjective). Transforming those spoken descriptions into formal written equivalents enacts the transfer from the gap-exchange register to the post-task written register."
+
+# F6 / F7 validation
+f7_passed: true
+f6_passed: true
+structural_validation_passed: true
+dialect_excluded_feature_detected: false
+
+# ADR 0019 compliance
+posttask_teacher_paired: true
+posttask_no_teacher_page: true
+
+# Phase 5a feedback
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+
+# Phase 5b write status
+log_write: ok
+cross_course_feed_write: ok
