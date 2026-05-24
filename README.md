@@ -53,5 +53,3 @@ Rounds generate:
 ## Usage
 
 These files are Claude agent instruction files (`.md` prompts). Load `tblt-orchestrator.md` as the entry-point agent in a Claude Code or Claude.ai multi-agent setup. The orchestrator delegates to the four specialist agents at the appropriate gates.
-
-Runtime configuration (course profiles, class profiles, session state) lives outside this repo per the system design.
