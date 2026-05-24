@@ -20,7 +20,11 @@ frameworks/
 
 ## Pipeline overview
 
-The orchestrator drives a three-round generation sequence through Gates A→D, delegating each round to a specialist agent via a typed invocation contract. The inspector evaluates Round 1 output against the Lee-Schell framework before Gate B opens. All rounds write to per-course activity logs and a cross-course telemetry feed via a retry/quarantine recovery stack.
+tblt-agent is an AI-powered multi-agent system for generating complete Task-Based Language Teaching (TBLT) lesson packages for Spanish language classrooms.
+
+The project combines large language models with a structured pedagogical workflow to create communicative, standards-aligned materials focused on meaningful interaction and real-world language use. Instead of isolated exercises, the system generates cohesive lesson sequences that include tasks, vocabulary support, student activities, reflections, and pedagogical evaluation.
+
+Each agent in the pipeline performs a specific instructional role, such as lesson planning, task generation, language scaffolding, quality review, or formatting.
 
 Rounds generate:
 - **Round 1 (Main Task):** HTML student/teacher files
