@@ -1,6 +1,6 @@
-# TBLT Agent
+# TBLT Agents
 
-Agent instruction files and shared framework modules for the **Task-Based Language Teaching (TBLT) activity generator**. This five-agent pipeline produces standards-aligned, gap-pair-based Spanish activities for 9th-grade learners.
+AI agents for generating structured Task-Based Language Teaching (TBLT) activities, fully automating the pre-task, main-task, and reflection loop workflow. The agents deliver standards-aligned, gap-pair-based Spanish activities for 9th-grade learners.
 
 ## What's here
 
