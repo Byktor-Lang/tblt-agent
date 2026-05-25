@@ -1,6 +1,8 @@
-# TBLT Agents
+# TBLT Agent
 
-AI agents for generating structured Task-Based Language Teaching (TBLT) activities, fully automating the pre-task, main-task, and reflection loop workflow. The agents deliver standards-aligned, gap-pair-based Spanish activities for 9th-grade learners.
+A multi-agent system designed to automate the creation of structured Task-Based Language Teaching (TBLT) activities. By distributing pedagogical responsibilities across specialized AI agents, the system automates the traditional language lesson pipeline:
+- Workflow: Orchestrates seamless transitions between the pre-task, main task, and reflection stages.
+- Target: Generates standards-aligned, information-gap and pair-based Spanish activities tailored to the cognitive and linguistic level of 9th-grade learners.
 
 ## What's here
 
