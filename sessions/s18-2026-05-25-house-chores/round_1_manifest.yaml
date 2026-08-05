@@ -1,0 +1,106 @@
+session_id: s18-2026-05-25-house-chores
+course_id: spanish_general
+round: 1
+date: "2026-05-25"
+topic: "House chores and household responsibilities"
+gap_type: resource
+paso_structure: categorization_interview_synthesis
+complication_pattern: role_asymmetry
+
+grammar_targets:
+  grammar_1: "Present tense of reflexive verbs related to house chores (levantarse, ducharse, lavarse, vestirse, acostarse)"
+  grammar_2: "The verb gustar (me gusta / no me gusta / le gusta + infinitive)"
+
+pvs_items_used:
+  - barrer el piso
+  - lavar los platos
+  - limpiar el baño
+  - pasar la aspiradora
+  - sacar la basura
+  - hacer la cama
+  - ordenar el cuarto
+  - cocinar la cena
+  - levantarse temprano
+  - lavarse las manos
+  - ducharse
+  - la tarea doméstica
+
+pvs_count: 12
+
+artifacts:
+  - student_a.html
+  - student_b.html
+  - teacher_key.html
+  - ab_representation.yaml
+
+novelty_signature:
+  paso_structure:
+    label: categorization_interview_synthesis
+    count_in_last_5_sessions: 0
+  complication_pattern:
+    label: role_asymmetry
+    count_in_last_5_sessions: 0
+  double_freshness: true
+
+activity_derivation_block:
+  activity_pvs_items_used:
+    - barrer el piso
+    - lavar los platos
+    - limpiar el baño
+    - pasar la aspiradora
+    - sacar la basura
+    - hacer la cama
+    - ordenar el cuarto
+    - cocinar la cena
+    - levantarse temprano
+    - lavarse las manos
+    - ducharse
+    - la tarea doméstica
+  confirmed_complication: "role_asymmetry — Student A (parent, does most chores) and Student B (teenager, does very few) negotiate a fair redistribution using gustar to express preferences and reflexive verbs to describe daily routines. The structural power imbalance (parental authority vs. teenage dependence) shapes the negotiation."
+  confirmed_outcome: "A negotiated chore distribution with at least 3 assigned chores (one per person minimum), a fairness rating with justification, and a Paso 5 public commitment sentence using the synthesis frame."
+  gap_summary: "Student A holds a full chore schedule (6 chores) and schedule details; Student B holds a light chore load and after-school activity constraints plus a cooking preference A does not know about. Neither can produce the full negotiated plan without the other's information. A must discover B's preferences using gustar; B must reveal schedule constraints using reflexive verbs."
+
+lee_schell:
+  kill_criteria:
+    individually_solvable: false
+    yes_no_only: false
+    no_negotiation: false
+    exploit_detected: false
+    speaking_avoidable: false
+    any_triggered: false
+  layer_a:
+    information_gap: 3
+    interaction_dependency: 3
+    target_structure_deployment: 3
+    linguistic_payoff_alignment: 3
+    all_pass: true
+  layer_b:
+    curiosity_surprise_capacity: 3
+    flow_curve_integrity: 3
+    meaningful_choice_carry_forward: 3
+    ending_and_payoff: 3
+    structural_freshness: suppressed
+    all_pass: true
+  denominator: 24
+  total: 24
+  extended_discourse:
+    justification_required: true
+    disagreement_possible: true
+    multi_turn_paso3: true
+  convergence:
+    verdict: converged
+    revisions_required: 0
+    improvements_optional: 0
+
+structural_validation_passed: true
+f3_passed: true
+f6_passed: true
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false

@@ -1,0 +1,130 @@
+---
+session_id: s16-2026-05-23-family
+round: 1
+pedagogical_stage: Main Task
+course_id: spanish_general
+class_id: spanish_general_9th
+specialist: tblt-activity-specialist
+inspector: tblt-inspector
+timestamp: "2026-05-23T00:00:00Z"
+
+# SCB inputs (frozen at Gate A)
+topic: "Describe members of the family"
+grammar:
+  - "present tense of ser"
+  - "descriptive adjectives"
+pvs:
+  - "el abuelo"
+  - "el esposo"
+  - "la familia"
+  - "la hermana"
+  - "el hijo"
+  - "la madre"
+  - "el padre"
+  - "el primo"
+  - "el sobrino"
+  - "el suegro"
+  - "la tía"
+pvs_count: 11
+task_type: resource_gap
+register: formal
+transfer_goal: "Write a formal email to a pen pal describing family members using correct ser + adjective forms"
+success_criteria:
+  - "Use ser + descriptive adjective correctly in Paso 2 and Paso 3 frames"
+  - "Complete the information exchange without switching to English"
+  - "Identify and describe all 5 target family members on both cards"
+  - "Negotiate and document a consensus description in Paso 4"
+  - "Present a coherent 3-5 sentence family portrait in Paso 5 referencing Paso 3 and Paso 4"
+writing_genre: formal_email
+register_shift_pattern: informal_to_formal_verb_phrase
+
+# Round 1 outputs
+gap_type: resource
+files:
+  ab_representation: ab_representation.yaml
+  student_a: student_a.html
+  student_b: student_b.html
+  teacher_key: teacher_key.html
+
+# Activity Derivation Block (ADB) — extracted at Gate B
+activity_pvs_items_used:
+  - "el abuelo"
+  - "el esposo"
+  - "la familia"
+  - "la hermana"
+  - "el hijo"
+  - "la madre"
+  - "el primo"
+  - "el sobrino"
+  - "el suegro"
+  - "la tía"
+confirmed_complication: "Both partners must negotiate exactly two agreed adjectives to describe el suegro (Papá Roberto) — Student A has 'estricto pero justo'; Student B has no description. Neither description alone satisfies both students."
+confirmed_outcome: "Pairs produce a consensus two-adjective description of el suegro and present a complete family portrait (Paso 5) referencing the negotiated description."
+gap_summary: "Student A holds descriptions of el abuelo, la madre, el hijo, la hermana, and el suegro. Student B holds descriptions of el esposo, la tía, el primo, el sobrino, and la familia overall. Neither student can complete their recording table without the partner. The complication arises in Paso 4 when both must negotiate a consensus description of el suegro — a values-conflict complication requiring Spanish negotiation to resolve."
+
+# Canonical taxonomy labels
+canonical_taxonomy_labels:
+  paso_structure: info_gap_resource_negotiation
+  complication_pattern: values_conflict
+
+# Novelty signature (bootstrap state — fewer than 5 sessions in course log under v2.4 schema)
+novelty_signature:
+  paso_structure:
+    label: null
+    sessions_since_last_use: null
+    count_in_last_5_sessions: 0
+  complication_pattern:
+    label: null
+    sessions_since_last_use: null
+    count_in_last_5_sessions: 0
+
+# Lee-Schell evaluation
+lee_schell:
+  kill_criteria:
+    individually_solvable: false
+    yes_no_only: false
+    no_negotiation: false
+    exploit_detected: false
+    speaking_avoidable: false
+    any_triggered: false
+  layer_a:
+    information_gap: 3
+    interaction_dependency: 3
+    target_structure_deployment: 3
+    linguistic_payoff_alignment: 3
+    all_pass: true
+  layer_b:
+    curiosity_surprise_capacity: 2
+    flow_curve_integrity: 3
+    meaningful_choice_carry_forward: 3
+    ending_and_payoff: 3
+    structural_freshness: suppressed
+    all_pass: true
+  denominator: 24
+  total: 23
+  extended_discourse:
+    justification_required: true
+    disagreement_possible: true
+    multi_turn_paso3: true
+  convergence:
+    verdict: converged
+    revisions_required: 0
+    improvements_optional: 0
+
+inspector_verdict: CONVERGED
+inspector_revision_count: 0
+
+# F3 / F6 validation
+f3_passed: true
+f6_passed: true
+structural_validation_passed: true
+dialect_excluded_feature_detected: false
+
+# Phase 5a feedback (to be filled after delivery)
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+
+# Phase 5b write status
+log_write: ok
+cross_course_feed_write: ok

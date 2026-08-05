@@ -1,0 +1,110 @@
+{
+  "session_id": "s16-2026-05-23-family",
+  "course_id": "spanish_general",
+  "class_id": "spanish_general_9th",
+  "created_at": "2026-05-23T00:00:00Z",
+  "last_updated_at": "2026-05-23T00:00:00Z",
+  "transition_log": [
+    { "phase": "gate_a", "at": "2026-05-23T00:00:00Z", "event": "gate_a_confirmed" },
+    { "phase": "gate_b", "at": "2026-05-23T00:00:00Z", "event": "gate_b_confirmed" },
+    { "phase": "gate_c", "at": "2026-05-23T00:00:00Z", "event": "gate_c_confirmed" },
+    { "phase": "gate_d", "at": "2026-05-23T00:00:00Z", "event": "gate_d_confirmed" },
+    { "phase": "phase_8", "at": "2026-05-23T00:00:00Z", "event": "session_completed" }
+  ],
+  "scb": {
+    "status": "frozen",
+    "topic": "Describe members of the family",
+    "grammar": ["present tense of ser", "descriptive adjectives"],
+    "pvs": [
+      "el abuelo", "el esposo", "la familia", "la hermana", "el hijo",
+      "la madre", "el padre", "el primo", "el sobrino", "el suegro", "la tía"
+    ],
+    "pvs_count": 11,
+    "task_type": "resource_gap",
+    "complication_candidate": "values_conflict — negotiating two adjectives for el suegro",
+    "register": "formal",
+    "transfer_goal": "Write a formal email to a pen pal describing family members using correct ser + adjective forms",
+    "success_criteria": [
+      "Use ser + descriptive adjective correctly in Paso 2 and Paso 3 frames",
+      "Complete the information exchange without switching to English",
+      "Identify and describe all 5 target family members on both cards",
+      "Negotiate and document a consensus description in Paso 4",
+      "Present a coherent 3-5 sentence family portrait in Paso 5 referencing Paso 3 and Paso 4"
+    ],
+    "writing_genre": "formal_email",
+    "register_shift_pattern": "informal_to_formal_verb_phrase",
+    "snapshot_hash_inventory": {
+      "tblt-orchestrator.md": "2940DCD454BDBFD0B9A3FB6D6FC6B28B41AAD63A5190DE037A36EE3ED594E329",
+      "tblt-orchestrator_version": "0.7.0-08.12",
+      "tblt-activity-specialist.md": "E3119C3587D15EBA2BEDB80B73573882F21A5B659CB87FAF5BF0A94D3506AE54",
+      "tblt-activity-specialist_version": "0.5.1-10.6",
+      "tblt-inspector.md": "5FB89DCB32206E73764D0041D468A2FD5953464F8635C75B9847271B0D75B63D",
+      "tblt-inspector_version": "0.5.1-07.reg",
+      "tblt-pretask-specialist.md": "73A0EA2435E8C3EB75EA4C3722D4084E5340B001657741634F51F35BAFF2D046",
+      "tblt-pretask-specialist_version": "0.1.5-05.15",
+      "tblt-reflective-specialist.md": "5FE91E0C135719A3C3917AD9C18747F1D98B394389E5F03E00D2E672524228AA",
+      "tblt-reflective-specialist_version": "0.2.0-06.15",
+      "spanish_general_profile.md": "1B5BD4B14A944CB8757078FA69F6D29D0EECCAE1EC69F95419F0B23E26B77804",
+      "class-profile.md": "525FB6BE3F7F0F620A9CFD83D5DEF81EAEEFDC4DD91859B6DF93436B556DEE72",
+      "lee-schell-framework.md": "B84B72DE294881E1266A3BDAFCA51A3599479A4C24F166AE5975165F91E07124",
+      "shared-taxonomy.md": "8159F567045014B2C4D31F3CBA6D75B93C9D96D885502BD83ADB7932236F4E8C"
+    }
+  },
+  "adb": {
+    "activity_pvs_items_used": [
+      "el abuelo", "el esposo", "la familia", "la hermana", "el hijo",
+      "la madre", "el primo", "el sobrino", "el suegro", "la tía"
+    ],
+    "confirmed_complication": "Both partners must negotiate exactly two agreed adjectives to describe el suegro (Papá Roberto) — Student A has 'estricto pero justo'; Student B has no description. Neither description alone satisfies both students.",
+    "confirmed_outcome": "Pairs produce a consensus two-adjective description of el suegro and present a complete family portrait (Paso 5) referencing the negotiated description.",
+    "gap_summary": "Student A holds descriptions of el abuelo, la madre, el hijo, la hermana, and el suegro. Student B holds descriptions of el esposo, la tía, el primo, el sobrino, and la familia overall. Neither student can complete their recording table without the partner. The complication arises in Paso 4 when both must negotiate a consensus description of el suegro — a values-conflict complication requiring Spanish negotiation to resolve."
+  },
+  "rounds": {
+    "round_1": {
+      "status": "passed_gate_B",
+      "rejection_count": 0,
+      "inspector_verdict": "CONVERGED",
+      "inspector_revision_count": 0,
+      "f3_passed": true,
+      "f6_passed": true,
+      "f7_passed": null,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    },
+    "round_2": {
+      "status": "passed_gate_C",
+      "rejection_count": 0,
+      "f6_passed": true,
+      "f7_passed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    },
+    "round_3": {
+      "status": "passed_gate_D",
+      "rejection_count": 0,
+      "f6_passed": true,
+      "f7_passed": true,
+      "transfer_goal_echoed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    }
+  },
+  "gate_d": {
+    "status": "passed"
+  },
+  "session_completed": {
+    "at": "2026-05-23T00:00:00Z",
+    "gates_passed": ["A", "B", "C", "D"],
+    "rejections_per_gate": { "B": 0, "C": 0, "D": 0 },
+    "inspector_revision_count": 0,
+    "f6_halt_count": 0,
+    "f7_halt_count": 0,
+    "reach_in_free": false,
+    "checklist_flags": {
+      "dialect_excluded_feature_detected": false,
+      "canonical_label_compliance": true,
+      "pvs_drift_detected": false,
+      "grammar_drift_detected": false
+    }
+  }
+}

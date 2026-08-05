@@ -1,0 +1,100 @@
+{
+  "session_id": "s17-2026-05-25-weekend-plans",
+  "course_id": "spanish_general",
+  "class_id": "spanish_general_9th",
+  "created_at": "2026-05-25T00:00:00Z",
+  "last_updated_at": "2026-05-25T00:01:00Z",
+  "session_completed": true,
+  "reach_in_free": false,
+  "gates_passed": ["A", "B", "C", "D"],
+  "rejections_per_gate": {"B": 0, "C": 0, "D": 0},
+  "inspector_revision_count": 0,
+  "f6_halt_count": 0,
+  "f7_halt_count": 0,
+  "transition_log": [
+    {"phase": "gate_a_confirmed", "at": "2026-05-25T00:00:00Z", "event": "scb_frozen"},
+    {"phase": "gate_b_confirmed", "at": "2026-05-25T00:00:00Z", "event": "adb_extracted_round_1_passed"},
+    {"phase": "gate_c_confirmed", "at": "2026-05-25T00:00:00Z", "event": "round_2_passed"},
+    {"phase": "gate_d_confirmed", "at": "2026-05-25T00:00:00Z", "event": "round_3_passed_session_complete"}
+  ],
+  "scb": {
+    "status": "frozen",
+    "course_profile": {
+      "course_id": "spanish_general",
+      "course_name": "Spanish General (9th Grade)",
+      "updated_on": "2026-05-23",
+      "staleness_threshold_days": 365,
+      "domain": "general_spanish",
+      "target_register_defaults": "formal written Spanish",
+      "dialect_profile": {
+        "target_variety": "Latin American Spanish",
+        "excluded_features": ["vosotros", "vos", "leismo"],
+        "preferred_lexemes": ["autobús", "computadora", "apartamento"]
+      },
+      "vocabulary_fence": {
+        "paso_size_caps": { "paso_1": 6, "default": 8 }
+      }
+    },
+    "class_profile": {
+      "actfl_level": "Novice-Mid",
+      "interest_hooks": ["TikTok culture", "school sports teams", "group chats and messaging apps", "gaming", "weekend social plans with peers"],
+      "target_register": "Formal written communication addressed to an adult authority figure",
+      "scaffolding_defaults": {
+        "novice_abstract": "sentence frames + model response",
+        "mixed_ability_pair": "lower-proficiency student gets more receptive support role",
+        "low_rating_paso": "substitute info-gap variant before reusing",
+        "time_pressured": "cut Paso 4, preserve Pasos 1-3 and closing reflection"
+      },
+      "classroom_constraints": {
+        "class_size": 28,
+        "pairing": "rotate partners every two weeks",
+        "block_minutes": 47,
+        "transition_budget_minutes": 3
+      }
+    },
+    "phase_0_inputs": {
+      "topic": "Make and confirm weekend plans with a classmate",
+      "grammar_1": "poder + infinitive",
+      "grammar_2": "tener que + infinitive",
+      "pvs": ["el fin de semana", "el sábado", "el domingo", "por la mañana", "por la tarde", "el cine", "el parque", "libre", "ocupado/a", "el partido de fútbol"],
+      "pvs_count": 10,
+      "task_type": "oral_gap",
+      "complication_candidate": "values_conflict",
+      "register": "informal peer-to-peer spoken → formal written for parent/guardian",
+      "transfer_goal": "Write a formal email to a parent or guardian confirming where you will be and what you plan to do over the weekend",
+      "success_criteria": [
+        "Use tener que + infinitive to explain at least one schedule constraint",
+        "Use poder + infinitive to express availability",
+        "Negotiate one shared activity both partners agree on, in Spanish",
+        "Produce a complete Paso 5 plan sentence: El [día] por la [mañana/tarde] vamos a [actividad] porque...",
+        "Write a post-task formal email to a parent/guardian confirming the agreed plan"
+      ],
+      "writing_genre": "formal_email",
+      "register_shift_pattern": "informal_to_formal_verb_phrase"
+    },
+    "pvs": ["el fin de semana", "el sábado", "el domingo", "por la mañana", "por la tarde", "el cine", "el parque", "libre", "ocupado/a", "el partido de fútbol"],
+    "snapshot_hashes": {
+      "tblt-orchestrator.md": "2940DCD454BDBFD0B9A3FB6D6FC6B28B41AAD63A5190DE037A36EE3ED594E329",
+      "tblt-activity-specialist.md": "E3119C3587D15EBA2BEDB80B73573882F21A5B659CB87FAF5BF0A94D3506AE54",
+      "tblt-inspector.md": "5FB89DCB32206E73764D0041D468A2FD5953464F8635C75B9847271B0D75B63D",
+      "tblt-pretask-specialist.md": "1893C2D3707E06E99CE2A70E317ECBFB7B58E0771042C6BFF647E2DECC0EC073",
+      "tblt-reflective-specialist.md": "5FE91E0C135719A3C3917AD9C18747F1D98B394389E5F03E00D2E672524228AA",
+      "spanish_general_profile.md": "1B5BD4B14A944CB8757078FA69F6D29D0EECCAE1EC69F95419F0B23E26B77804",
+      "spanish_general_9th_class_profile.md": "AF46D8F6045839952C3E4C388492CFD55D99A35F3582DE43C4099E7DC0B38B3F",
+      "lee-schell-framework.md": "2A5056936B0A4013455FA410919D0121784AC9A0D390AC9A84C4CEB055121F2A",
+      "shared-taxonomy.md": "B6291EC7F74D79611953FD5835D3C6946061030B5C07F849BB17A042162043FA"
+    }
+  },
+  "rounds": {
+    "round_1": { "status": "passed_gate_B", "rejection_count": 0 },
+    "round_2": { "status": "passed_gate_C", "rejection_count": 0 },
+    "round_3": { "status": "passed_gate_D", "rejection_count": 0 }
+  },
+  "gate_d": { "status": "passed" },
+  "adb": {
+    "activity_pvs_items_used": ["el fin de semana", "el sábado", "el domingo", "por la mañana", "por la tarde", "el cine", "el parque", "libre", "ocupado/a", "el partido de fútbol"],
+    "confirmed_complication": "values_conflict — Student A prefers el cine; Student B prefers el parque; schedules are mirror-inverted with no shared free slot",
+    "confirmed_outcome": "Pairs produce a Paso 5 public commitment plan sentence: El [día] por la [mañana/tarde] vamos a [actividad] porque...",
+    "gap_summary": "Student A holds Saturday afternoon libre and Sunday morning libre; Student B holds Saturday morning libre and Sunday afternoon libre. No time slot is simultaneously free for both. Students negotiate which constraint to relax and which activity to accept, communicating schedule limitations and preferences using poder + infinitivo and tener que + infinitivo."
+  }
+}

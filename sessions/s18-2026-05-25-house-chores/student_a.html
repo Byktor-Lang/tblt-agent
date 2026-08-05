@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House Chores Activity — Student A (El/La padre/madre)</title>
+  <style>
+    :root {
+      --font-family: Georgia, 'Times New Roman', serif;
+      --page-width: 21cm;
+      --primary-color: #2c5282;
+      --border-color: #cbd5e0;
+      --accent-color: #e2e8f0;
+      --step-bg: #f7fafc;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      font-size: 11pt;
+      color: #1a202c;
+    }
+    .activity-header {
+      text-align: center;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5cm;
+      margin-bottom: 0.6cm;
+    }
+    .activity-title {
+      font-size: 16pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.2cm;
+    }
+    .activity-subtitle {
+      font-size: 11pt;
+      color: #4a5568;
+    }
+    .resource-panel {
+      background: #ebf8ff;
+      border: 2px solid #3182ce;
+      border-radius: 6px;
+      padding: 0.5cm;
+      margin-bottom: 0.6cm;
+    }
+    .resource-panel-title {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #2b6cb0;
+      margin-bottom: 0.3cm;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .resource-panel p {
+      margin-bottom: 0.2cm;
+      line-height: 1.5;
+    }
+    .resource-panel ul {
+      margin-left: 1cm;
+      margin-top: 0.2cm;
+      margin-bottom: 0.2cm;
+    }
+    .resource-panel li {
+      margin-bottom: 0.15cm;
+    }
+    .confidential-note {
+      font-size: 9pt;
+      color: #e53e3e;
+      font-style: italic;
+      margin-top: 0.3cm;
+      border-top: 1px dashed #fc8181;
+      padding-top: 0.2cm;
+    }
+    .step-container {
+      background: var(--step-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.45cm;
+      margin-bottom: 0.5cm;
+      break-inside: avoid;
+    }
+    .step-header {
+      font-size: 12pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.25cm;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.15cm;
+    }
+    .step-instruction {
+      margin-bottom: 0.2cm;
+      line-height: 1.6;
+    }
+    .sentence-frame {
+      background: #fffbeb;
+      border-left: 4px solid #d69e2e;
+      padding: 0.2cm 0.3cm;
+      margin: 0.2cm 0;
+      font-style: italic;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.2cm 0;
+      font-size: 10.5pt;
+    }
+    th {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.2cm 0.3cm;
+      text-align: left;
+      font-weight: bold;
+    }
+    td {
+      border: 1px solid var(--border-color);
+      padding: 0.2cm 0.3cm;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: var(--accent-color); }
+    .write-line {
+      border-bottom: 1px solid #a0aec0;
+      min-height: 0.7cm;
+      margin: 0.15cm 0;
+      display: block;
+    }
+    .write-lines-block { margin: 0.2cm 0 0.3cm 0; }
+    .vocab-box {
+      background: #f0fff4;
+      border: 1px solid #68d391;
+      border-radius: 4px;
+      padding: 0.25cm;
+      margin: 0.2cm 0;
+      font-size: 10pt;
+    }
+    .vocab-box strong { color: #276749; }
+    .rating-row { display: flex; gap: 0.3cm; align-items: center; margin: 0.2cm 0; flex-wrap: wrap; }
+    .rating-label { min-width: 3cm; font-size: 10pt; }
+    .rating-boxes span {
+      display: inline-block;
+      width: 0.6cm; height: 0.6cm;
+      border: 1px solid #718096;
+      text-align: center;
+      line-height: 0.6cm;
+      margin-right: 0.1cm;
+      font-size: 9pt;
+    }
+    .synthesis-frame {
+      background: #fff5f5;
+      border: 2px solid #feb2b2;
+      border-radius: 4px;
+      padding: 0.3cm;
+      margin: 0.2cm 0;
+      font-size: 11pt;
+    }
+    @media print {
+      body { padding: 0; }
+      .step-container { break-inside: avoid; }
+      .resource-panel { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="activity-header">
+    <div class="activity-title"><em lang="es">Los quehaceres en casa</em> — House Chores Negotiation</div>
+    <div class="activity-subtitle">9th Grade Spanish · Resource Gap Activity · Student A</div>
+  </div>
+
+  <div class="resource-panel">
+    <div class="resource-panel-title">Your Role Card — <em lang="es">El/La padre/madre</em> (READ THIS FIRST — DO NOT SHOW YOUR PARTNER)</div>
+    <p><strong>Who you are:</strong> You are the parent in the household. You work full-time and currently do <em lang="es">most</em> of the chores. You are exhausted and want a fairer arrangement. You have real power in this negotiation — your teenager depends on you — but you also want peace at home, so you cannot simply demand everything.</p>
+    <p><strong>Your current chore schedule:</strong></p>
+    <ul>
+      <li><em lang="es">Barrer el piso</em> — every day</li>
+      <li><em lang="es">Lavar los platos</em> — every day after dinner</li>
+      <li><em lang="es">Limpiar el baño</em> — three times a week</li>
+      <li><em lang="es">Pasar la aspiradora</em> — twice a week</li>
+      <li><em lang="es">Sacar la basura</em> — every other day</li>
+      <li><em lang="es">Cocinar la cena</em> — every night</li>
+    </ul>
+    <p><strong>Your daily routine (use this in Paso 2 and Paso 3):</strong><br>
+    <em lang="es">Me levanto a las 5:30. Me ducho rápido. Me visto y salgo al trabajo.</em></p>
+    <p><strong>Your preferences (use gustar in Paso 3):</strong><br>
+    <em lang="es">No me gusta limpiar el baño todos los días. No me gusta barrer el piso solo/a.</em></p>
+    <p><strong>Your negotiation goal:</strong> Redistribute at least <strong>three chores</strong> to your teenager. You must use <em lang="es">gustar</em> to express what you dislike and reflexive verbs to describe your exhausting routine. Stay in your role.</p>
+    <div class="confidential-note">CONFIDENTIAL — Do not show this card to your partner. Only share information when your partner asks a direct question in Spanish.</div>
+  </div>
+
+  <div class="vocab-box">
+    <strong>Vocabulary bank (<em lang="es">Banco de palabras</em>):</strong>
+    <em lang="es">barrer el piso · lavar los platos · limpiar el baño · pasar la aspiradora · sacar la basura · hacer la cama · ordenar el cuarto · cocinar la cena · levantarse temprano · lavarse las manos · ducharse · la tarea doméstica</em>
+  </div>
+
+  <!-- PASO 1 -->
+  <div class="step-container">
+    <div class="step-header">Paso 1 — <em lang="es">Clasifica los quehaceres</em> (Classify the chores)</div>
+    <p class="step-instruction">Look at the six chores below. Sort each one into the correct column: <em lang="es">Quehaceres del hogar</em> (household tasks) or <em lang="es">Rutinas personales</em> (personal routines). Work individually — you will compare with your partner in Paso 3.</p>
+    <table>
+      <tr>
+        <th><em lang="es">Quehaceres del hogar</em> (Household tasks)</th>
+        <th><em lang="es">Rutinas personales</em> (Personal routines)</th>
+      </tr>
+      <tr>
+        <td style="height:0.8cm;"></td>
+        <td style="height:0.8cm;"></td>
+      </tr>
+      <tr>
+        <td style="height:0.8cm;"></td>
+        <td style="height:0.8cm;"></td>
+      </tr>
+      <tr>
+        <td style="height:0.8cm;"></td>
+        <td style="height:0.8cm;"></td>
+      </tr>
+    </table>
+    <p class="step-instruction" style="margin-top:0.2cm;"><em lang="es">Quehaceres a clasificar: barrer el piso · lavar los platos · limpiar el baño · hacer la cama · ducharse · lavarse las manos</em></p>
+    <p class="step-instruction" style="margin-top:0.2cm;"><strong>Sentence frame for reporting in Paso 5:</strong></p>
+    <div class="sentence-frame"><em lang="es">"[Quehacer] es una tarea doméstica / una rutina personal."</em></div>
+  </div>
+
+  <!-- PASO 2 -->
+  <div class="step-container">
+    <div class="step-header">Paso 2 — <em lang="es">Mis quehaceres en casa</em> (My chores at home)</div>
+    <p class="step-instruction">From your role card, choose <strong>two chores you do regularly</strong>. Write one sentence about each using a reflexive verb and one sentence using <em lang="es">gustar</em>. <strong>You will use these sentences in Paso 3.</strong></p>
+    <div class="sentence-frame"><em lang="es">"Yo me [reflexive verb] a las [time] para [quehacer]."</em><br>Example: <em lang="es">"Me levanto a las 5:30 para cocinar la cena."</em></div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+    </div>
+    <div class="sentence-frame"><em lang="es">"No me gusta [quehacer] porque [reason]."</em><br>Example: <em lang="es">"No me gusta limpiar el baño porque tarda mucho tiempo."</em></div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+    </div>
+  </div>
+
+  <!-- PASO 3 -->
+  <div class="step-container">
+    <div class="step-header">Paso 3 — <em lang="es">La negociación en casa</em> (The household negotiation)</div>
+    <p class="step-instruction"><strong>Now speak with your partner.</strong> You are the parent; your partner is the teenager. Use your role card information and the sentences from Paso 2. Ask your partner about their routine and preferences. Then negotiate a fairer chore distribution.</p>
+    <p class="step-instruction"><strong>Model dialogue (continue from here):</strong></p>
+    <table style="margin-bottom:0.2cm;">
+      <tr>
+        <th style="width:50%;">Student A (<em lang="es">padre/madre</em>)</th>
+        <th style="width:50%;">Student B (<em lang="es">hijo/a</em>)</th>
+      </tr>
+      <tr>
+        <td><em lang="es">"Yo me levanto a las 5:30 y barro el piso todos los días. ¿A qué hora te levantas tú?"</em></td>
+        <td><em lang="es">(Answer with your real schedule from your role card)</em></td>
+      </tr>
+      <tr>
+        <td><em lang="es">"No me gusta lavar los platos todos los días. ¿Te gusta lavar los platos?"</em></td>
+        <td><em lang="es">(Respond honestly — you must give a real answer, not just "sí" or "no" — explain)</em></td>
+      </tr>
+      <tr>
+        <td><em lang="es">(Propose a redistribution: "Yo propongo que tú te encargues de [chore] porque…")</em></td>
+        <td><em lang="es">(Agree or counter-propose with a reason using gustar or a reflexive verb)</em></td>
+      </tr>
+    </table>
+    <p class="step-instruction"><strong>Record the negotiated assignments below (you need at least 3):</strong></p>
+    <table>
+      <tr>
+        <th>Chore (<em lang="es">Quehacer</em>)</th>
+        <th>Assigned to (<em lang="es">Se encarga</em>)</th>
+        <th>Reason given (<em lang="es">Razón</em>)</th>
+      </tr>
+      <tr><td style="height:0.7cm;"></td><td></td><td></td></tr>
+      <tr><td style="height:0.7cm;"></td><td></td><td></td></tr>
+      <tr><td style="height:0.7cm;"></td><td></td><td></td></tr>
+      <tr><td style="height:0.7cm;"></td><td></td><td></td></tr>
+    </table>
+  </div>
+
+  <!-- PASO 4 -->
+  <div class="step-container">
+    <div class="step-header">Paso 4 — <em lang="es">¿Es justo?</em> (Is it fair?)</div>
+    <p class="step-instruction">Look at the chore assignments you recorded in Paso 3. Rate how fair the new distribution is on a scale of 1 (not fair at all) to 5 (completely fair). Then explain your rating using <em lang="es">gustar</em> and at least one reflexive verb.</p>
+    <div class="rating-row">
+      <span class="rating-label"><em lang="es">Fairness rating:</em></span>
+      <span class="rating-boxes">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+      </span>
+    </div>
+    <div class="sentence-frame"><em lang="es">"Esta distribución [es / no es] justa porque [gustar reason]. Además, yo me [reflexive verb] [time/how] y por eso [reason for assignment]."</em></div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+    </div>
+    <p class="step-instruction"><strong>If your partner disagrees</strong> with your rating, note their reason and try to reach a consensus score. Write the consensus score: ____</p>
+  </div>
+
+  <!-- PASO 5 -->
+  <div class="step-container">
+    <div class="step-header">Paso 5 — <em lang="es">La casa ideal</em> (The ideal household) — Class Synthesis</div>
+    <p class="step-instruction">Using the chore assignments from <strong>Paso 3</strong> and the fairness rating from <strong>Paso 4</strong>, complete the synthesis sentence below for <strong>each chore you negotiated</strong>. Your pair will share this with the class. The class will vote on the fairest plan and each pair makes a public commitment.</p>
+    <div class="synthesis-frame">
+      <em lang="es">"En nuestra casa ideal, [persona] se encarga de [quehacer] porque [razón usando gustar o verbo reflexivo]."</em>
+    </div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+    </div>
+    <p class="step-instruction" style="margin-top:0.3cm;"><strong>Public commitment:</strong> After the class vote, your pair states one chore assignment you both commit to. Circle the chore and write your commitment:</p>
+    <div class="sentence-frame"><em lang="es">"Nosotros nos comprometemos a que [persona] se encargue de [quehacer] a partir de ahora."</em></div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+---
+session_id: s19-2026-05-25-school-activities
+course_id: spanish_general
+class_id: spanish_general_9th
+round: 1
+date: "2026-05-25"
+agent: tblt-activity-specialist
+invocation_mode: pipeline
+
+topic: "School activities and subject preferences"
+gap_type: oral
+paso_structure: opinion_ranking_debate
+complication_pattern: resource_scarcity
+
+grammar_1: "Present tense of gustar (me gusta, te gusta, le gusta, nos gusta + noun/infinitive)"
+grammar_2: "The verb ser in the present tense (es, son) for describing school subjects and activities"
+
+pvs_count: 12
+activity_pvs_items_used:
+  - la clase de matemáticas
+  - la educación física
+  - la historia
+  - la música
+  - las ciencias naturales
+  - interesante
+  - aburrido/a
+  - difícil
+  - fácil
+  - el recreo
+  - el proyecto escolar
+  - la tarea
+
+artifacts:
+  - student.html
+  - teacher_key.html
+  - ab_representation.yaml
+
+novelty_signature:
+  paso_structure:
+    label: opinion_ranking_debate
+    count_in_last_5_sessions: 0
+  complication_pattern:
+    label: resource_scarcity
+    count_in_last_5_sessions: 0
+
+lee_schell:
+  kill_criteria:
+    individually_solvable: false
+    yes_no_only: false
+    no_negotiation: false
+    exploit_detected: false
+    speaking_avoidable: false
+    any_triggered: false
+  layer_a:
+    information_gap: 3
+    interaction_dependency: 3
+    target_structure_deployment: 3
+    linguistic_payoff_alignment: 3
+    all_pass: true
+  layer_b:
+    curiosity_surprise_capacity: 3
+    flow_curve_integrity: 3
+    meaningful_choice_carry_forward: 3
+    ending_and_payoff: 3
+    structural_freshness: 3
+    all_pass: true
+  denominator: 27
+  total: 27
+  extended_discourse:
+    justification_required: true
+    disagreement_possible: true
+    multi_turn_paso3: true
+  convergence:
+    verdict: CONVERGED
+    revisions_required: 0
+    improvements_optional: 0
+
+structural_validation_passed: true
+
+# Activity Derivation Block (ADB) — extracted at Gate B
+adb:
+  activity_pvs_items_used:
+    - la clase de matemáticas
+    - la educación física
+    - la historia
+    - la música
+    - las ciencias naturales
+    - interesante
+    - aburrido/a
+    - difícil
+    - fácil
+    - el recreo
+    - el proyecto escolar
+    - la tarea
+  confirmed_complication: >
+    Resource scarcity — both partners want their own favourite subject at #1 on the class
+    ranking poster; only one subject can occupy the #1 spot; students must negotiate and
+    defend their choice using gustar and ser.
+  confirmed_outcome: >
+    Partners reach a written agreement on a single #1 subject with a shared justification
+    of at least two reasons using gustar and ser. Each pair produces the Paso 5 class
+    declaration sentence.
+  gap_summary: >
+    Oral gap — each student holds their own private subject-preference ranking (Paso 1).
+    Neither student can see the other's ranking; they must exchange rankings and justifications
+    verbally (Paso 2), debate disagreements (Paso 3), and negotiate the #1 allocation
+    (Paso 4). The communicative stake is exclusive occupancy of the top poster spot —
+    only one subject can be declared best, so both students must persuade their partner
+    or accept the partner's argument before any agreement is possible.
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false
+canonical_label_compliance: true

@@ -1,0 +1,68 @@
+---
+session_id: s20-2026-05-27-past-times
+course_id: spanish_general
+class_id: spanish_general_9th
+round: 2
+date: "2026-05-27"
+agent: tblt-pretask-specialist
+invocation_mode: pipeline
+
+topic: "Past-times and hobbies (los pasatiempos)"
+exercise_types:
+  - ASSOC
+  - MC
+  - FREQ
+
+pvs_subset_count: 12
+
+coherence_audit:
+  adb_keys_covered: 4
+  coverage:
+    - key: activity_pvs_items_used
+      covered: true
+      rationale: >
+        All 12 PVS items appear across the three exercises. Hobbies (el fútbol,
+        la natación, el dibujo, bailar, leer, cocinar, el senderismo) appear in
+        the FREQ grid rows and MC paragraph context sentences. Adjectives (emocionante,
+        relajante, creativo/a, activo/a, divertido/a) appear as MC blank targets
+        and FREQ column headers. Full PVS subset coverage confirmed.
+    - key: confirmed_complication
+      covered: true
+      rationale: >
+        The values conflict (creative/expressive vs. active/physical) is primed by
+        the FREQ survey, which exposes divergent adjective preferences between partners
+        in real time. Students discover through the survey that their partner may describe
+        the same hobby with different adjectives — directly priming the Paso 4 negotiation.
+        ASSOC activates the "what makes a good hobby?" framing organically before vocabulary
+        labels are presented.
+    - key: confirmed_outcome
+      covered: true
+      rationale: >
+        FREQ survey generates per-hobby preference data (me gusta mucho/poco/no me gusta)
+        and descriptive judgments (adjectives) that directly scaffold Main Task Paso 2–3
+        sharing. Students arrive at the Main Task with practice using gustar + noun and
+        ser + adjective to describe hobbies, and with awareness of their partner's preferences
+        — sharpening the Paso 4 values negotiation for the exclusive program slot.
+    - key: gap_summary
+      covered: true
+      rationale: >
+        ASSOC is completed individually before any partner exposure, priming private hobby
+        schemas that feed the oral gap. MC models gustar agreement patterns and ser + adjective
+        forms in a reading/recognition context. FREQ is an oral interview requiring students
+        to ask, listen, and record — activating the same oral-exchange skill set as Main Task
+        Paso 2 (share top hobby) and Paso 3 (compare full rankings) verbatim.
+
+artifacts:
+  - pretask_student.html
+  - pretask_teacher.html
+
+structural_validation_passed: true
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false
+canonical_label_compliance: true

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pre-Task — House Chores Vocabulary Practice</title>
+  <style>
+    :root {
+      --font-family: Georgia, 'Times New Roman', serif;
+      --page-width: 21cm;
+      --primary-color: #553c9a;
+      --border-color: #d6bcfa;
+      --accent-color: #faf5ff;
+      --step-bg: #f9f5ff;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      font-size: 11pt;
+      color: #1a202c;
+    }
+    .activity-header {
+      text-align: center;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5cm;
+      margin-bottom: 0.6cm;
+    }
+    .activity-title {
+      font-size: 15pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.2cm;
+    }
+    .student-info {
+      display: flex;
+      gap: 1cm;
+      flex-wrap: wrap;
+      margin-bottom: 0.5cm;
+      font-size: 10.5pt;
+    }
+    .info-field {
+      flex: 1;
+      min-width: 5cm;
+      border-bottom: 1px solid #718096;
+      padding-bottom: 0.1cm;
+    }
+    .info-label { color: #4a5568; font-size: 9.5pt; }
+    .step-container {
+      background: var(--step-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.45cm;
+      margin-bottom: 0.5cm;
+      break-inside: avoid;
+    }
+    .step-header {
+      font-size: 12pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.25cm;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.15cm;
+    }
+    .step-instruction {
+      margin-bottom: 0.2cm;
+      line-height: 1.6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.2cm 0;
+      font-size: 10.5pt;
+    }
+    th {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.2cm 0.3cm;
+      text-align: center;
+      font-weight: bold;
+    }
+    td {
+      border: 1px solid var(--border-color);
+      padding: 0.2cm 0.3cm;
+      vertical-align: middle;
+      text-align: center;
+    }
+    td.label-cell { text-align: left; font-style: italic; }
+    tr:nth-child(even) td { background: var(--accent-color); }
+    .rank-label { font-size: 9.5pt; color: #553c9a; font-style: italic; }
+    .sentence-frame {
+      background: #fffbeb;
+      border-left: 4px solid #d69e2e;
+      padding: 0.2cm 0.3cm;
+      margin: 0.2cm 0;
+      font-style: italic;
+    }
+    .write-line {
+      border-bottom: 1px solid #a0aec0;
+      min-height: 0.65cm;
+      margin: 0.15cm 0;
+      display: block;
+    }
+    .write-lines-block { margin: 0.2cm 0 0.3cm 0; }
+    .word-bank {
+      background: #e9d8fd;
+      border-radius: 4px;
+      padding: 0.25cm 0.4cm;
+      margin: 0.2cm 0;
+      font-size: 10pt;
+      line-height: 1.8;
+    }
+    .word-bank strong { color: #44337a; }
+    .odd-group {
+      background: var(--accent-color);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 0.25cm 0.4cm;
+      margin: 0.25cm 0;
+    }
+    .odd-group-label { font-size: 9.5pt; color: #553c9a; font-weight: bold; margin-bottom: 0.1cm; }
+    .odd-items { font-style: italic; margin-bottom: 0.1cm; }
+    .odd-answer { display: flex; gap: 0.5cm; align-items: baseline; flex-wrap: wrap; margin-top: 0.1cm; }
+    .odd-answer-label { font-size: 9.5pt; min-width: 4cm; }
+    .blank-line { border-bottom: 1px solid #a0aec0; flex: 1; min-width: 3cm; }
+    @media print {
+      body { padding: 0; }
+      .step-container { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="activity-header">
+    <div class="activity-title"><em lang="es">Los quehaceres en casa</em> — Pre-Task Vocabulary Practice</div>
+    <div>9th Grade Spanish</div>
+  </div>
+
+  <div class="student-info">
+    <div class="info-field"><span class="info-label">Name / <em lang="es">Nombre</em>:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div class="info-field"><span class="info-label">Date / <em lang="es">Fecha</em>:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div class="info-field"><span class="info-label">Class / <em lang="es">Clase</em>:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  </div>
+
+  <!-- EXERCISE 1 — RANK -->
+  <div class="step-container">
+    <div class="step-header">Exercise 1 — <em lang="es">Ordena los quehaceres por esfuerzo</em> (Rank chores by effort)</div>
+    <p class="step-instruction">Rank the eight chores below from <strong>1 = least effort</strong> (<em lang="es">menos esfuerzo</em>) to <strong>8 = most effort</strong> (<em lang="es">más esfuerzo</em>). Write a number in the Rank column. Then complete the reporting sentence at the bottom.</p>
+    <table>
+      <tr>
+        <th style="width:10%;">Rank</th>
+        <th style="width:90%;">Chore (<em lang="es">Quehacer</em>)</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">hacer la cama</em></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">lavar los platos</em></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">barrer el piso</em></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">pasar la aspiradora</em></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">limpiar el baño</em></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">sacar la basura</em></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">ordenar el cuarto</em></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="label-cell"><em lang="es">cocinar la cena</em></td>
+      </tr>
+    </table>
+    <p class="step-instruction" style="margin-top:0.3cm;"><strong>Reporting sentence:</strong></p>
+    <div class="sentence-frame"><em lang="es">"El quehacer que requiere más esfuerzo es ___________ porque ___________."</em></div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+    </div>
+    <div class="sentence-frame"><em lang="es">"El quehacer que requiere menos esfuerzo es ___________ porque ___________."</em></div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+    </div>
+    <p class="step-instruction" style="font-size:9.5pt; color:#553c9a; margin-top:0.2cm;"><em>Note: You will use your rankings in the class negotiation activity to argue about fair chore distribution.</em></p>
+  </div>
+
+  <!-- EXERCISE 2 — ODD -->
+  <div class="step-container">
+    <div class="step-header">Exercise 2 — <em lang="es">¿Cuál no pertenece?</em> (Odd one out)</div>
+    <p class="step-instruction">In each group of four items, circle the one that does NOT belong with the others for a <strong>semantic reason</strong> (meaning-based — not just because it sounds different). Write your reason on the line provided.</p>
+
+    <div class="odd-group">
+      <div class="odd-group-label">Group A</div>
+      <div class="odd-items"><em lang="es">ducharse &nbsp;·&nbsp; lavarse las manos &nbsp;·&nbsp; lavar los platos &nbsp;·&nbsp; levantarse temprano</em></div>
+      <div class="odd-answer">
+        <span class="odd-answer-label"><em lang="es">No pertenece:</em></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="odd-answer">
+        <span class="odd-answer-label"><em lang="es">Razón:</em></span>
+        <span class="blank-line"></span>
+      </div>
+    </div>
+
+    <div class="odd-group">
+      <div class="odd-group-label">Group B</div>
+      <div class="odd-items"><em lang="es">barrer el piso &nbsp;·&nbsp; pasar la aspiradora &nbsp;·&nbsp; limpiar el baño &nbsp;·&nbsp; cocinar la cena</em></div>
+      <div class="odd-answer">
+        <span class="odd-answer-label"><em lang="es">No pertenece:</em></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="odd-answer">
+        <span class="odd-answer-label"><em lang="es">Razón:</em></span>
+        <span class="blank-line"></span>
+      </div>
+    </div>
+
+    <div class="odd-group">
+      <div class="odd-group-label">Group C</div>
+      <div class="odd-items"><em lang="es">sacar la basura &nbsp;·&nbsp; hacer la cama &nbsp;·&nbsp; ordenar el cuarto &nbsp;·&nbsp; ducharse</em></div>
+      <div class="odd-answer">
+        <span class="odd-answer-label"><em lang="es">No pertenece:</em></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="odd-answer">
+        <span class="odd-answer-label"><em lang="es">Razón:</em></span>
+        <span class="blank-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCISE 3 — WB -->
+  <div class="step-container">
+    <div class="step-header">Exercise 3 — <em lang="es">Completa las oraciones</em> (Complete the sentences — Word Bank)</div>
+    <p class="step-instruction">Complete each sentence using a word or phrase from the word bank below. Each item is used <strong>once</strong>. Two items in the word bank are distractors — they are not needed.</p>
+
+    <div class="word-bank">
+      <strong>Word bank (<em lang="es">Banco de palabras</em>):</strong><br>
+      <em lang="es">barrer el piso &nbsp;|&nbsp; me levanto &nbsp;|&nbsp; me lavo &nbsp;|&nbsp; cocinar la cena &nbsp;|&nbsp; me encargo &nbsp;|&nbsp; la tarea doméstica &nbsp;|&nbsp; sacar la basura &nbsp;|&nbsp; me ducho &nbsp;|&nbsp; ordenar el cuarto &nbsp;|&nbsp; limpiar el baño &nbsp;|&nbsp; hacer la cama &nbsp;|&nbsp; me visto</em>
+    </div>
+
+    <table style="margin-top:0.3cm;">
+      <tr>
+        <th style="width:5%;">#</th>
+        <th>Sentence (<em lang="es">Oración</em>)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">Todos los días ___________ a las 6:30 y me preparo para el trabajo.</em></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">Antes de salir de casa, ___________ las manos con jabón.</em></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">No me gusta ___________ todos los días porque tarda mucho tiempo.</em></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">Me gusta ___________ porque es creativo y puedo escuchar música.</em></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">En nuestra casa, yo ___________ de ___________ los lunes y jueves.</em></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">Compartir ___________ de manera justa es importante en una familia.</em></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">Por la mañana ___________ rápido y luego desayuno antes de ir a la escuela.</em></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td class="label-cell" style="text-align:left;"><em lang="es">Mi hermano/a debe ___________ antes de salir al recreo — ¡no puede vivir en el desorden!</em></td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

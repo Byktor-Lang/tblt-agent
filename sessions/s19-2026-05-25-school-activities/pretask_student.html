@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pre-Task: School Subjects and Preferences — Student Worksheet</title>
+<style>
+  :root {
+    --font-family: 'Segoe UI', Arial, sans-serif;
+    --page-width: 21cm;
+    --primary-color: #2c5f8a;
+    --border-color: #c8d8e8;
+    --accent-color: #e8f2fb;
+  }
+  @page { size: A4 portrait; margin: 1cm; }
+  @media print {
+    .step-container { break-inside: avoid; }
+  }
+  body {
+    font-family: var(--font-family);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0.5cm 1cm;
+    color: #1a1a1a;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+  .activity-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.35cm;
+    margin-bottom: 0.5cm;
+  }
+  .activity-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.1cm 0;
+  }
+  .student-info {
+    display: flex;
+    gap: 1.5cm;
+    margin-bottom: 0.5cm;
+    font-size: 10pt;
+  }
+  .student-info span {
+    border-bottom: 1px solid #888;
+    min-width: 5cm;
+    padding-bottom: 2px;
+  }
+  .step-container {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 0.5cm;
+    padding: 0.4cm 0.5cm;
+    background: #fff;
+    break-inside: avoid;
+  }
+  .step-header {
+    font-size: 11.5pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.25cm 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.15cm;
+  }
+  .step-instruction {
+    margin: 0.2cm 0;
+    font-size: 10.5pt;
+  }
+  .write-line {
+    border-bottom: 1px solid #aaa;
+    min-height: 0.65cm;
+    margin: 0.12cm 0;
+    width: 100%;
+    display: block;
+  }
+  .exercise-label {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 0.05cm 0.3cm;
+    border-radius: 10px;
+    margin-bottom: 0.15cm;
+    letter-spacing: 0.04em;
+  }
+  /* ASSOC — brainstorm bubble grid */
+  .bubble-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.3cm;
+    margin: 0.25cm 0;
+  }
+  .bubble {
+    border: 1px dashed #aaa;
+    border-radius: 20px;
+    min-height: 1cm;
+    padding: 0.15cm 0.25cm;
+    text-align: center;
+    font-size: 10pt;
+  }
+  /* MC — paragraph cloze */
+  .cloze-para {
+    background: var(--accent-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.3cm 0.5cm;
+    font-size: 11pt;
+    line-height: 1.7;
+    margin: 0.2cm 0;
+  }
+  .blank {
+    display: inline-block;
+    border-bottom: 2px solid var(--primary-color);
+    min-width: 3cm;
+    margin: 0 0.1cm;
+    vertical-align: bottom;
+  }
+  .mc-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6cm;
+    margin: 0.2cm 0 0.1cm 0;
+    font-size: 10.5pt;
+  }
+  .mc-option label {
+    display: flex;
+    align-items: center;
+    gap: 0.2cm;
+    cursor: pointer;
+  }
+  /* FREQ — survey grid */
+  .freq-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10.5pt;
+    margin: 0.25cm 0;
+  }
+  .freq-table th {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.2cm 0.3cm;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 10pt;
+  }
+  .freq-table td {
+    padding: 0.2cm 0.3cm;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 10pt;
+  }
+  .freq-table td.subject-col {
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .freq-table tr:nth-child(even) td {
+    background: #f7fbff;
+  }
+  .reporting-frame {
+    background: #f4f9f4;
+    border-left: 3px solid #388e3c;
+    padding: 0.2cm 0.4cm;
+    font-size: 10.5pt;
+    font-style: italic;
+    margin: 0.2cm 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .circle-blank {
+    display: inline-block;
+    border: 1.5px solid #666;
+    border-radius: 50%;
+    width: 0.5cm;
+    height: 0.5cm;
+    margin: 0 0.1cm;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<div class="activity-header">
+  <div class="activity-title">Pre-Task: <span lang="es">Las materias escolares</span> — School Subjects and Preferences</div>
+</div>
+
+<div class="student-info">
+  <span>Name: ___________________________</span>
+  <span>Date: _______________</span>
+  <span>Class: _______________</span>
+</div>
+
+<!-- EXERCISE 1: ASSOC -->
+<div class="step-container">
+  <div class="step-header"><span class="exercise-label">ASSOC</span> &nbsp;Exercise 1 — <span lang="es">¿Qué piensas?</span> Schema Activation (3 min)</div>
+  <p class="step-instruction">Before looking at any vocabulary, write as many Spanish words or phrases as you can think of when you see the topic below. Write anything that comes to mind — people, feelings, subjects, actions, places. Use English if you must, but try Spanish first.</p>
+  <div style="text-align:center; font-size:13pt; font-weight:bold; color:var(--primary-color); margin:0.2cm 0;">
+    <span lang="es">"Las clases y las actividades escolares"</span>
+  </div>
+  <div class="bubble-grid">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+  <p class="step-instruction" style="font-size:9.5pt; color:#555;">Compare your list with a partner after Exercise 3. Did you predict any of the same words?</p>
+</div>
+
+<!-- EXERCISE 2: MC -->
+<div class="step-container">
+  <div class="step-header"><span class="exercise-label">MC</span> &nbsp;Exercise 2 — <span lang="es">¿Cuál es la palabra correcta?</span> Multiple-Choice Cloze (6 min)</div>
+  <p class="step-instruction">Read the paragraph below. Choose the correct word from the options in each group to complete the sentences. Circle your answer.</p>
+
+  <div class="cloze-para">
+    <p>
+      En mi colegio hay muchas materias diferentes. A mí <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b1" value="a"> (a) <span lang="es">me gusta</span></label>
+        <label><input type="radio" name="b1" value="b"> (b) <span lang="es">te gusta</span></label>
+        <label><input type="radio" name="b1" value="c"> (c) <span lang="es">gusta me</span></label>
+      </span>
+      <span lang="es">la educación física porque es</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b2" value="a"> (a) <span lang="es">difícil</span></label>
+        <label><input type="radio" name="b2" value="b"> (b) <span lang="es">divertida</span></label>
+        <label><input type="radio" name="b2" value="c"> (c) <span lang="es">aburridas</span></label>
+      </span>.
+    </p>
+    <p>
+      <span lang="es">La clase de matemáticas</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b3" value="a"> (a) <span lang="es">son</span></label>
+        <label><input type="radio" name="b3" value="b"> (b) <span lang="es">es</span></label>
+        <label><input type="radio" name="b3" value="c"> (c) <span lang="es">está</span></label>
+      </span>
+      <span lang="es">muy</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b4" value="a"> (a) <span lang="es">difícil</span></label>
+        <label><input type="radio" name="b4" value="b"> (b) <span lang="es">difíciles</span></label>
+        <label><input type="radio" name="b4" value="c"> (c) <span lang="es">dificilísimas</span></label>
+      </span>
+      <span lang="es">, pero a muchos estudiantes</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b5" value="a"> (a) <span lang="es">les gusta</span></label>
+        <label><input type="radio" name="b5" value="b"> (b) <span lang="es">le gustan</span></label>
+        <label><input type="radio" name="b5" value="c"> (c) <span lang="es">les gustan</span></label>
+      </span>.
+    </p>
+    <p>
+      <span lang="es">El recreo no es una materia, pero</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b6" value="a"> (a) <span lang="es">nos gusta</span></label>
+        <label><input type="radio" name="b6" value="b"> (b) <span lang="es">nos gustan</span></label>
+        <label><input type="radio" name="b6" value="c"> (c) <span lang="es">me gustan</span></label>
+      </span>
+      <span lang="es">a todos porque es</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b7" value="a"> (a) <span lang="es">fáciles</span></label>
+        <label><input type="radio" name="b7" value="b"> (b) <span lang="es">fácil</span></label>
+        <label><input type="radio" name="b7" value="c"> (c) <span lang="es">interesantes</span></label>
+      </span>
+      <span lang="es">y divertido</span>.
+    </p>
+    <p>
+      <span lang="es">La historia y la música son muy</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b8" value="a"> (a) <span lang="es">interesantes</span></label>
+        <label><input type="radio" name="b8" value="b"> (b) <span lang="es">interesante</span></label>
+        <label><input type="radio" name="b8" value="c"> (c) <span lang="es">interesado</span></label>
+      </span>,
+      <span lang="es">pero la tarea</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="mc-options">
+        <label><input type="radio" name="b9" value="a"> (a) <span lang="es">son aburridas</span></label>
+        <label><input type="radio" name="b9" value="b"> (b) <span lang="es">es aburrida</span></label>
+        <label><input type="radio" name="b9" value="c"> (c) <span lang="es">es aburridos</span></label>
+      </span>.
+    </p>
+  </div>
+</div>
+
+<!-- EXERCISE 3: FREQ -->
+<div class="step-container">
+  <div class="step-header"><span class="exercise-label">FREQ</span> &nbsp;Exercise 3 — <span lang="es">¿Con qué frecuencia?</span> Partner Frequency Survey (7 min)</div>
+  <p class="step-instruction">Interview your partner. For each subject or school activity, ask: <em lang="es">"¿Te gusta [materia]? ¿Es interesante, aburrida, difícil o fácil para ti?"</em> Mark a check (&#10003;) in the column that matches your partner's answer. Then write one reporting sentence using the frame below.</p>
+
+  <table class="freq-table">
+    <tr>
+      <th style="width:4.5cm; text-align:left;">Subject / Activity<br><span lang="es">(materia / actividad)</span></th>
+      <th><span lang="es">Me gusta mucho</span></th>
+      <th><span lang="es">Me gusta un poco</span></th>
+      <th><span lang="es">No me gusta</span></th>
+      <th><span lang="es">Es interesante</span></th>
+      <th><span lang="es">Es aburrida/o</span></th>
+      <th><span lang="es">Es difícil</span></th>
+      <th><span lang="es">Es fácil</span></th>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">la clase de matemáticas</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">la educación física</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">la historia</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">la música</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">las ciencias naturales</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">el recreo</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">el proyecto escolar</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="subject-col" lang="es">la tarea</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+  </table>
+
+  <p class="step-instruction"><strong>Write two reporting sentences about your partner using the frames:</strong></p>
+  <div class="reporting-frame"><span lang="es">A mi compañero/a le gusta [materia] porque es [adjective].</span></div>
+  <span class="write-line"></span>
+  <div class="reporting-frame"><span lang="es">A mi compañero/a no le gusta [materia] porque es [adjective].</span></div>
+  <span class="write-line"></span>
+
+  <p class="step-instruction" style="font-size:9.5pt; color:#555; margin-top:0.25cm;">Now go back to Exercise 1 — compare your brainstorm with the vocabulary above. Circle any words that matched.</p>
+</div>
+
+</body>
+</html>

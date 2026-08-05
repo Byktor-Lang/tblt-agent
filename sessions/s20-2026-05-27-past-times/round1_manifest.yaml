@@ -1,0 +1,120 @@
+---
+session_id: s20-2026-05-27-past-times
+course_id: spanish_general
+class_id: spanish_general_9th
+round: 1
+date: "2026-05-27"
+agent: tblt-activity-specialist
+invocation_mode: pipeline
+
+topic: "Past-times and hobbies (los pasatiempos)"
+gap_type: oral
+paso_structure: opinion_ranking_debate
+complication_pattern: values_conflict
+
+grammar_1: "Present tense of gustar (me gusta, te gusta, le gusta, nos gusta + noun/infinitive)"
+grammar_2: "Verb ser + descriptive adjectives (es/son + adjective) for describing hobbies"
+
+pvs_count: 12
+activity_pvs_items_used:
+  - el fútbol
+  - la natación
+  - el dibujo
+  - bailar
+  - leer
+  - cocinar
+  - el senderismo
+  - emocionante
+  - relajante
+  - creativo/a
+  - activo/a
+  - divertido/a
+
+artifacts:
+  - student.html
+  - teacher_key.html
+  - ab_representation.yaml
+
+novelty_signature:
+  paso_structure:
+    label: opinion_ranking_debate
+    count_in_last_5_sessions: 1
+  complication_pattern:
+    label: values_conflict
+    count_in_last_5_sessions: 0
+
+lee_schell:
+  kill_criteria:
+    individually_solvable: false
+    yes_no_only: false
+    no_negotiation: false
+    exploit_detected: false
+    speaking_avoidable: false
+    any_triggered: false
+  layer_a:
+    information_gap: 3
+    interaction_dependency: 3
+    target_structure_deployment: 3
+    linguistic_payoff_alignment: 3
+    all_pass: true
+  layer_b:
+    curiosity_surprise_capacity: 3
+    flow_curve_integrity: 3
+    meaningful_choice_carry_forward: 3
+    ending_and_payoff: 3
+    structural_freshness: 3
+    all_pass: true
+  denominator: 27
+  total: 27
+  extended_discourse:
+    justification_required: true
+    disagreement_possible: true
+    multi_turn_paso3: true
+  convergence:
+    verdict: CONVERGED
+    revisions_required: 0
+    improvements_optional: 0
+
+structural_validation_passed: true
+
+# Activity Derivation Block (ADB) — extracted at Gate B
+adb:
+  activity_pvs_items_used:
+    - el fútbol
+    - la natación
+    - el dibujo
+    - bailar
+    - leer
+    - cocinar
+    - el senderismo
+    - emocionante
+    - relajante
+    - creativo/a
+    - activo/a
+    - divertido/a
+  confirmed_complication: >
+    Values conflict — students each privately rank 5 hobbies and discover in Paso 4 that
+    they value different qualities in a hobby: one partner prioritizes creative/expressive
+    activities (creativo/a, divertido/a), the other prioritizes active/physical activities
+    (activo/a, emocionante). Only one hobby can be recommended for the school's after-school
+    program; students must negotiate across incompatible value systems and produce a shared
+    justification using gustar and ser.
+  confirmed_outcome: >
+    Partners agree on ONE hobby to recommend for the after-school program and produce a
+    Paso 5 class declaration sentence with at least two reasons using gustar and ser.
+    The declaration is shared with the class for comparison.
+  gap_summary: >
+    Oral gap — each student holds a private hobby ranking (Paso 1) that cannot be shown
+    to the partner; rankings must be exchanged verbally (Paso 2), compared (Paso 3), and
+    reconciled despite a values conflict (Paso 4). The communicative stake is exclusive
+    program slot occupancy — only one hobby can be recommended, so both students must
+    persuade the other or accept a principled compromise before any agreement is possible.
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false
+canonical_label_compliance: true

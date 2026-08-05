@@ -1,0 +1,44 @@
+session_id: s17-2026-05-25-weekend-plans
+course_id: spanish_general
+round: 2
+
+exercise_types:
+  - SORT
+  - ODD
+  - FRAME
+
+pvs_subset_count: 10
+activity_pvs_items_used:
+  - "el fin de semana"
+  - "el sábado"
+  - "el domingo"
+  - "por la mañana"
+  - "por la tarde"
+  - "el cine"
+  - "el parque"
+  - "libre"
+  - "ocupado/a"
+  - "el partido de fútbol"
+
+coherence_audit:
+  coverage:
+    - adb_key: activity_pvs_items_used
+      covered: true
+      rationale: "All 10 PVS items appear across SORT statements, ODD sets, and FRAME word bank. Students encounter and produce all target vocabulary before the Main Task."
+    - adb_key: confirmed_complication
+      covered: true
+      rationale: "SORT exercise includes two items (3 and 5) that test the logical relationship between schedule constraints and availability status — directly priming the values_conflict negotiation scenario."
+    - adb_key: confirmed_outcome
+      covered: true
+      rationale: "FRAME exercise 4 asks students to produce the exact Paso 5 plan sentence structure (El [día] por la [mañana/tarde] vamos a [actividad] porque...) before the Main Task requires it."
+    - adb_key: gap_summary
+      covered: true
+      rationale: "FRAME exercises 1–3 require students to produce poder + infinitivo (availability) and tener que + infinitivo (constraint) in the same schedule context as the oral gap — direct structural rehearsal."
+  f7_passed: true
+
+structural_validation_passed: true
+log_write: ok
+cross_course_feed_write: ok
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null

@@ -1,0 +1,63 @@
+---
+session_id: s20-2026-05-27-past-times
+course_id: spanish_general
+class_id: spanish_general_9th
+round: 3
+date: "2026-05-27"
+agent: tblt-reflective-specialist
+invocation_mode: pipeline
+
+topic: "Past-times and hobbies (los pasatiempos)"
+writing_genre: formal_recommendation
+register_shift_pattern: informal_to_formal_verb_phrase
+
+transfer_goal: >
+  Write a formal recommendation letter to the school activities coordinator
+  proposing the hobby your pair agreed on in the Main Task, with at least
+  three reasons using gustar and ser + adjective, rewritten in formal Spanish.
+
+transfer_goal_echoed: true
+
+coherence_audit:
+  adb_keys_covered: 4
+  coverage:
+    - key: activity_pvs_items_used
+      covered: true
+      rationale: >
+        All PVS hobbies and adjectives appear in the register-shift table
+        exemplars and the model letter. The post-task explicitly directs
+        students to use the hobby and adjectives from their Main Task negotiation.
+    - key: confirmed_complication
+      covered: true
+      rationale: >
+        The register-shift table Row 3 rehearses formal equivalents for
+        arguing a hobby's qualities — the same reasoning students needed to
+        navigate the values conflict in Paso 4. Writing formally about "why
+        this hobby is better" directly extends the oral argument.
+    - key: confirmed_outcome
+      covered: true
+      rationale: >
+        Transfer goal explicitly requires the hobby agreed on at Paso 5.
+        The post-task is the written formalization of the oral joint decision.
+        Students cannot complete the letter without the Paso 5 outcome.
+    - key: gap_summary
+      covered: true
+      rationale: >
+        The register-shift exercise makes the spoken → written transformation
+        explicit, bridging what students said in the oral gap to the formal
+        register they now deploy in writing.
+
+artifacts:
+  - posttask.html
+  - posttask_teacher.html
+
+structural_validation_passed: true
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false
+canonical_label_compliance: true

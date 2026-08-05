@@ -1,0 +1,122 @@
+{
+  "session_id": "s19-2026-05-25-school-activities",
+  "course_id": "spanish_general",
+  "class_id": "spanish_general_9th",
+  "created_at": "2026-05-25T00:00:00Z",
+  "last_updated_at": "2026-05-25T23:59:00Z",
+  "transition_log": [
+    { "phase": "gate_a", "at": "2026-05-25T00:01:00Z", "event": "gate_a_confirmed" },
+    { "phase": "gate_b", "at": "2026-05-25T00:15:00Z", "event": "gate_b_confirmed" },
+    { "phase": "gate_c", "at": "2026-05-25T00:30:00Z", "event": "gate_c_confirmed" },
+    { "phase": "gate_d", "at": "2026-05-25T00:50:00Z", "event": "gate_d_confirmed" }
+  ],
+  "scb": {
+    "status": "frozen",
+    "course_id": "spanish_general",
+    "class_id": "spanish_general_9th",
+    "topic": "School activities and subject preferences",
+    "grammar_1": "Present tense of gustar (me gusta, te gusta, le gusta, nos gusta + noun/infinitive)",
+    "grammar_2": "The verb ser in the present tense (es, son) for describing school subjects and activities",
+    "pvs": [
+      "la clase de matemáticas",
+      "la educación física",
+      "la historia",
+      "la música",
+      "las ciencias naturales",
+      "interesante",
+      "aburrido/a",
+      "difícil",
+      "fácil",
+      "el recreo",
+      "el proyecto escolar",
+      "la tarea"
+    ],
+    "task_type": "oral_gap",
+    "complication_candidate": "resource_scarcity",
+    "register": "informal spoken (classroom pair debate) → formal written complaint",
+    "transfer_goal": "Write a formal complaint letter to the school principal about the subject your pair ranked last, arguing that it should be improved or given less weight, with at least three reasons using gustar and ser",
+    "success_criteria": [
+      "Use gustar + noun at least three times to express preferences (e.g., 'Me gusta la música porque es divertida')",
+      "Use ser + adjective at least three times to characterize subjects (e.g., 'Las matemáticas son difíciles pero son importantes')",
+      "Negotiate a joint top-3 ranking using evidence from both students' individual rankings",
+      "Resolve the Paso 4 complication: agree on a single #1 subject with a shared justification",
+      "Produce the Paso 5 class declaration: 'Nuestra clase piensa que [materia] es la mejor porque...'"
+    ],
+    "writing_genre": "formal_complaint_letter",
+    "register_shift_pattern": "hedge_to_formal_opener",
+    "snapshot_hash_inventory": {
+      "tblt-orchestrator.md": "2940DCD454BDBFD0B9A3FB6D6FC6B28B41AAD63A5190DE037A36EE3ED594E329",
+      "tblt-activity-specialist.md": "E3119C3587D15EBA2BEDB80B73573882F21A5B659CB87FAF5BF0A94D3506AE54",
+      "tblt-inspector.md": "5FB89DCB32206E73764D0041D468A2FD5953464F8635C75B9847271B0D75B63D",
+      "tblt-pretask-specialist.md": "1893C2D3707E06E99CE2A70E317ECBFB7B58E0771042C6BFF647E2DECC0EC073",
+      "tblt-reflective-specialist.md": "5FE91E0C135719A3C3917AD9C18747F1D98B394389E5F03E00D2E672524228AA",
+      "course_profile.md": "1B5BD4B14A944CB8757078FA69F6D29D0EECCAE1EC69F95419F0B23E26B77804",
+      "class_profile.md": "AF46D8F6045839952C3E4C388492CFD55D99A35F3582DE43C4099E7DC0B38B3F",
+      "lee-schell-framework.md": "2A5056936B0A4013455FA410919D0121784AC9A0D390AC9A84C4CEB055121F2A",
+      "shared-taxonomy.md": "B6291EC7F74D79611953FD5835D3C6946061030B5C07F849BB17A042162043FA"
+    }
+  },
+  "adb": {
+    "activity_pvs_items_used": [
+      "la clase de matemáticas",
+      "la educación física",
+      "la historia",
+      "la música",
+      "las ciencias naturales",
+      "interesante",
+      "aburrido/a",
+      "difícil",
+      "fácil",
+      "el recreo",
+      "el proyecto escolar",
+      "la tarea"
+    ],
+    "confirmed_complication": "Resource scarcity — both partners want their own favourite subject at #1 on the class ranking poster; only one subject can occupy the #1 spot; students must negotiate and defend their choice using gustar and ser.",
+    "confirmed_outcome": "Partners reach written agreement on single #1 subject with shared justification of at least two reasons using gustar and ser; each pair produces the Paso 5 class declaration sentence.",
+    "gap_summary": "Oral gap — each student holds their own private subject-preference ranking (Paso 1). Neither student can see the other's ranking; they must exchange rankings and justifications verbally (Paso 2), debate disagreements (Paso 3), and negotiate the #1 allocation (Paso 4). The communicative stake is exclusive occupancy of the top poster spot — only one subject can be declared best, so both students must persuade their partner or accept the partner's argument before any agreement is possible."
+  },
+  "rounds": {
+    "round_1": {
+      "status": "passed_gate_B",
+      "rejection_count": 0,
+      "paso_structure": "opinion_ranking_debate",
+      "complication_pattern": "resource_scarcity",
+      "gap_type": "oral",
+      "artifacts": ["student.html", "teacher_key.html", "ab_representation.yaml"],
+      "lee_schell_total": 27,
+      "lee_schell_denominator": 27,
+      "inspector_verdict": "CONVERGED",
+      "inspector_revision_count": 0,
+      "structural_validation_passed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    },
+    "round_2": {
+      "status": "passed_gate_C",
+      "rejection_count": 0,
+      "exercise_types": ["ASSOC", "MC", "FREQ"],
+      "pvs_subset_count": 12,
+      "artifacts": ["pretask_student.html", "pretask_teacher.html"],
+      "f7_passed": true,
+      "structural_validation_passed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    },
+    "round_3": {
+      "status": "passed_gate_D",
+      "rejection_count": 0,
+      "writing_genre": "formal_complaint_letter",
+      "register_shift_pattern": "hedge_to_formal_opener",
+      "transfer_goal_echoed": true,
+      "artifacts": ["posttask.html", "posttask_teacher.html"],
+      "f7_passed": true,
+      "structural_validation_passed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    }
+  },
+  "gate_d": {
+    "status": "passed",
+    "rejection_count": 0
+  }
+}

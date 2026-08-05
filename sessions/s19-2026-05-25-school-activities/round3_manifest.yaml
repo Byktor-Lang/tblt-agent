@@ -1,0 +1,68 @@
+---
+session_id: s19-2026-05-25-school-activities
+course_id: spanish_general
+class_id: spanish_general_9th
+round: 3
+date: "2026-05-25"
+agent: tblt-reflective-specialist
+invocation_mode: pipeline
+
+topic: "School activities and subject preferences"
+writing_genre: formal_complaint_letter
+register_shift_pattern: hedge_to_formal_opener
+transfer_goal_echoed: true
+
+# Q12 compliance: writing_genre and register_shift_pattern read from frozen SCB; not re-elicited
+scb_frozen_values_used:
+  writing_genre: formal_complaint_letter
+  register_shift_pattern: hedge_to_formal_opener
+
+coherence_audit:
+  adb_keys_covered: 4
+  coverage:
+    - key: activity_pvs_items_used
+      covered: true
+      rationale: >
+        Subject names and adjectives from all 12 PVS items appear in the register-shift pair
+        examples (la historia, la educación física, las matemáticas, la música, la tarea,
+        interesante, aburrido/a, difícil, fácil) and in the writing prompt scaffold and
+        letter body sample. Full PVS coverage in post-task materials.
+    - key: confirmed_complication
+      covered: true
+      rationale: >
+        Resource-scarcity complication explicitly echoed — students who lost the Paso 4 #1-spot
+        negotiation are cast as the letter writers; the formal complaint letter is the real-world
+        consequence of losing the ranking debate. The stakes line in posttask_teacher.html
+        names the scarcity directly (schedule resources at stake).
+    - key: confirmed_outcome
+      covered: true
+      rationale: >
+        Paso 4 agreed justification and Paso 5 class declaration are explicitly named as the
+        source of evidence for the letter body's three required reasons. The writing prompt
+        references "today's ranking debate (Paso 3 and Paso 4)" directly, anchoring the
+        post-task to the confirmed outcome.
+    - key: gap_summary
+      covered: true
+      rationale: >
+        Oral gap debate (Paso 2 sharing, Paso 3 debate, Paso 4 negotiation) → formal written
+        complaint; the register-shift table (hedge_to_formal_opener) is the structural bridge
+        between the Main Task's informal spoken register and the Post-Task's formal written
+        register, directly exercising the transfer across the oral/written gap axis.
+
+artifacts:
+  - posttask.html
+  - posttask_teacher.html
+
+structural_validation_passed: true
+
+# ADR 0019: posttask.html contains no .teacher-page element; posttask_teacher.html is separate file
+posttask_teacher_pair_compliant: true
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false
+canonical_label_compliance: true

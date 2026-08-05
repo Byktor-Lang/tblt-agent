@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekend Plans — Post-Task</title>
+  <style>
+    :root {
+      --font-family: 'Georgia', serif;
+      --page-width: 21cm;
+      --primary-color: #2c5f8a;
+      --border-color: #b0c4de;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    @media print {
+      .step-container { break-inside: avoid; }
+      .register-shift-table { break-inside: avoid; }
+      .writing-task-container { break-inside: avoid; }
+    }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      color: #222;
+    }
+    .activity-header {
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5em;
+      margin-bottom: 1.2em;
+    }
+    .activity-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0;
+    }
+    .student-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5em;
+      margin-bottom: 1.2em;
+      font-size: 0.9em;
+    }
+    .info-field {
+      border-bottom: 1px solid #999;
+      padding: 2px 4px;
+    }
+    .info-label {
+      font-size: 0.78em;
+      color: #555;
+      display: block;
+    }
+    .section-title {
+      font-size: 1em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 1em 0 0.4em 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.2em;
+    }
+    .instructions { font-size: 0.92em; margin-bottom: 0.6em; color: #333; }
+    .register-shift-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      margin-bottom: 1em;
+    }
+    .register-shift-table th {
+      background: var(--primary-color);
+      color: white;
+      padding: 5px 8px;
+      text-align: left;
+    }
+    .register-shift-table td {
+      border: 1px solid var(--border-color);
+      padding: 6px 8px;
+      vertical-align: top;
+    }
+    .register-shift-table tr:nth-child(even) td { background: #f5f9ff; }
+    .informal-col { color: #555; font-style: italic; }
+    .formal-col { color: #1a4a7a; font-weight: bold; }
+    .writing-task-container {
+      border: 2px solid var(--primary-color);
+      border-radius: 6px;
+      padding: 0.8em 1em;
+      margin-top: 1em;
+    }
+    .writing-task-container > * { break-inside: avoid; }
+    .writing-prompt-section {
+      margin-bottom: 0.8em;
+    }
+    .prompt-box {
+      background: #eef4fb;
+      border-left: 4px solid var(--primary-color);
+      padding: 0.6em 0.9em;
+      font-size: 0.92em;
+      margin: 0.4em 0 0.8em 0;
+    }
+    .email-template {
+      background: #f9f9f9;
+      border: 1px dashed var(--border-color);
+      border-radius: 4px;
+      padding: 0.7em 1em;
+      font-size: 0.9em;
+      margin: 0.5em 0;
+    }
+    .template-line {
+      border-bottom: 1px solid #ccc;
+      min-height: 1.4em;
+      display: block;
+      margin: 0.4em 0;
+    }
+    .template-label { font-size: 0.82em; color: #888; }
+    .checklist-section {
+      border-top: 1px solid var(--border-color);
+      padding-top: 0.6em;
+      margin-top: 0.8em;
+    }
+    .checklist-title {
+      font-size: 0.95em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.4em 0;
+    }
+    .single-column-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5em;
+      margin: 0.3em 0;
+      font-size: 0.9em;
+    }
+    .list-item input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; }
+    span[lang="es"] { color: #1a4a7a; }
+    em { font-style: italic; color: #555; }
+  </style>
+</head>
+<body>
+
+  <div class="activity-header">
+    <p class="activity-title">Planes para el fin de semana — Post-Task</p>
+  </div>
+
+  <div class="student-info">
+    <div class="info-field"><span class="info-label">Name / Nombre</span>&nbsp;</div>
+    <div class="info-field"><span class="info-label">Date / Fecha</span>&nbsp;</div>
+    <div class="info-field"><span class="info-label">Class / Clase</span>&nbsp;</div>
+  </div>
+
+  <!-- REGISTER SHIFT TABLE -->
+  <p class="section-title">Part 1 — Register-Shift Table: <span lang="es">Del habla informal al email formal</span></p>
+  <p class="instructions">The phrases below are from a spoken weekend-plans conversation. Rewrite each phrase as it would appear in a formal written email to a parent or guardian. The first row is done for you as a model.</p>
+
+  <table class="register-shift-table">
+    <tr>
+      <th>Spoken (Informal)</th>
+      <th>Written Email (Formal)</th>
+    </tr>
+    <tr>
+      <td class="informal-col"><span lang="es">Vamos a ir al parque.</span><br><em>(spoken, casual verb phrase)</em></td>
+      <td class="formal-col"><span lang="es">Tenemos la intención de visitar el parque.</span><br><em>(formal written — nominalization + intent verb)</em></td>
+    </tr>
+    <tr>
+      <td class="informal-col"><span lang="es">No puedo el sábado.</span></td>
+      <td><span class="template-line"></span></td>
+    </tr>
+    <tr>
+      <td class="informal-col"><span lang="es">Tengo que estudiar ese día.</span></td>
+      <td><span class="template-line"></span></td>
+    </tr>
+    <tr>
+      <td class="informal-col"><span lang="es">¿Podemos ir juntos el domingo?</span></td>
+      <td><span class="template-line"></span></td>
+    </tr>
+  </table>
+
+  <!-- WRITING TASK -->
+  <div class="writing-task-container">
+
+    <div class="writing-prompt-section">
+      <p class="section-title" style="margin-top:0;">Part 2 — Formal Email to Parent or Guardian</p>
+      <div class="prompt-box">
+        <strong>Task:</strong> Write a formal email in Spanish to a parent or guardian confirming your weekend plans.<br><br>
+        Your email must:<br>
+        1. Use a formal salutation (<span lang="es">Estimado/a + [title/name]</span>)<br>
+        2. Explain when you had a schedule constraint and why (<span lang="es">tener que + infinitivo</span>)<br>
+        3. Confirm when you are available (<span lang="es">poder + infinitivo</span>)<br>
+        4. State the agreed activity, day, and time from your Paso 5 plan sentence<br>
+        5. Use a formal closing (<span lang="es">Atentamente</span> or <span lang="es">Con respeto</span>)<br><br>
+        <em>Use your register-shift table from Part 1 to help convert your spoken phrases into formal written language.</em>
+      </div>
+
+      <div class="email-template">
+        <span class="template-label">Salutation / Saludo:</span>
+        <span class="template-line"></span>
+        <span class="template-label">Opening sentence (introduce the topic):</span>
+        <span class="template-line"></span>
+        <span class="template-label">Body — constraint explanation:</span>
+        <span class="template-line"></span>
+        <span class="template-line"></span>
+        <span class="template-label">Body — confirmed plan (activity + day + time + reason):</span>
+        <span class="template-line"></span>
+        <span class="template-line"></span>
+        <span class="template-label">Closing / Despedida:</span>
+        <span class="template-line"></span>
+        <span class="template-label">Signature / Firma:</span>
+        <span class="template-line"></span>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <p class="checklist-title">Self-Correction Checklist — Review your email before submitting</p>
+      <ul class="single-column-list">
+        <li class="list-item">
+          <input type="checkbox">
+          <span>I included a formal salutation (<span lang="es">Estimado/a...</span>).</span>
+        </li>
+        <li class="list-item">
+          <input type="checkbox">
+          <span>I used <span lang="es">tener que + infinitivo</span> to explain at least one schedule constraint.</span>
+        </li>
+        <li class="list-item">
+          <input type="checkbox">
+          <span>I used <span lang="es">poder + infinitivo</span> to confirm when I am available.</span>
+        </li>
+        <li class="list-item">
+          <input type="checkbox">
+          <span>I named the agreed activity, day, and time from our Paso 5 plan.</span>
+        </li>
+        <li class="list-item">
+          <input type="checkbox">
+          <span>I used a formal closing (<span lang="es">Atentamente</span> or <span lang="es">Con respeto</span>) and signed my name.</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

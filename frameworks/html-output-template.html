@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TBLT HTML Output Template — Canonical Markup Reference</title>
+<!--
+  ============================================================================
+  TBLT HTML OUTPUT TEMPLATE  —  canonical markup reference
+  ============================================================================
+
+  WHAT THIS IS
+    A catalog of the canonical markup for every artifact the pipeline renders.
+    Copy the <style> block wholesale, then copy the blocks the session needs.
+    Do not re-derive class names: every class here is a name F6 checks
+    (frameworks/html-structure-schema.md is the authority).
+
+  CONTENT SLOTS ARE MARKERS — SUBSTITUTE, DO NOT COPY
+    This file contains NO Spanish. Every content slot is a bracketed marker:
+
+      [PVS item]        one vocabulary item from the session PVS
+      [PVS phrase]      a short phrase built from PVS items + function words
+      [PVS sentence]    a full sentence built from the same two sources
+      [frequency label] a PVS frequency expression (FREQ column headers)
+      [scale low] / [scale high]   RANK scale endpoints, in Spanish
+      [topic]           the session topic
+      [answer]          the correct response, teacher files only
+
+    Substitute each marker with session content. All Spanish in a rendered
+    artifact must trace to the session PVS or the function-word allowlist
+    (tblt-pretask-specialist.md "Spanish Language Constraint"). Markers are
+    wrapped in <em lang="es"> wherever the substituted content will be Spanish
+    — keep the wrapper, replace the marker. English instructional text is not
+    fenced and is shown as real prose.
+
+    A rendered artifact still containing a bracketed marker is unfinished.
+
+  SOURCE
+    Markup consolidated from sessions/s16 (TF, MATCH, WB), s19 (MC, FREQ,
+    ASSOC, RANK), s17 (SORT), s18 (ODD).
+
+  F6 GLOBAL REQUIREMENTS THIS FILE SATISFIES
+    DOCTYPE; html lang="en" with Spanish in <em lang="es">; meta charset;
+    non-empty title; :root with --font-family, --page-width: 21cm,
+    --primary-color, --border-color; @page A4 portrait margin 1cm;
+    @media print declaring break-inside: avoid for .step-container;
+    every style inline (no external stylesheet link element); no external
+    script element; teacher content in a separate file (see PART 5).
+
+  NOT COVERED HERE
+    Only the 10 canonical F4 exercise types have blocks. An exercise type with
+    no canonical label must be added to shared-taxonomy.md before use
+    (ADR 0001 add-before-use) — do not invent a block for it.
+  ============================================================================
+-->
+<style>
+  :root {
+    --font-family: Georgia, 'Times New Roman', serif;
+    --page-width: 21cm;
+    --primary-color: #2c5282;
+    --border-color: #bee3f8;
+    --accent-bg: #f7fafc;
+    --step-bg: #f8fbff;
+    --ink: #1a202c;
+    --muted: #4a5568;
+    --rule: #a0aec0;
+  }
+
+  @page { size: A4 portrait; margin: 1cm; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-family);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 1cm;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  /* ---- header + student metadata ---------------------------------------- */
+  .activity-header {
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.4cm;
+    margin-bottom: 0.5cm;
+  }
+  .activity-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.15cm;
+  }
+  .activity-subtitle { font-size: 10.5pt; color: var(--muted); }
+
+  .student-info {
+    display: flex;
+    gap: 0.8cm;
+    flex-wrap: wrap;
+    margin-bottom: 0.5cm;
+    font-size: 10.5pt;
+  }
+  .info-field {
+    flex: 1;
+    min-width: 5cm;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.1cm;
+  }
+  .info-label { color: var(--muted); font-size: 9.5pt; }
+
+  /* ---- step container (every exercise sits in one) ----------------------- */
+  .step-container {
+    background: var(--step-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.45cm;
+    margin-bottom: 0.5cm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .step-header {
+    font-size: 12pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.2cm;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.12cm;
+  }
+  .step-instruction { margin-bottom: 0.25cm; }
+
+  /* ---- shared writing affordances ---------------------------------------- */
+  .write-line {
+    display: block;
+    border-bottom: 1px solid var(--rule);
+    min-height: 0.65cm;
+    margin: 0.15cm 0;
+  }
+  .write-lines-block { margin: 0.2cm 0 0.1cm 0; }
+  .blank-line {
+    display: inline-block;
+    min-width: 4cm;
+    border-bottom: 1px solid var(--rule);
+  }
+  .sentence-frame {
+    background: #fffbeb;
+    border-left: 4px solid #d69e2e;
+    padding: 0.2cm 0.3cm;
+    margin: 0.2cm 0;
+    font-style: italic;
+  }
+
+  /* ---- tables (shared base) ---------------------------------------------- */
+  table { width: 100%; border-collapse: collapse; margin: 0.2cm 0; font-size: 10.5pt; }
+  th {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.18cm 0.25cm;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10pt;
+  }
+  td { border: 1px solid var(--border-color); padding: 0.18cm 0.25cm; text-align: center; }
+  td.label-cell { text-align: left; }
+  tbody tr:nth-child(even) td { background: var(--accent-bg); }
+
+  /* ---- ASSOC ------------------------------------------------------------- */
+  .bubble-grid { display: flex; flex-wrap: wrap; gap: 0.3cm; margin: 0.25cm 0; }
+  .bubble {
+    flex: 1;
+    min-width: 3.4cm;
+    min-height: 1.1cm;
+    border: 1px dashed var(--rule);
+    border-radius: 18px;
+  }
+
+  /* ---- TF ---------------------------------------------------------------- */
+  .tf-table { break-inside: avoid; page-break-inside: avoid; }
+
+  /* ---- SORT -------------------------------------------------------------- */
+  .sort-bank {
+    background: #ebf8ff;
+    border-radius: 4px;
+    padding: 0.25cm 0.35cm;
+    margin: 0.2cm 0;
+    font-size: 10pt;
+    line-height: 1.9;
+  }
+  .two-col { display: flex; gap: 0.4cm; margin-top: 0.25cm; }
+  .sort-col-box {
+    flex: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-height: 3.2cm;
+    padding: 0.2cm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .col-header {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.1cm;
+    margin-bottom: 0.15cm;
+    font-size: 10.5pt;
+  }
+
+  /* ---- MATCH ------------------------------------------------------------- */
+  .match-set {
+    display: flex;
+    gap: 0.6cm;
+    margin-top: 0.2cm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .match-col { flex: 1; }
+  .match-col-label {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 10.5pt;
+    margin-bottom: 0.12cm;
+  }
+  .match-item { margin-bottom: 0.18cm; font-size: 10.5pt; }
+  .match-blank {
+    display: inline-block;
+    width: 1.1cm;
+    border-bottom: 1px solid var(--rule);
+    margin-right: 0.2cm;
+  }
+  .letter { font-weight: bold; color: var(--primary-color); margin-right: 0.2cm; }
+
+  /* ---- MC ---------------------------------------------------------------- */
+  .cloze-para { line-height: 2.1; margin: 0.2cm 0; }
+  .blank {
+    display: inline-block;
+    min-width: 2.6cm;
+    border-bottom: 1px solid var(--rule);
+  }
+  .mc-options {
+    background: var(--accent-bg);
+    border-radius: 4px;
+    padding: 0.2cm 0.3cm;
+    margin-top: 0.2cm;
+    font-size: 10pt;
+  }
+
+  /* ---- WB ---------------------------------------------------------------- */
+  .word-bank {
+    background: #e6fffa;
+    border: 1px solid #b2f5ea;
+    border-radius: 4px;
+    padding: 0.25cm 0.35cm;
+    margin: 0.2cm 0;
+    font-size: 10pt;
+    line-height: 1.8;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .wb-sentence { margin-bottom: 0.2cm; }
+  .wb-blank {
+    display: inline-block;
+    min-width: 2.6cm;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ---- ODD --------------------------------------------------------------- */
+  .odd-group {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.22cm 0.3cm;
+    margin-bottom: 0.25cm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .odd-group-label { font-weight: bold; color: var(--primary-color); font-size: 10pt; }
+  .odd-items { margin: 0.12cm 0; }
+  .odd-answer-label { font-size: 9.5pt; color: var(--muted); }
+  .odd-answer {
+    display: inline-block;
+    min-width: 5cm;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ---- FREQ -------------------------------------------------------------- */
+  .freq-table { break-inside: avoid; page-break-inside: avoid; }
+  .freq-table td.subject-col { text-align: left; }
+  .partner-record { margin-top: 0.25cm; }
+  .partner-record-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 10.5pt;
+    margin-bottom: 0.12cm;
+  }
+
+  /* ---- RANK -------------------------------------------------------------- */
+  .ranking-table { break-inside: avoid; page-break-inside: avoid; }
+  .rank-num { width: 1.6cm; font-weight: bold; color: var(--primary-color); }
+  .rank-label { font-size: 9.5pt; color: var(--muted); font-style: italic; }
+
+  /* ---- Round 1 main task -------------------------------------------------- */
+  .resource-panel {
+    background: #fffaf0;
+    border: 2px solid #f6ad55;
+    border-radius: 6px;
+    padding: 0.35cm;
+    margin: 0.3cm 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .resource-panel-title { font-weight: bold; color: #9c4221; margin-bottom: 0.15cm; }
+  .complication-box {
+    background: #fff5f5;
+    border-left: 4px solid #fc8181;
+    padding: 0.25cm 0.3cm;
+    margin: 0.25cm 0;
+  }
+  .complication-label { font-weight: bold; color: #9b2c2c; font-size: 10pt; }
+  .vocab-strip { display: flex; flex-wrap: wrap; gap: 0.18cm; margin: 0.2cm 0; }
+  .vocab-chip {
+    background: var(--border-color);
+    border-radius: 12px;
+    padding: 0.08cm 0.28cm;
+    font-size: 9.5pt;
+  }
+  .dialogue-model {
+    background: var(--accent-bg);
+    border-left: 3px solid var(--primary-color);
+    padding: 0.2cm 0.3cm;
+    margin: 0.2cm 0;
+    font-size: 10.5pt;
+  }
+  .dialogue-speaker { font-weight: bold; color: var(--primary-color); }
+
+  /* ---- Round 3 post-task -------------------------------------------------- */
+  .register-shift-table { break-inside: avoid; page-break-inside: avoid; }
+  .register-shift-table td.informal-col { text-align: left; font-style: italic; }
+  .register-shift-table td.formal-col { text-align: left; }
+
+  .writing-task-container {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.4cm;
+    margin-top: 0.4cm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .writing-prompt-section { margin-bottom: 0.3cm; }
+  .writing-prompt-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 11.5pt;
+    margin-bottom: 0.12cm;
+  }
+  .checklist-section { margin-top: 0.3cm; }
+  .checklist-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 10.5pt;
+    margin-bottom: 0.12cm;
+  }
+  .single-column-list { list-style: none; }
+  .list-item { margin-bottom: 0.12cm; font-size: 10.5pt; }
+
+  /* ---- teacher files ------------------------------------------------------ */
+  .teacher-header {
+    border: 2px solid #9b2c2c;
+    background: #fff5f5;
+    border-radius: 6px;
+    padding: 0.3cm;
+    margin-bottom: 0.5cm;
+    text-align: center;
+  }
+  .teacher-header-title { font-size: 14pt; font-weight: bold; color: #9b2c2c; }
+  .do-not-distribute {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #9b2c2c;
+    letter-spacing: 0.05em;
+  }
+  .teacher-section {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.35cm;
+    margin-bottom: 0.4cm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .teacher-section-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 11.5pt;
+    margin-bottom: 0.15cm;
+  }
+  .teacher-note { font-size: 10.5pt; margin-bottom: 0.15cm; }
+  .answer-key {
+    background: var(--accent-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.35cm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .answer-key-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 11.5pt;
+    margin-bottom: 0.15cm;
+  }
+  .scenario-anchor {
+    background: #faf5ff;
+    border: 1px solid #d6bcfa;
+    border-radius: 6px;
+    padding: 0.35cm;
+    margin-bottom: 0.4cm;
+  }
+  .scenario-field { margin-bottom: 0.1cm; font-size: 10.5pt; }
+  .scenario-label { font-weight: bold; color: #553c9a; }
+
+  /* ---- template-only chrome (delete when copying) ------------------------- */
+  .template-only-note {
+    background: #fefcbf;
+    border: 2px dashed #b7791f;
+    border-radius: 6px;
+    padding: 0.3cm;
+    margin: 0.5cm 0;
+    font-size: 10pt;
+  }
+  .template-part {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #9b2c2c;
+    border-top: 2px solid #9b2c2c;
+    padding-top: 0.25cm;
+    margin: 0.8cm 0 0.35cm 0;
+  }
+
+  /* ---- print -------------------------------------------------------------- */
+  @media print {
+    body { padding: 0; orphans: 3; widows: 3; }
+    .step-container,
+    .tf-table,
+    .match-set,
+    .word-bank,
+    .freq-table,
+    .sort-col-box,
+    .odd-group,
+    .ranking-table,
+    .resource-panel,
+    .writing-task-container,
+    .register-shift-table,
+    .teacher-section,
+    .answer-key { break-inside: avoid; page-break-inside: avoid; }
+    .template-only-note, .template-part { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="template-only-note">
+  <strong>Template file — not an artifact.</strong> Copy the <code>&lt;style&gt;</code>
+  block and the blocks this session needs. Delete every
+  <code>.template-only-note</code> and <code>.template-part</code> element.
+  Substitute every bracketed marker with session content.
+</div>
+
+
+<!-- ========================================================================
+     PART 1 — STUDENT SHEET SKELETON
+     Used by: pretask_student.html, student.html, student_a/b.html, posttask.html
+     ======================================================================== -->
+<div class="template-part">PART 1 — Student sheet skeleton</div>
+
+<!-- The subtitle carries the COURSE LABEL ONLY. No session_id, no session_date,
+     no internal identifier (pretask spec 05.6 / F6 pretask_student rule). -->
+<div class="activity-header">
+  <div class="activity-title"><em lang="es">[topic]</em> — Vocabulary Practice</div>
+  <div class="activity-subtitle">9th Grade Spanish</div>
+</div>
+
+<div class="student-info">
+  <div class="info-field"><span class="info-label">Name / <em lang="es">Nombre</em>:</span></div>
+  <div class="info-field"><span class="info-label">Date / <em lang="es">Fecha</em>:</span></div>
+  <div class="info-field"><span class="info-label">Class / <em lang="es">Clase</em>:</span></div>
+</div>
+
+
+<!-- ========================================================================
+     PART 2 — EXERCISE BLOCK LIBRARY (the 10 canonical F4 exercise types)
+     Used by: pretask_student.html
+     Each block is one .step-container. Order them controlled -> freer.
+     Include only the blocks whose codes appear in the manifest exercise_types.
+     ======================================================================== -->
+<div class="template-part">PART 2 — Exercise block library</div>
+
+
+<!-- ---------- ASSOC — Schema Activation / Brainstorm ----------------------
+     When included, ASSOC is ALWAYS Exercise 1 (F4). It runs BEFORE any
+     vocabulary is introduced, so it carries no target items. -->
+<div class="step-container">
+  <div class="step-header">Exercise 1 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Write five words you associate with <em lang="es">[topic]</em>.
+    Do not use a dictionary.
+  </div>
+  <div class="bubble-grid">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+</div>
+
+
+<!-- ---------- TF — True/False Logical Statements --------------------------
+     Statements are judged on semantic reasoning, not collocational frequency. -->
+<div class="step-container">
+  <div class="step-header">Exercise 2 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Decide whether each statement is logically true or false.
+  </div>
+  <table class="tf-table">
+    <thead>
+      <tr>
+        <th style="width:1.2cm">#</th>
+        <th>Statement</th>
+        <th style="width:2cm"><em lang="es">Cierto</em></th>
+        <th style="width:2cm"><em lang="es">Falso</em></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td class="label-cell"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td></tr>
+      <tr><td>2</td><td class="label-cell"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td></tr>
+      <tr><td>3</td><td class="label-cell"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ---------- SORT — Logical / Illogical Two-Column Sort -------------------
+     Items are illogical for principled, articulable reasons (F4). -->
+<div class="step-container">
+  <div class="step-header">Exercise 3 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Write each phrase in the correct column. Be ready to say why.
+  </div>
+  <div class="sort-bank">
+    <em lang="es">[PVS phrase]</em> &nbsp;•&nbsp;
+    <em lang="es">[PVS phrase]</em> &nbsp;•&nbsp;
+    <em lang="es">[PVS phrase]</em> &nbsp;•&nbsp;
+    <em lang="es">[PVS phrase]</em>
+  </div>
+  <div class="two-col">
+    <div class="sort-col-box">
+      <div class="col-header"><em lang="es">Lógico</em></div>
+    </div>
+    <div class="sort-col-box">
+      <div class="col-header"><em lang="es">Ilógico</em></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ---------- MATCH — Word / Description Matching -------------------------
+     Include one or two distractors on the description side so the last pair
+     cannot be found by elimination (F4). Below: 3 words, 5 descriptions. -->
+<div class="step-container">
+  <div class="step-header">Exercise 4 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Write the letter of the description next to the word it matches.
+    Two descriptions will not be used.
+  </div>
+  <div class="match-set">
+    <div class="match-col">
+      <div class="match-col-label">Word</div>
+      <div class="match-item"><span class="match-blank"></span><em lang="es">[PVS item]</em></div>
+      <div class="match-item"><span class="match-blank"></span><em lang="es">[PVS item]</em></div>
+      <div class="match-item"><span class="match-blank"></span><em lang="es">[PVS item]</em></div>
+    </div>
+    <div class="match-col">
+      <div class="match-col-label">Description</div>
+      <div class="match-item"><span class="letter">a.</span>[description]</div>
+      <div class="match-item"><span class="letter">b.</span>[description]</div>
+      <div class="match-item"><span class="letter">c.</span>[description]</div>
+      <div class="match-item"><span class="letter">d.</span>[distractor description]</div>
+      <div class="match-item"><span class="letter">e.</span>[distractor description]</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ---------- MC — Multiple-Choice Cloze Paragraph -------------------------
+     One coherent paragraph; options are near-synonyms or collocates (F4). -->
+<div class="step-container">
+  <div class="step-header">Exercise 5 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Choose the correct word for each blank.
+  </div>
+  <p class="cloze-para">
+    <em lang="es">[PVS sentence] <span class="blank"></span> [PVS sentence]
+    <span class="blank"></span> [PVS sentence] <span class="blank"></span>.</em>
+  </p>
+  <div class="mc-options">
+    1. <em lang="es">([PVS item] / [PVS item])</em> &nbsp;&nbsp;
+    2. <em lang="es">([PVS item] / [PVS item])</em> &nbsp;&nbsp;
+    3. <em lang="es">([PVS item] / [PVS item])</em>
+  </div>
+</div>
+
+
+<!-- ---------- WB — Gap-Fill with Word Bank --------------------------------
+     All word-bank items come from the PVS. Distractors are optional. -->
+<div class="step-container">
+  <div class="step-header">Exercise 6 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Complete each sentence with a word from the bank. One word will not be used.
+  </div>
+  <div class="word-bank">
+    <strong>Word bank:</strong>
+    <em lang="es">[PVS item] &nbsp;•&nbsp; [PVS item] &nbsp;•&nbsp; [PVS item] &nbsp;•&nbsp; [PVS item] &nbsp;•&nbsp; [PVS item]</em>
+  </div>
+  <div class="wb-sentence">
+    1. <em lang="es">[PVS sentence] <span class="wb-blank"></span> [PVS phrase].</em>
+  </div>
+  <div class="wb-sentence">
+    2. <em lang="es">[PVS sentence] <span class="wb-blank"></span> [PVS phrase].</em>
+  </div>
+  <div class="wb-sentence">
+    3. <em lang="es"><span class="wb-blank"></span> [PVS phrase].</em>
+  </div>
+</div>
+
+
+<!-- ---------- ODD — Odd-One-Out -------------------------------------------
+     Max four items per group. The odd item's INDEX MUST VARY across groups —
+     never fixed at the same position (F4 ODD rule). The comments below record
+     the intended odd index per group; vary them when substituting. -->
+<div class="step-container">
+  <div class="step-header">Exercise 7 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Circle the word that does not belong, then write why.
+  </div>
+
+  <div class="odd-group">
+    <div class="odd-group-label">1.</div>
+    <!-- odd item at index 3 -->
+    <div class="odd-items">
+      <em lang="es">[PVS item] &nbsp;—&nbsp; [PVS item] &nbsp;—&nbsp; [PVS item — ODD] &nbsp;—&nbsp; [PVS item]</em>
+    </div>
+    <span class="odd-answer-label">Why:</span> <span class="odd-answer"></span>
+  </div>
+
+  <div class="odd-group">
+    <div class="odd-group-label">2.</div>
+    <!-- odd item at index 1 -->
+    <div class="odd-items">
+      <em lang="es">[PVS item — ODD] &nbsp;—&nbsp; [PVS item] &nbsp;—&nbsp; [PVS item] &nbsp;—&nbsp; [PVS item]</em>
+    </div>
+    <span class="odd-answer-label">Why:</span> <span class="odd-answer"></span>
+  </div>
+
+  <div class="odd-group">
+    <div class="odd-group-label">3.</div>
+    <!-- odd item at index 4 -->
+    <div class="odd-items">
+      <em lang="es">[PVS item] &nbsp;—&nbsp; [PVS item] &nbsp;—&nbsp; [PVS item] &nbsp;—&nbsp; [PVS item — ODD]</em>
+    </div>
+    <span class="odd-answer-label">Why:</span> <span class="odd-answer"></span>
+  </div>
+</div>
+
+
+<!-- ---------- FREQ — Frequency Survey Grid --------------------------------
+     Frequency expressions come from the PVS and label the columns. The grid
+     feeds a reporting sentence frame (F4). -->
+<div class="step-container">
+  <div class="step-header">Exercise 8 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Interview a classmate. Mark how often they do each thing.
+  </div>
+  <table class="freq-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th><em lang="es">[frequency label]</em></th>
+        <th><em lang="es">[frequency label]</em></th>
+        <th><em lang="es">[frequency label]</em></th>
+        <th><em lang="es">[frequency label]</em></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="subject-col"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td></tr>
+      <tr><td class="subject-col"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td></tr>
+      <tr><td class="subject-col"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td></tr>
+      <tr><td class="subject-col"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td></tr>
+      <tr><td class="subject-col"><em lang="es">[PVS sentence]</em></td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td><td>&#9744;</td></tr>
+    </tbody>
+  </table>
+  <div class="partner-record">
+    <div class="partner-record-title">Report your findings</div>
+    <div class="sentence-frame">
+      <em lang="es">[PVS phrase] <span class="blank"></span> [PVS phrase] <span class="blank"></span>.</em>
+    </div>
+  </div>
+</div>
+
+
+<!-- ---------- RANK — Semantic Ranking ------------------------------------
+     Maximum eight items (F4 working-memory cap). Scale labels in Spanish. -->
+<div class="step-container">
+  <div class="step-header">Exercise 9 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Rank these items from <em lang="es">[scale low]</em> (1) to
+    <em lang="es">[scale high]</em> (5).
+  </div>
+  <table class="ranking-table">
+    <thead>
+      <tr><th class="rank-num">#</th><th>Item</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="rank-num">1</td><td class="label-cell"><em lang="es">[PVS item]</em></td></tr>
+      <tr><td class="rank-num">2</td><td class="label-cell"><em lang="es">[PVS item]</em></td></tr>
+      <tr><td class="rank-num">3</td><td class="label-cell"><em lang="es">[PVS item]</em></td></tr>
+      <tr><td class="rank-num">4</td><td class="label-cell"><em lang="es">[PVS item]</em></td></tr>
+      <tr><td class="rank-num">5</td><td class="label-cell"><em lang="es">[PVS item]</em></td></tr>
+    </tbody>
+  </table>
+  <div class="sentence-frame">
+    <em lang="es">[PVS phrase] <span class="blank"></span> [PVS phrase] <span class="blank"></span>.</em>
+  </div>
+</div>
+
+
+<!-- ---------- FRAME — Sentence Frame Completion ---------------------------
+     Students produce a personally meaningful statement without teacher support. -->
+<div class="step-container">
+  <div class="step-header">Exercise 10 — <em lang="es">[PVS phrase]</em></div>
+  <div class="step-instruction">
+    Complete each sentence so that it is true for you.
+  </div>
+  <div class="write-lines-block">
+    <div class="sentence-frame">
+      1. <em lang="es">[PVS phrase] <span class="blank"></span>.</em>
+    </div>
+    <div class="sentence-frame">
+      2. <em lang="es">[PVS phrase] <span class="blank"></span>.</em>
+    </div>
+    <div class="sentence-frame">
+      3. <em lang="es">[PVS phrase] <span class="blank"></span>.</em>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================================================
+     PART 3 — ROUND 1 MAIN TASK BLOCKS
+     Used by: student.html (oral gap) / student_a.html + student_b.html (resource gap)
+
+     The step wrapper is .step-container / .step-header — NOT .paso-container.
+     F6 counts .step-container elements against pasos[] length in Check B.
+     ======================================================================== -->
+<div class="template-part">PART 3 — Round 1 main task blocks</div>
+
+<div class="step-container">
+  <div class="step-header"><em lang="es">Paso 1</em> — [step goal]</div>
+  <div class="step-instruction">
+    Read your card. Do not show it to your partner.
+  </div>
+
+  <!-- Vocabulary strip: optional support, PVS items only. -->
+  <div class="vocab-strip">
+    <span class="vocab-chip"><em lang="es">[PVS item]</em></span>
+    <span class="vocab-chip"><em lang="es">[PVS item]</em></span>
+    <span class="vocab-chip"><em lang="es">[PVS item]</em></span>
+    <span class="vocab-chip"><em lang="es">[PVS item]</em></span>
+  </div>
+
+  <!-- Resource panel: student_a.html and student_b.html ONLY. The two files
+       must carry DIFFERENT text inside .resource-panel (F6 Check B). -->
+  <div class="resource-panel">
+    <div class="resource-panel-title">Your card — <em lang="es">Estudiante A</em></div>
+    <table>
+      <thead>
+        <tr><th>[column]</th><th>[column]</th><th>[column]</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><em lang="es">[PVS item]</em></td><td><em lang="es">[PVS item]</em></td><td>?</td></tr>
+        <tr><td><em lang="es">[PVS item]</em></td><td>?</td><td><em lang="es">[PVS item]</em></td></tr>
+        <tr><td><em lang="es">[PVS item]</em></td><td><em lang="es">[PVS item]</em></td><td>?</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="dialogue-model">
+    <div><span class="dialogue-speaker"><em lang="es">Estudiante A:</em></span> <em lang="es">[PVS sentence]</em></div>
+    <div><span class="dialogue-speaker"><em lang="es">Estudiante B:</em></span> <em lang="es">[PVS sentence]</em></div>
+  </div>
+</div>
+
+<div class="step-container">
+  <div class="step-header"><em lang="es">Paso 2</em> — [step goal]</div>
+  <div class="complication-box">
+    <div class="complication-label">Complication</div>
+    <div><em lang="es">[complication statement]</em></div>
+  </div>
+  <span class="write-line"></span>
+  <span class="write-line"></span>
+</div>
+
+
+<!-- ========================================================================
+     PART 4 — ROUND 3 POST-TASK BLOCKS
+     Used by: posttask.html
+
+     .writing-task-container MUST contain .writing-prompt-section and
+     .checklist-section as DIRECT children, and .checklist-section MUST contain
+     .single-column-list with at least three .list-item elements (F6).
+     .register-shift-table row count must equal register_shift_pair_count.
+     ======================================================================== -->
+<div class="template-part">PART 4 — Round 3 post-task blocks</div>
+
+<div class="step-container">
+  <div class="step-header">Register Shift</div>
+  <div class="step-instruction">
+    Rewrite each spoken phrase in formal written Spanish.
+  </div>
+  <table class="register-shift-table">
+    <thead>
+      <tr><th>Spoken (informal)</th><th>Written (formal)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="informal-col"><em lang="es">[informal phrase]</em></td><td class="formal-col"></td></tr>
+      <tr><td class="informal-col"><em lang="es">[informal phrase]</em></td><td class="formal-col"></td></tr>
+      <tr><td class="informal-col"><em lang="es">[informal phrase]</em></td><td class="formal-col"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="writing-task-container">
+  <div class="writing-prompt-section">
+    <div class="writing-prompt-title">Your writing task</div>
+    <div>[writing prompt — states genre, audience, and what the student must produce]</div>
+    <div class="write-lines-block">
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+    </div>
+  </div>
+
+  <div class="checklist-section">
+    <div class="checklist-title">Before you submit</div>
+    <ul class="single-column-list">
+      <li class="list-item">&#9744; [checklist item]</li>
+      <li class="list-item">&#9744; [checklist item]</li>
+      <li class="list-item">&#9744; [checklist item]</li>
+      <li class="list-item">&#9744; [checklist item]</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ========================================================================
+     PART 5 — TEACHER FILE SKELETON
+     Used by: teacher_key.html, pretask_teacher.html, posttask_teacher.html
+
+     Teacher content is ALWAYS a separate file. Teacher files open with
+     .teacher-header. F6 forbids the single-file pattern that folds teacher
+     content into a student artifact — on every artifact, including this one.
+     ======================================================================== -->
+<div class="template-part">PART 5 — Teacher file skeleton</div>
+
+<div class="teacher-header">
+  <div class="teacher-header-title"><em lang="es">[topic]</em> — Teacher Copy</div>
+  <div class="do-not-distribute">DO NOT DISTRIBUTE</div>
+</div>
+
+<!-- .scenario-anchor is required on posttask_teacher.html only. It carries
+     genre, audience, complication, outcome, and the stakes line. -->
+<div class="scenario-anchor">
+  <div class="scenario-field"><span class="scenario-label">Genre:</span> [writing_genre label]</div>
+  <div class="scenario-field"><span class="scenario-label">Audience:</span> [audience]</div>
+  <div class="scenario-field"><span class="scenario-label">Complication:</span> [complication]</div>
+  <div class="scenario-field"><span class="scenario-label">Outcome:</span> [outcome]</div>
+  <div class="scenario-field"><span class="scenario-label">Stakes:</span> [stakes line]</div>
+</div>
+
+<div class="teacher-section">
+  <div class="teacher-section-title">Facilitation notes</div>
+  <div class="teacher-note">[facilitation note]</div>
+  <div class="teacher-note">[differentiation note from the class profile]</div>
+</div>
+
+<div class="answer-key">
+  <div class="answer-key-title">Answer key</div>
+  <div><strong>Exercise 2 (TF):</strong> 1. [answer] &nbsp; 2. [answer] &nbsp; 3. [answer]</div>
+  <div><strong>Exercise 7 (ODD):</strong> 1. [answer] &nbsp; 2. [answer] &nbsp; 3. [answer]</div>
+</div>
+
+</body>
+</html>

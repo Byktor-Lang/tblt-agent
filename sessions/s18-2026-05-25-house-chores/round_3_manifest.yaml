@@ -1,0 +1,74 @@
+session_id: s18-2026-05-25-house-chores
+course_id: spanish_general
+round: 3
+date: "2026-05-25"
+topic: "House chores and household responsibilities"
+
+writing_genre: formal_recommendation
+register_shift_pattern: frequency_to_formal_adverb
+transfer_goal_echoed: true
+
+register_shift_pairs:
+  - informal: "a veces"
+    formal: "en ocasiones"
+  - informal: "siempre"
+    formal: "de manera constante"
+  - informal: "nunca"
+    formal: "en ningún caso"
+  - informal: "todos los días"
+    formal: "diariamente"
+
+register_shift_pair_count: 4
+
+checklist_items:
+  - "Use at least three reflexive verbs in present tense correctly"
+  - "Use gustar + infinitive to express at least two preferences or complaints"
+  - "Reference the specific chore assignments negotiated in Paso 3"
+  - "Include the Paso 5 synthesis sentence: En nuestra casa ideal..."
+  - "Use at least two formal adverb replacements from the Register-Shift Table"
+
+checklist_item_count: 5
+
+adb_consumed:
+  activity_pvs_items_used: 12
+  confirmed_complication: "role_asymmetry"
+  confirmed_outcome: "Negotiated chore distribution, fairness rating, Paso 5 synthesis"
+  gap_summary: "A holds full chore schedule; B holds cooking preference and sports constraints"
+
+coherence_audit:
+  coverage:
+    - key: activity_pvs_items_used
+      covered: true
+      rationale: "Register-shift table examples embed barrer el piso, sacar la basura, limpiar el baño, and tareas domésticas. Writing prompt requires naming chores from Paso 3 — all 12 PVS items available. Checklist item 3 explicitly requires Paso 3 chore names."
+    - key: confirmed_complication
+      covered: true
+      rationale: "Writing prompt requires three reasons drawn from negotiation — must reference both parties' constraints. Model opening embeds the family context. Scenario anchor in teacher copy frames the role-asymmetry stakes explicitly."
+    - key: confirmed_outcome
+      covered: true
+      rationale: "Checklist item 3 requires Paso 3 table references; checklist item 4 requires the Paso 5 synthesis sentence verbatim or closely adapted. These two checklist items directly link main task output to post-task writing."
+    - key: gap_summary
+      covered: true
+      rationale: "Formal recommendation's persuasive structure requires demonstrating understanding of both sides of the information gap: naming what A currently does (full schedule) and what B offered or agreed to (preferences + constraints). Students writing from only one perspective fail checklist item 3."
+  all_pass: true
+
+artifacts:
+  - posttask.html
+  - posttask_teacher.html
+
+scb_fields_read:
+  writing_genre: "formal_recommendation (from frozen SCB, Q12 read discipline — not re-elicited)"
+  register_shift_pattern: "frequency_to_formal_adverb (from frozen SCB, Q12 read discipline — not re-elicited)"
+
+structural_validation_passed: true
+adr_0019_pair: true
+f7_passed: true
+f6_passed: true
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false

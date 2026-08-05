@@ -1,0 +1,97 @@
+---
+session_id: s16-2026-05-23-family
+round: 1
+gap_type: resource
+a_alone_sufficient: false
+b_alone_sufficient: false
+
+student_a:
+  cannot_obtain_alone: true
+  holds:
+    - "El abuelo (Abuelo Carlos) es alto y serio."
+    - "La madre (Mamá Elena) es simpática y trabajadora."
+    - "El hijo (el hijo mayor, Diego) es inteligente y creativo."
+    - "La hermana (Sofía) es extrovertida y generosa."
+    - "El suegro (Papá Roberto) es estricto pero justo."
+  needs:
+    - "Description of el esposo (esposo de Elena)"
+    - "Description of la tía (Tía Carmen)"
+    - "Description of el primo (Primo Andrés)"
+    - "Description of el sobrino (sobrino de Elena)"
+    - "Description of la familia overall style"
+
+student_b:
+  cannot_obtain_alone: true
+  holds:
+    - "El esposo (Papá Jorge) es simpático y tranquilo."
+    - "La tía (Tía Carmen) es divertida y artística."
+    - "El primo (Andrés) es tímido pero inteligente."
+    - "El sobrino (Luisito) es pequeño y curioso."
+    - "La familia es grande y unida."
+  needs:
+    - "Description of el abuelo (Abuelo Carlos)"
+    - "Description of la madre (Mamá Elena)"
+    - "Description of el hijo (Diego)"
+    - "Description of la hermana (Sofía)"
+    - "Description of el suegro (Papá Roberto)"
+
+complication:
+  pattern: values_conflict
+  description: >
+    Student A describes el suegro (Papá Roberto) as 'estricto pero justo' (strict but fair),
+    while Student B knows Papá Roberto only as 'el padre de Jorge' and has no physical description.
+    When they reconcile, they must negotiate which adjectives best capture someone both strict
+    AND respected — producing a consensus description they both find accurate and complete.
+
+pasos:
+  - id: 1
+    label: "Paso 1 — Categorize the family members"
+    type: SORT
+    description: >
+      Each student reviews their own family-member cards and sorts them by relationship
+      category (immediate family vs. extended family) using a two-column table provided on their card.
+    pvs_items: ["el abuelo", "la madre", "el padre", "el hijo", "la hermana", "el esposo", "la tía", "el primo", "el sobrino", "el suegro", "la familia"]
+
+  - id: 2
+    label: "Paso 2 — Share one description per member"
+    type: MATCH
+    description: >
+      Using sentence frame 'Mi [familiar] es [adjective].' and 'Mi [familiar] es [adjective] y [adjective].',
+      each student describes the family members they hold to their partner.
+      Partner records the descriptions on a matching grid on their own card.
+    pvs_items: ["el abuelo", "la madre", "el hijo", "la hermana", "el suegro", "el esposo", "la tía", "el primo", "el sobrino"]
+
+  - id: 3
+    label: "Paso 3 — Live interview: discover and record"
+    type: FREQ
+    description: >
+      Partner A asks about each person on their needs list; Partner B answers.
+      Students use 'Su [familiar] es ___.' to record what they learned.
+      This is the central information-gap exchange paso.
+    pvs_items: ["el abuelo", "la madre", "el hijo", "la hermana", "el suegro", "el esposo", "la tía", "el primo", "el sobrino", "la familia"]
+
+  - id: 4
+    label: "Paso 4 — Negotiate the complication"
+    type: SORT
+    description: >
+      Both students compare their descriptions of el suegro / Papá Roberto.
+      Student A says he is 'estricto pero justo'; Student B has no physical description.
+      Together they must choose two adjectives that both agree capture Papá Roberto accurately.
+      They write: 'El suegro de Jorge es ___ y ___.' on both cards.
+    pvs_items: ["el suegro"]
+
+  - id: 5
+    label: "Paso 5 — Class synthesis: family portrait"
+    type: SORT
+    description: >
+      Each pair presents their agreed-upon full family profile to the class using the sentence frame
+      'La familia [name] es ___ porque ___.' They reference their Paso 3 notes AND the Paso 4
+      consensus description. The class votes on the most interesting family characteristic.
+    pvs_items: ["la familia", "el abuelo", "el esposo", "la madre", "el hijo", "la hermana", "el suegro", "la tía", "el primo", "el sobrino"]
+
+pvs_count: 11
+register_shift_pair_count: 4
+checklist_item_count: 5
+
+student_a_resources: "Cards for: el abuelo (Abuelo Carlos), la madre (Mamá Elena), el hijo (Diego), la hermana (Sofía), el suegro (Papá Roberto)"
+student_b_resources: "Cards for: el esposo (Papá Jorge), la tía (Tía Carmen), el primo (Andrés), el sobrino (Luisito), la familia (overall profile)"

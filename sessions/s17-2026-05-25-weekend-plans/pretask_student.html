@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekend Plans — Pre-Task</title>
+  <style>
+    :root {
+      --font-family: 'Georgia', serif;
+      --page-width: 21cm;
+      --primary-color: #2c5f8a;
+      --border-color: #b0c4de;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    @media print {
+      .step-container { break-inside: avoid; }
+    }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      color: #222;
+    }
+    .activity-header {
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5em;
+      margin-bottom: 1.2em;
+    }
+    .activity-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0;
+    }
+    .student-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5em;
+      margin-bottom: 1.2em;
+      font-size: 0.9em;
+    }
+    .info-field {
+      border-bottom: 1px solid #999;
+      padding: 2px 4px;
+    }
+    .info-label {
+      font-size: 0.78em;
+      color: #555;
+      display: block;
+    }
+    .step-container {
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      padding: 0.8em 1em;
+      margin-bottom: 1em;
+    }
+    .step-header {
+      font-size: 1em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.5em 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.3em;
+    }
+    .instructions { font-size: 0.92em; margin-bottom: 0.6em; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5em;
+      margin: 0.5em 0;
+    }
+    .col-header {
+      font-weight: bold;
+      font-size: 0.88em;
+      color: #2c5f8a;
+      border-bottom: 2px solid #2c5f8a;
+      padding-bottom: 2px;
+      margin-bottom: 0.3em;
+    }
+    .sort-item {
+      background: #eef4fb;
+      border: 1px solid var(--border-color);
+      border-radius: 3px;
+      padding: 3px 7px;
+      font-size: 0.87em;
+      margin: 2px 0;
+    }
+    .sort-bank {
+      background: #fffbe6;
+      border: 1px solid #e0c040;
+      border-radius: 4px;
+      padding: 0.5em 0.8em;
+      margin-bottom: 0.6em;
+      font-size: 0.88em;
+    }
+    .sort-col-box {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 0.4em;
+      min-height: 5em;
+    }
+    .write-line {
+      border-bottom: 1px solid #aaa;
+      min-height: 1.4em;
+      display: block;
+      margin: 0.4em 0;
+    }
+    .write-line-label { font-size: 0.85em; color: #555; }
+    .odd-set {
+      display: flex;
+      gap: 0.5em;
+      flex-wrap: wrap;
+      margin: 0.4em 0;
+    }
+    .odd-item {
+      background: #eef4fb;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 0.88em;
+    }
+    .odd-row {
+      margin-bottom: 0.7em;
+    }
+    .sentence-frame {
+      background: #eef4fb;
+      border-left: 3px solid var(--primary-color);
+      padding: 0.4em 0.8em;
+      margin: 0.4em 0;
+      font-size: 0.92em;
+    }
+    em { font-style: normal; font-weight: bold; color: #1a4a7a; }
+    span[lang="es"] { color: #1a4a7a; }
+  </style>
+</head>
+<body>
+
+  <div class="activity-header">
+    <p class="activity-title">Planes para el fin de semana — Pre-Task</p>
+  </div>
+
+  <div class="student-info">
+    <div class="info-field"><span class="info-label">Name / Nombre</span>&nbsp;</div>
+    <div class="info-field"><span class="info-label">Date / Fecha</span>&nbsp;</div>
+    <div class="info-field"><span class="info-label">Class / Clase</span>&nbsp;</div>
+  </div>
+
+  <!-- EXERCISE 1: SORT -->
+  <div class="step-container" id="ejercicio-1">
+    <p class="step-header">Ejercicio 1 — <span lang="es">¿Lógico o ilógico? (Ordena)</span></p>
+    <p class="instructions">Read each statement. Decide: <strong>Logical</strong> (it makes sense in context) or <strong>Illogical</strong> (there is a clear semantic reason it does not work). Write each statement number in the correct column. Then write the reason for each illogical statement.</p>
+    <div class="sort-bank">
+      <strong>Statements:</strong><br>
+      <span lang="es">1. El sábado por la mañana estoy ocupado porque tengo que estudiar para el examen.</span><br>
+      <span lang="es">2. El parque está libre los domingos por la tarde, así que voy allí.</span><br>
+      <span lang="es">3. Estoy libre este fin de semana porque tengo que ir al partido de fútbol.</span><br>
+      <span lang="es">4. Puedo ir al cine el domingo porque no tengo que hacer nada.</span><br>
+      <span lang="es">5. El lunes por la tarde estoy ocupado/a, así que puedo salir el sábado.</span><br>
+      <span lang="es">6. Tengo que estudiar el domingo por la mañana, entonces no puedo ir al parque.</span>
+    </div>
+    <div class="two-col">
+      <div>
+        <p class="col-header">Logical</p>
+        <div class="sort-col-box"></div>
+      </div>
+      <div>
+        <p class="col-header">Illogical — Reason</p>
+        <div class="sort-col-box"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCISE 2: ODD -->
+  <div class="step-container" id="ejercicio-2">
+    <p class="step-header">Ejercicio 2 — <span lang="es">¿Cuál no corresponde?</span> (Odd One Out)</p>
+    <p class="instructions">In each group, circle the word that does NOT belong. Write a sentence in Spanish explaining why it is different.</p>
+
+    <div class="odd-row">
+      <p class="write-line-label">Set A:</p>
+      <div class="odd-set">
+        <span class="odd-item" lang="es">el cine</span>
+        <span class="odd-item" lang="es">el parque</span>
+        <span class="odd-item" lang="es">el partido de fútbol</span>
+        <span class="odd-item" lang="es">el domingo</span>
+      </div>
+      <div class="sentence-frame"><span lang="es">"________ no corresponde porque ________________________."</span></div>
+      <span class="write-line"></span>
+    </div>
+
+    <div class="odd-row">
+      <p class="write-line-label">Set B:</p>
+      <div class="odd-set">
+        <span class="odd-item" lang="es">el sábado</span>
+        <span class="odd-item" lang="es">el domingo</span>
+        <span class="odd-item" lang="es">el fin de semana</span>
+        <span class="odd-item" lang="es">libre</span>
+      </div>
+      <div class="sentence-frame"><span lang="es">"________ no corresponde porque ________________________."</span></div>
+      <span class="write-line"></span>
+    </div>
+
+    <div class="odd-row">
+      <p class="write-line-label">Set C:</p>
+      <div class="odd-set">
+        <span class="odd-item" lang="es">por la mañana</span>
+        <span class="odd-item" lang="es">por la tarde</span>
+        <span class="odd-item" lang="es">ocupado/a</span>
+        <span class="odd-item" lang="es">el sábado</span>
+      </div>
+      <div class="sentence-frame"><span lang="es">"________ no corresponde porque ________________________."</span></div>
+      <span class="write-line"></span>
+    </div>
+  </div>
+
+  <!-- EXERCISE 3: FRAME -->
+  <div class="step-container" id="ejercicio-3">
+    <p class="step-header">Ejercicio 3 — <span lang="es">Completa las frases</span> (Sentence Frames)</p>
+    <p class="instructions">Complete each sentence frame using words from the box and your own ideas. Each sentence must make personal sense for you.</p>
+    <div class="sort-bank">
+      <strong>Word bank:</strong> <span lang="es">el sábado · el domingo · por la mañana · por la tarde · el cine · el parque · el partido de fútbol · libre · ocupado/a · el fin de semana</span>
+    </div>
+
+    <p class="write-line-label">1. Using <em>tener que + infinitivo</em> — explain a constraint:</p>
+    <div class="sentence-frame"><span lang="es">Este ________ por la ________ estoy ocupado/a porque tengo que ________________________.</span></div>
+    <span class="write-line"></span>
+
+    <p class="write-line-label">2. Using <em>poder + infinitivo</em> — express availability:</p>
+    <div class="sentence-frame"><span lang="es">El ________ por la ________ puedo ir a ________ porque estoy libre.</span></div>
+    <span class="write-line"></span>
+
+    <p class="write-line-label">3. Combining both structures — express a compromise:</p>
+    <div class="sentence-frame"><span lang="es">No puedo ir el ________ porque tengo que ________________, pero puedo ir el ________ por la ________.</span></div>
+    <span class="write-line"></span>
+
+    <p class="write-line-label">4. Plan sentence — write your weekend plan:</p>
+    <div class="sentence-frame"><span lang="es">El ________ [sábado/domingo] por la ________ [mañana/tarde] vamos a ________ porque ________________________.</span></div>
+    <span class="write-line"></span>
+  </div>
+
+</body>
+</html>

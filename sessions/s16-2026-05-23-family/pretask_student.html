@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pre-Task — Describe Members of the Family (s16)</title>
+  <style>
+    :root {
+      --font-family: 'Segoe UI', Arial, sans-serif;
+      --page-width: 21cm;
+      --primary-color: #1A6B3A;
+      --border-color: #A8D5B5;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    @media print {
+      body { font-size: 11pt; }
+    }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      color: #1a1a1a;
+    }
+    .activity-header {
+      border-bottom: 3px solid var(--primary-color);
+      margin-bottom: 0.8cm;
+      padding-bottom: 0.4cm;
+    }
+    .activity-title {
+      font-size: 1.25em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.2em 0;
+    }
+    .student-info {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 0.4cm;
+      margin-bottom: 0.7cm;
+    }
+    .info-field {
+      border-bottom: 1.5px solid #666;
+      padding-bottom: 0.15em;
+      font-size: 0.9em;
+    }
+    .info-label {
+      font-size: 0.78em;
+      color: #666;
+    }
+    .step-container {
+      border: 1.5px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 0.7cm;
+      padding: 0.5cm;
+    }
+    .step-header {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 1.05em;
+      margin-bottom: 0.3em;
+    }
+    .exercise-instruction {
+      font-size: 0.93em;
+      margin-bottom: 0.4em;
+    }
+    .sentence-frame {
+      background: #F0FFF6;
+      border-left: 4px solid var(--primary-color);
+      padding: 0.3em 0.6em;
+      margin: 0.3em 0;
+      font-style: italic;
+      font-size: 0.95em;
+    }
+    .gap-bridge-note {
+      background: #E8F5FF;
+      border: 1.5px solid #7BB8D8;
+      border-radius: 6px;
+      padding: 0.4em 0.6em;
+      margin-bottom: 0.5em;
+      font-size: 0.9em;
+    }
+    /* Exercise 1 — TF */
+    .tf-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      margin-top: 0.3em;
+    }
+    .tf-table th {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.25em 0.5em;
+      text-align: center;
+    }
+    .tf-table td {
+      border: 1px solid var(--border-color);
+      padding: 0.3em 0.5em;
+    }
+    .tf-table td:nth-child(2),
+    .tf-table td:nth-child(3) {
+      text-align: center;
+      width: 3.5cm;
+    }
+    /* Exercise 2 — MATCH */
+    .match-set {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3cm;
+      margin-top: 0.3em;
+    }
+    .match-col-label {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 0.88em;
+      margin-bottom: 0.2em;
+    }
+    .match-item {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 0.2em 0.5em;
+      margin-bottom: 0.2em;
+      background: white;
+      font-size: 0.9em;
+    }
+    .match-item .letter {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    .match-blank {
+      display: inline-block;
+      border-bottom: 1px solid #555;
+      min-width: 1.5cm;
+    }
+    /* Exercise 3 — WB (Gap-fill, bridge) */
+    .wb-sentence {
+      margin: 0.3em 0;
+      font-size: 0.93em;
+      line-height: 1.6;
+    }
+    .wb-blank {
+      display: inline-block;
+      border-bottom: 1.5px solid #555;
+      min-width: 3cm;
+      vertical-align: bottom;
+    }
+    .word-bank {
+      background: #F5F5F5;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      padding: 0.3em 0.5em;
+      margin: 0.3em 0 0.5em 0;
+      font-size: 0.88em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="activity-header">
+  <p class="activity-title">Pre-Task — Describe Members of the Family</p>
+  <p style="margin:0; font-size:0.9em; color:#444;">9th Grade Spanish · Session s16 · 2026-05-23</p>
+</div>
+
+<div class="student-info">
+  <div>
+    <div class="info-label">Name / <em lang="es">Nombre</em></div>
+    <div class="info-field"></div>
+  </div>
+  <div>
+    <div class="info-label">Date / <em lang="es">Fecha</em></div>
+    <div class="info-field"></div>
+  </div>
+  <div>
+    <div class="info-label">Class / <em lang="es">Clase</em></div>
+    <div class="info-field"></div>
+  </div>
+</div>
+
+<!-- EXERCISE 1 — TF (Logical True/False) -->
+<div class="step-container">
+  <div class="step-header">Exercise 1 — True or False? <em lang="es">(¿Verdadero o Falso?)</em></div>
+  <p class="exercise-instruction">
+    Read each statement about family members. Circle <strong>V</strong> if it is logically true or <strong>F</strong> if it is logically false.
+    Think about the meaning of the words — do not guess from sound alone.
+  </p>
+  <table class="tf-table">
+    <thead>
+      <tr>
+        <th style="text-align:left;">Statement</th>
+        <th>V (True)</th>
+        <th>F (False)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. <em lang="es">El abuelo es el padre de mi madre o de mi padre.</em></td>
+        <td>V</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>2. <em lang="es">El sobrino es el hijo de mi hermana o de mi hermano.</em></td>
+        <td>V</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>3. <em lang="es">El primo es el hijo de mi esposo o de mi esposa.</em></td>
+        <td>V</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>4. <em lang="es">El suegro es el padre de mi esposo o de mi esposa.</em></td>
+        <td>V</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>5. <em lang="es">La tía es la hermana de mi madre o de mi padre.</em></td>
+        <td>V</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>6. <em lang="es">La familia es simpática cuando todos son egoístas.</em></td>
+        <td>V</td>
+        <td>F</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- EXERCISE 2 — MATCH (Word-Description Matching) -->
+<div class="step-container">
+  <div class="step-header">Exercise 2 — Match the Family Member <em lang="es">(Relaciona al familiar)</em></div>
+  <p class="exercise-instruction">
+    Match each family member term (left column) with the description that fits best (right column).
+    Write the letter of the correct description on the blank next to each term.
+    Two descriptions are distractors — they do not match any term.
+  </p>
+  <div class="match-set">
+    <div>
+      <div class="match-col-label">Family Terms <em lang="es">(Familiares)</em></div>
+      <div class="match-item">1. <em lang="es">la hermana</em> <span class="match-blank">____</span></div>
+      <div class="match-item">2. <em lang="es">el hijo</em> <span class="match-blank">____</span></div>
+      <div class="match-item">3. <em lang="es">el esposo</em> <span class="match-blank">____</span></div>
+      <div class="match-item">4. <em lang="es">el primo</em> <span class="match-blank">____</span></div>
+      <div class="match-item">5. <em lang="es">la madre</em> <span class="match-blank">____</span></div>
+    </div>
+    <div>
+      <div class="match-col-label">Descriptions <em lang="es">(Descripciones)</em></div>
+      <div class="match-item"><span class="letter">A.</span> <em lang="es">el niño o joven de mis padres</em></div>
+      <div class="match-item"><span class="letter">B.</span> <em lang="es">la mujer que me dio la vida</em></div>
+      <div class="match-item"><span class="letter">C.</span> <em lang="es">el hijo de mi tío o de mi tía</em></div>
+      <div class="match-item"><span class="letter">D.</span> <em lang="es">la persona con quien estoy casado/a</em></div>
+      <div class="match-item"><span class="letter">E.</span> <em lang="es">la hija de mis padres — mi hermana</em></div>
+      <div class="match-item"><span class="letter">F.</span> <em lang="es">el hermano de mi madre o de mi padre</em> <em style="color:#888;">(distractor)</em></div>
+      <div class="match-item"><span class="letter">G.</span> <em lang="es">el padre del esposo o de la esposa</em> <em style="color:#888;">(distractor)</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXERCISE 3 — WB / Bridge Exercise (Gap-fill tied to gap structure) -->
+<div class="step-container">
+  <div class="step-header">Exercise 3 — Complete the Questions <em lang="es">(Completa las preguntas)</em></div>
+
+  <div class="gap-bridge-note">
+    <strong>Bridge to the Main Task:</strong> In the activity you are about to do, you will need to ask your partner:
+    <em lang="es">"¿Cómo es el/la [familiar]?"</em> — to find out a family member's description.
+    Practice forming those questions now, using vocabulary from today's lesson.
+  </div>
+
+  <p class="exercise-instruction">
+    Complete each question and answer using words from the word bank.
+    Use each word only once. Two words are extra.
+  </p>
+
+  <div class="word-bank">
+    <strong>Word Bank:</strong>
+    <em lang="es">el abuelo · la hermana · el sobrino · la tía · simpática · estricto · generosa · el primo · inteligente</em>
+  </div>
+
+  <div class="wb-sentence">
+    1. <em lang="es">¿Cómo es</em> <span class="wb-blank"></span>? — <em lang="es">Mi abuelo es alto y</em> <span class="wb-blank"></span>.</div>
+  <div class="wb-sentence">
+    2. <em lang="es">¿Cómo es</em> <span class="wb-blank"></span>? — <em lang="es">Mi tía es</em> <span class="wb-blank"></span> <em lang="es">y artística.</em></div>
+  <div class="wb-sentence">
+    3. <em lang="es">¿Cómo es</em> <span class="wb-blank"></span>? — <em lang="es">Mi primo es tímido pero</em> <span class="wb-blank"></span>.</div>
+  <div class="wb-sentence">
+    4. <em lang="es">¿Cómo es</em> <span class="wb-blank"></span>? — <em lang="es">Mi hermana es extrovertida y</em> <span class="wb-blank"></span>.</div>
+
+  <p style="margin-top:0.5em; font-size:0.88em; color:#555;">
+    Now write your own question: <em lang="es">¿Cómo es</em> _______________? — <em lang="es">Su/Mi _____________ es _____________.</em>
+  </p>
+</div>
+
+</body>
+</html>

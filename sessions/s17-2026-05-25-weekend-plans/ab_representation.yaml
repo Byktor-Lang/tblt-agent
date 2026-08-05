@@ -1,0 +1,118 @@
+session_id: s17-2026-05-25-weekend-plans
+course_id: spanish_general
+round: 1
+gap_type: oral
+paso_structure: info_gap_resource_negotiation
+complication_pattern: values_conflict
+grammar_1: "poder + infinitive"
+grammar_2: "tener que + infinitive"
+pvs:
+  - "el fin de semana"
+  - "el sábado"
+  - "el domingo"
+  - "por la mañana"
+  - "por la tarde"
+  - "el cine"
+  - "el parque"
+  - "libre"
+  - "ocupado/a"
+  - "el partido de fútbol"
+pvs_count: 10
+
+student_a_role:
+  name: "Estudiante A"
+  schedule:
+    sabado_manana: ocupado/a
+    sabado_tarde: libre
+    domingo_manana: libre
+    domingo_tarde: ocupado/a
+  constraint_reason: "Tengo que estudiar para un examen el sábado por la mañana y el domingo por la tarde."
+  preference: el cine
+
+student_b_role:
+  name: "Estudiante B"
+  schedule:
+    sabado_manana: libre
+    sabado_tarde: ocupado/a
+    domingo_manana: ocupado/a
+    domingo_tarde: libre
+  constraint_reason: "Tengo que ir al partido de fútbol el sábado por la tarde y el domingo por la mañana."
+  preference: el parque
+
+complication_description: "Student A wants to go to el cine; Student B wants to go to el parque. Their schedules are mirror-inverted: A is free Sat afternoon and Sun morning; B is free Sat morning and Sun afternoon. They must find one time slot where both are free AND agree on one shared activity."
+possible_resolutions:
+  - "El domingo por la tarde vamos al parque (if A accepts parque)"
+  - "El sábado por la mañana vamos al cine (if B accepts cine)"
+  - "A compromise activity at the only mutually free slot found through negotiation"
+
+pasos:
+  - id: 1
+    type: FRAME
+    title: "Mi horario del fin de semana"
+    cognitive_demand: 2
+  - id: 2
+    type: FREQ
+    title: "El horario de mi compañero/a"
+    cognitive_demand: 3
+  - id: 3
+    type: negotiation
+    title: "Negociamos un plan"
+    cognitive_demand: 4
+  - id: 4
+    type: evaluation
+    title: "Evaluamos el plan"
+    cognitive_demand: 4
+  - id: 5
+    type: public_commitment
+    title: "Anunciamos nuestro plan"
+    cognitive_demand: 5
+
+register_shift_pair_count: 4
+checklist_item_count: 5
+
+novelty_signature:
+  paso_structure:
+    label: info_gap_resource_negotiation
+    count_in_last_5_sessions: 1
+  complication_pattern:
+    label: values_conflict
+    count_in_last_5_sessions: 1
+
+lee_schell:
+  kill_criteria:
+    individually_solvable: false
+    yes_no_only: false
+    no_negotiation: false
+    exploit_detected: false
+    speaking_avoidable: false
+    any_triggered: false
+  layer_a:
+    information_gap: 3
+    interaction_dependency: 3
+    target_structure_deployment: 3
+    linguistic_payoff_alignment: 3
+    all_pass: true
+  layer_b:
+    curiosity_surprise_capacity: 3
+    flow_curve_integrity: 3
+    meaningful_choice_carry_forward: 3
+    ending_and_payoff: 3
+    structural_freshness: suppressed
+    all_pass: true
+  denominator: 24
+  total: 24
+  extended_discourse:
+    justification_required: true
+    disagreement_possible: true
+    multi_turn_paso3: true
+  convergence:
+    verdict: converged
+    revisions_required: 0
+    improvements_optional: 0
+
+structural_validation_passed: true
+log_write: ok
+cross_course_feed_write: ok
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null

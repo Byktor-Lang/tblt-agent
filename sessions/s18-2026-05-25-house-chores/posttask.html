@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post-Task — Formal Recommendation: Household Chore Schedule</title>
+  <style>
+    :root {
+      --font-family: Georgia, 'Times New Roman', serif;
+      --page-width: 21cm;
+      --primary-color: #2d3748;
+      --border-color: #e2e8f0;
+      --accent-color: #edf2f7;
+      --step-bg: #f7fafc;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      font-size: 11pt;
+      color: #1a202c;
+    }
+    .activity-header {
+      text-align: center;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+    .activity-title {
+      font-size: 15pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.2cm;
+    }
+    .student-info {
+      display: flex;
+      gap: 1cm;
+      flex-wrap: wrap;
+      margin-bottom: 0.5cm;
+      font-size: 10.5pt;
+    }
+    .info-field {
+      flex: 1;
+      min-width: 5cm;
+      border-bottom: 1px solid #718096;
+      padding-bottom: 0.1cm;
+    }
+    .info-label { color: #4a5568; font-size: 9.5pt; }
+    .register-shift-table {
+      margin-bottom: 0.5cm;
+      break-inside: avoid;
+    }
+    .register-shift-table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5pt;
+    }
+    .register-shift-table th {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.2cm 0.3cm;
+      text-align: left;
+    }
+    .register-shift-table td {
+      border: 1px solid var(--border-color);
+      padding: 0.2cm 0.3cm;
+      vertical-align: middle;
+    }
+    .register-shift-table tr:nth-child(even) td { background: var(--accent-color); }
+    .register-shift-header {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.2cm;
+    }
+    .register-shift-note {
+      font-size: 9.5pt;
+      color: #4a5568;
+      margin-bottom: 0.2cm;
+      font-style: italic;
+    }
+    .writing-task-container {
+      background: var(--step-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.5cm;
+      break-inside: avoid;
+    }
+    .writing-task-container > * + * { margin-top: 0.35cm; }
+    .writing-prompt-section {
+      margin-bottom: 0.3cm;
+    }
+    .writing-prompt-title {
+      font-size: 12pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.2cm;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.1cm;
+    }
+    .writing-prompt-instruction {
+      line-height: 1.6;
+      margin-bottom: 0.2cm;
+    }
+    .prompt-frame {
+      background: #fffbeb;
+      border-left: 4px solid #d69e2e;
+      padding: 0.2cm 0.3cm;
+      margin: 0.2cm 0;
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .write-lines-area {
+      margin: 0.2cm 0;
+    }
+    .write-line {
+      border-bottom: 1px solid #a0aec0;
+      min-height: 0.7cm;
+      margin: 0.2cm 0;
+      display: block;
+    }
+    .checklist-section {
+      border-top: 1px solid var(--border-color);
+      padding-top: 0.3cm;
+    }
+    .checklist-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.2cm;
+    }
+    .single-column-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .list-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3cm;
+      margin-bottom: 0.2cm;
+      line-height: 1.6;
+    }
+    .list-item::before {
+      content: "☐";
+      font-size: 13pt;
+      color: #4a5568;
+      flex-shrink: 0;
+    }
+    .step-note {
+      font-size: 9.5pt;
+      color: #718096;
+      font-style: italic;
+      margin-top: 0.1cm;
+      margin-left: 1.3cm;
+    }
+    @media print {
+      body { padding: 0; }
+      .writing-task-container { break-inside: avoid; }
+      .register-shift-table { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="activity-header">
+    <div class="activity-title"><em lang="es">Recomendación formal: el horario de quehaceres ideal</em></div>
+    <div>9th Grade Spanish — Post-Task Writing</div>
+  </div>
+
+  <div class="student-info">
+    <div class="info-field"><span class="info-label">Name / <em lang="es">Nombre</em>:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div class="info-field"><span class="info-label">Date / <em lang="es">Fecha</em>:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div class="info-field"><span class="info-label">Class / <em lang="es">Clase</em>:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  </div>
+
+  <!-- REGISTER SHIFT TABLE -->
+  <div class="register-shift-table">
+    <div class="register-shift-header"><em lang="es">Cambio de registro</em> — Register Shift Practice</div>
+    <div class="register-shift-note">Before you write, study these informal-to-formal changes. Use at least <strong>two</strong> formal expressions from the right column in your recommendation.</div>
+    <table>
+      <tr>
+        <th>Informal (spoken / <em lang="es">hablado</em>)</th>
+        <th>Formal written (<em lang="es">escrito formal</em>)</th>
+        <th>Example in context</th>
+      </tr>
+      <tr>
+        <td><em lang="es">a veces</em></td>
+        <td><em lang="es">en ocasiones</em></td>
+        <td><em lang="es">"En ocasiones, el adolescente puede encargarse de sacar la basura."</em></td>
+      </tr>
+      <tr>
+        <td><em lang="es">siempre</em></td>
+        <td><em lang="es">de manera constante</em></td>
+        <td><em lang="es">"El padre/la madre realiza de manera constante las tareas de mayor esfuerzo."</em></td>
+      </tr>
+      <tr>
+        <td><em lang="es">nunca</em></td>
+        <td><em lang="es">en ningún caso</em></td>
+        <td><em lang="es">"En ningún caso debe recaer toda la carga doméstica en una sola persona."</em></td>
+      </tr>
+      <tr>
+        <td><em lang="es">todos los días</em></td>
+        <td><em lang="es">diariamente</em></td>
+        <td><em lang="es">"El estudiante propone barrer el piso diariamente en días de semana."</em></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- WRITING TASK CONTAINER -->
+  <div class="writing-task-container">
+
+    <div class="writing-prompt-section">
+      <div class="writing-prompt-title"><em lang="es">Tu tarea: Recomendación formal al comité del hogar</em></div>
+      <p class="writing-prompt-instruction">
+        You and your partner have finished your household negotiation. Now write a <strong>formal recommendation</strong> to a <em lang="es">Comité de Bienestar del Hogar</em> (Household Welfare Committee) proposing a fair weekly chore schedule based on your negotiation.
+      </p>
+      <p class="writing-prompt-instruction">
+        Your recommendation must include:
+      </p>
+      <ul style="margin-left:0.8cm; margin-bottom:0.2cm; line-height:1.8;">
+        <li>A formal opening phrase (see model below)</li>
+        <li>At least <strong>three reasons</strong> for your proposed distribution — drawn directly from what you and your partner said during the negotiation (use your Paso 3 table and Paso 5 synthesis sentence)</li>
+        <li>At least <strong>two formal adverb expressions</strong> from the Register-Shift Table above</li>
+        <li>At least <strong>one reflexive verb</strong> in present tense (e.g., <em lang="es">se levanta, se encarga</em>)</li>
+        <li>A formal closing phrase</li>
+      </ul>
+      <div class="prompt-frame">
+        <strong>Model opening:</strong> <em lang="es">"Estimado Comité de Bienestar del Hogar: Por medio de la presente, les comunicamos la propuesta de distribución de quehaceres acordada entre los miembros de nuestra familia, con el objetivo de garantizar una convivencia justa y equitativa."</em><br><br>
+        <strong>Model closing:</strong> <em lang="es">"Agradecemos su consideración y quedamos a disposición para cualquier consulta adicional. Atentamente, [nombre del estudiante]"</em>
+      </div>
+    </div>
+
+    <div class="write-lines-area">
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+      <span class="write-line"></span>
+    </div>
+
+    <div class="checklist-section">
+      <div class="checklist-title"><em lang="es">Lista de verificación</em> — Self-Correction Checklist</div>
+      <ul class="single-column-list">
+        <li class="list-item">
+          I used at least three reflexive verbs in present tense correctly (e.g., <em lang="es">me levanto, se encarga, se ducha</em>).
+          <span class="step-note">Check each reflexive verb: does it have the correct pronoun (me/te/se) AND the correct -ar/-er/-ir ending?</span>
+        </li>
+        <li class="list-item">
+          I used <em lang="es">gustar</em> + infinitive to express at least two preferences or complaints (e.g., <em lang="es">no me gusta limpiar el baño; le gusta cocinar la cena</em>).
+          <span class="step-note">Each gustar sentence needs: indirect object pronoun (me/le) + gusta + infinitive verb.</span>
+        </li>
+        <li class="list-item">
+          I referenced the specific chore assignments negotiated in Paso 3 — naming who is responsible for what and why.
+          <span class="step-note">Look at your Paso 3 table. Did you name at least three chores and who is responsible for each?</span>
+        </li>
+        <li class="list-item">
+          I included the Paso 5 synthesis sentence: <em lang="es">"En nuestra casa ideal, [persona] se encarga de [quehacer] porque..."</em>
+          <span class="step-note">Copy or adapt your Paso 5 sentence — this is the core of your recommendation.</span>
+        </li>
+        <li class="list-item">
+          I used at least two formal adverb replacements from the Register-Shift Table (e.g., <em lang="es">de manera constante</em> instead of <em lang="es">siempre</em>; <em lang="es">en ocasiones</em> instead of <em lang="es">a veces</em>).
+          <span class="step-note">Underline each formal adverb you used and draw an arrow to the informal version it replaces.</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

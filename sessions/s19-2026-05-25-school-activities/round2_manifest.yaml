@@ -1,0 +1,63 @@
+---
+session_id: s19-2026-05-25-school-activities
+course_id: spanish_general
+class_id: spanish_general_9th
+round: 2
+date: "2026-05-25"
+agent: tblt-pretask-specialist
+invocation_mode: pipeline
+
+topic: "School activities and subject preferences"
+exercise_types:
+  - ASSOC
+  - MC
+  - FREQ
+
+pvs_subset_count: 12
+
+coherence_audit:
+  adb_keys_covered: 4
+  coverage:
+    - key: activity_pvs_items_used
+      covered: true
+      rationale: >
+        All 12 PVS items appear across the three exercises. Subjects (la clase de matemáticas,
+        la educación física, la historia, la música, las ciencias naturales, la tarea) appear
+        in Ex 1–3; adjectives (interesante, aburrido/a, difícil, fácil) in Ex 2–3;
+        el recreo and el proyecto escolar in FREQ grid. Full PVS subset coverage.
+    - key: confirmed_complication
+      covered: true
+      rationale: >
+        Resource-scarcity complication (only one #1 spot) is primed by the FREQ survey, which
+        generates per-subject preference data and creates awareness of partners' rankings before
+        the Main Task. ASSOC activates the competitive framing ("best subject") organically before
+        vocabulary labels are presented.
+    - key: confirmed_outcome
+      covered: true
+      rationale: >
+        FREQ survey yields preference data by subject that directly scaffolds the Paso 3 debate
+        and the Paso 4 joint-selection outcome. Students arrive at the Main Task already aware
+        of their partner's subject preferences from the FREQ exchange, sharpening the Paso 4
+        negotiation for the exclusive #1 spot.
+    - key: gap_summary
+      covered: true
+      rationale: >
+        ASSOC is completed individually before any partner exposure, priming private schemas
+        that feed the oral gap. MC models target grammar (gustar agreement, ser + adjective)
+        in reading context. FREQ is an oral interview requiring students to ask, listen, and
+        record — activating the same oral-exchange skill set as Main Task Paso 2 and Paso 3.
+
+artifacts:
+  - pretask_student.html
+  - pretask_teacher.html
+
+structural_validation_passed: true
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false
+canonical_label_compliance: true

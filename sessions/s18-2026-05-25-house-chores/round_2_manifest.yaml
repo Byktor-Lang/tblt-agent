@@ -1,0 +1,51 @@
+session_id: s18-2026-05-25-house-chores
+course_id: spanish_general
+round: 2
+date: "2026-05-25"
+topic: "House chores and household responsibilities"
+
+exercise_types:
+  - RANK
+  - ODD
+  - WB
+
+pvs_subset_count: 10
+
+adb_consumed:
+  activity_pvs_items_used: 12
+  confirmed_complication: "role_asymmetry"
+  confirmed_outcome: "Negotiated chore distribution, fairness rating, Paso 5 synthesis"
+  gap_summary: "A holds full chore schedule; B holds cooking preference and sports constraints"
+
+coherence_audit:
+  coverage:
+    - key: activity_pvs_items_used
+      covered: true
+      rationale: "All 12 PVS items appear across RANK (8 chores), ODD (12 items in 3 groups), and WB sentence frames (levantarse temprano and la tarea doméstica). No PVS item omitted."
+    - key: confirmed_complication
+      covered: true
+      rationale: "ODD Group A distinguishes personal hygiene routines from household tasks, priming the role-asymmetry distinction between chores the parent does (household) and routines the teenager has (personal). Students who catch this distinction are positioned for the Paso 3 negotiation."
+    - key: confirmed_outcome
+      covered: true
+      rationale: "WB sentence 5 uses 'me encargo de [quehacer]' — the exact synthesis frame appearing in Paso 5. Students who complete this correctly are scaffolded for the main task's public commitment output."
+    - key: gap_summary
+      covered: true
+      rationale: "RANK exercise and reporting frames ('el quehacer que requiere más esfuerzo') prime the effort-fairness vocabulary students need for Paso 4 justification sentences. The explicit note in RANK instructions alerts students that rankings will be used in the negotiation."
+  all_pass: true
+
+artifacts:
+  - pretask_student.html
+  - pretask_teacher.html
+
+structural_validation_passed: true
+f7_passed: true
+f6_passed: true
+
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null
+
+log_write: ok
+cross_course_feed_write: ok
+
+dialect_excluded_feature_detected: false

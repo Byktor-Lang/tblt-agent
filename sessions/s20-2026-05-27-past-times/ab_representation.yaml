@@ -1,0 +1,60 @@
+---
+session_id: s20-2026-05-27-past-times
+gap_type: oral
+paso_structure: opinion_ranking_debate
+complication_pattern: values_conflict
+
+# F3 Gap-Pair Contract
+gap_contract:
+  gap_type: oral
+  student_a_holds: >
+    Private ranking of 5 hobbies drawn from the PVS. Student A naturally
+    gravitates toward creative/expressive activities (el dibujo, bailar,
+    cocinar) and builds gustar + ser justifications around adjectives like
+    creativo/a and divertido/a.
+  student_b_holds: >
+    Private ranking of 5 hobbies drawn from the PVS. Student B naturally
+    gravitates toward active/physical activities (el fútbol, la natación,
+    el senderismo) and builds gustar + ser justifications around adjectives
+    like activo/a and emocionante.
+  what_a_discovers_from_b: >
+    B evaluates hobbies primarily on physical activity and excitement
+    (emocionante, activo/a), not on creative expression. B's top ranked
+    hobby is likely different from A's, and B's reasons for liking it
+    reflect a different value system.
+  communicative_stake: >
+    The school has one slot for a new after-school program. The pair must
+    recommend exactly ONE hobby to the activities coordinator. Because A
+    and B value different qualities in a hobby, they cannot simply pick
+    the higher-ranked option — they must negotiate across incompatible
+    value systems and find a justification that satisfies both.
+  complication_trigger: >
+    Paso 4 — after comparing rankings (Paso 3), both students discover they
+    have different top choices AND different reasons why their choice is
+    "better." The conflict is not just about preference (resource_scarcity)
+    but about what counts as a good hobby (values_conflict). The pair must
+    articulate their values explicitly, find a hobby that satisfies both
+    criteria (or accept a principled compromise), and produce a shared
+    justification using gustar and ser.
+
+# Reference ranking patterns (illustrative, not prescriptive)
+illustrative_patterns:
+  student_a_sample_ranking:
+    1: el dibujo
+    2: bailar
+    3: cocinar
+    4: leer
+    5: el senderismo
+  student_b_sample_ranking:
+    1: el fútbol
+    2: la natación
+    3: el senderismo
+    4: bailar
+    5: el dibujo
+
+# Grammar surface requirements
+grammar_surface:
+  grammar_1: "gustar (me gusta, te gusta, le gusta, nos gusta + noun/infinitive) — required in Paso 2, 3, 4"
+  grammar_2: "ser + descriptive adjective (es/son + adj) — required in every Paso justification"
+  minimum_gustar_uses: 3
+  minimum_ser_adj_uses: 3

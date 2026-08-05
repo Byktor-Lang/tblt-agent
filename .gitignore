@@ -1,0 +1,9 @@
+# Machine-specific Claude Code config
+.claude/settings.local.json
+
+# Quarantine contents are transient — directory is tracked via .gitkeep
+quarantine/*
+!quarantine/.gitkeep
+
+# Diagnostic logs grow large and are ephemeral
+logs/*_diagnostic_log.jsonl

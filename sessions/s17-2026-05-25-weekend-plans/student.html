@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekend Plans — Main Task</title>
+  <style>
+    :root {
+      --font-family: 'Georgia', serif;
+      --page-width: 21cm;
+      --primary-color: #2c5f8a;
+      --border-color: #b0c4de;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    @media print {
+      .step-container { break-inside: avoid; }
+      .role-section { break-inside: avoid; }
+    }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      color: #222;
+    }
+    .activity-header {
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5em;
+      margin-bottom: 1.2em;
+    }
+    .activity-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.2em 0;
+    }
+    .activity-subtitle {
+      font-size: 0.95em;
+      color: #555;
+      margin: 0;
+    }
+    .role-section {
+      border: 2px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.8em 1em;
+      margin-bottom: 1.2em;
+      background: #f5f9ff;
+    }
+    .role-title {
+      font-size: 1.05em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.5em 0;
+    }
+    .role-private-note {
+      font-size: 0.85em;
+      font-style: italic;
+      color: #c0392b;
+      margin-bottom: 0.5em;
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
+    }
+    .schedule-table th {
+      background: var(--primary-color);
+      color: white;
+      padding: 4px 8px;
+      text-align: left;
+    }
+    .schedule-table td {
+      border: 1px solid var(--border-color);
+      padding: 4px 8px;
+    }
+    .step-container {
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      padding: 0.8em 1em;
+      margin-bottom: 1em;
+    }
+    .step-header {
+      font-size: 1em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.5em 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.3em;
+    }
+    .sentence-frame {
+      background: #eef4fb;
+      border-left: 3px solid var(--primary-color);
+      padding: 0.4em 0.8em;
+      margin: 0.4em 0;
+      font-size: 0.93em;
+    }
+    .write-line {
+      border-bottom: 1px solid #aaa;
+      min-height: 1.4em;
+      margin: 0.5em 0;
+      display: block;
+    }
+    .write-line-label {
+      font-size: 0.85em;
+      color: #555;
+    }
+    .model-dialogue {
+      background: #f0f7f0;
+      border: 1px dashed #7ab87a;
+      border-radius: 4px;
+      padding: 0.5em 0.8em;
+      font-size: 0.9em;
+      margin: 0.5em 0;
+    }
+    .model-dialogue .speaker {
+      font-weight: bold;
+      color: #2d6a2d;
+    }
+    .freq-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      margin: 0.5em 0;
+    }
+    .freq-table th {
+      background: #ddeedd;
+      border: 1px solid var(--border-color);
+      padding: 4px 8px;
+      text-align: center;
+    }
+    .freq-table td {
+      border: 1px solid var(--border-color);
+      padding: 5px 8px;
+    }
+    .rating-row {
+      display: flex;
+      gap: 1em;
+      margin: 0.5em 0;
+      font-size: 0.9em;
+    }
+    .rating-option {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 3px 10px;
+      cursor: pointer;
+    }
+    .vocab-box {
+      background: #fffbe6;
+      border: 1px solid #e0c040;
+      border-radius: 4px;
+      padding: 0.4em 0.8em;
+      font-size: 0.88em;
+      margin-bottom: 0.5em;
+    }
+    .instructions { font-size: 0.92em; margin-bottom: 0.5em; }
+    .divider { border: none; border-top: 2px dashed #ccc; margin: 1.2em 0; }
+    em { font-style: normal; font-weight: bold; color: #1a4a7a; }
+    span[lang="es"] { color: #1a4a7a; }
+  </style>
+</head>
+<body>
+
+  <div class="activity-header">
+    <p class="activity-title">Planes para el fin de semana</p>
+    <p class="activity-subtitle">9th Grade Spanish — Main Task (Oral Information Gap)</p>
+  </div>
+
+  <!-- ROLE CARD A -->
+  <div class="role-section" id="role-card-a">
+    <p class="role-title">TARJETA DE ROL — <span lang="es">ESTUDIANTE A</span></p>
+    <p class="role-private-note">Keep this card face-down until your teacher says to begin. Do NOT show your card to your partner.</p>
+    <p class="instructions">This is YOUR private schedule for the weekend. You want to go to <span lang="es">el cine</span>.</p>
+    <table class="schedule-table">
+      <tr><th>Day / Time</th><th>Status</th><th>Reason</th></tr>
+      <tr><td><span lang="es">el sábado por la mañana</span></td><td><span lang="es">ocupado/a</span></td><td><span lang="es">Tengo que estudiar para un examen.</span></td></tr>
+      <tr><td><span lang="es">el sábado por la tarde</span></td><td><span lang="es">libre</span></td><td>—</td></tr>
+      <tr><td><span lang="es">el domingo por la mañana</span></td><td><span lang="es">libre</span></td><td>—</td></tr>
+      <tr><td><span lang="es">el domingo por la tarde</span></td><td><span lang="es">ocupado/a</span></td><td><span lang="es">Tengo que ir al partido de fútbol.</span></td></tr>
+    </table>
+    <div class="vocab-box">
+      <strong>Your vocabulary:</strong> <span lang="es">el fin de semana · el sábado · el domingo · por la mañana · por la tarde · el cine · libre · ocupado/a · poder + infinitivo · tener que + infinitivo</span>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ROLE CARD B -->
+  <div class="role-section" id="role-card-b">
+    <p class="role-title">TARJETA DE ROL — <span lang="es">ESTUDIANTE B</span></p>
+    <p class="role-private-note">Keep this card face-down until your teacher says to begin. Do NOT show your card to your partner.</p>
+    <p class="instructions">This is YOUR private schedule for the weekend. You want to go to <span lang="es">el parque</span>.</p>
+    <table class="schedule-table">
+      <tr><th>Day / Time</th><th>Status</th><th>Reason</th></tr>
+      <tr><td><span lang="es">el sábado por la mañana</span></td><td><span lang="es">libre</span></td><td>—</td></tr>
+      <tr><td><span lang="es">el sábado por la tarde</span></td><td><span lang="es">ocupado/a</span></td><td><span lang="es">Tengo que ir al partido de fútbol.</span></td></tr>
+      <tr><td><span lang="es">el domingo por la mañana</span></td><td><span lang="es">ocupado/a</span></td><td><span lang="es">Tengo que hacer la tarea.</span></td></tr>
+      <tr><td><span lang="es">el domingo por la tarde</span></td><td><span lang="es">libre</span></td><td>—</td></tr>
+    </table>
+    <div class="vocab-box">
+      <strong>Your vocabulary:</strong> <span lang="es">el fin de semana · el sábado · el domingo · por la mañana · por la tarde · el parque · libre · ocupado/a · poder + infinitivo · tener que + infinitivo</span>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PASO 1 -->
+  <div class="step-container" id="paso-1">
+    <p class="step-header">Paso 1 — <span lang="es">Mi horario del fin de semana</span></p>
+    <p class="instructions">Read your role card. Write 2 sentences explaining when you are busy and why. Use <em>tener que + infinitivo</em>.</p>
+    <div class="sentence-frame"><span lang="es">El ________ por la ________ estoy ocupado/a porque tengo que ________________________.</span></div>
+    <div class="sentence-frame"><span lang="es">El ________ por la ________ estoy libre.</span></div>
+    <span class="write-line-label">Your sentences:</span>
+    <span class="write-line"></span>
+    <span class="write-line"></span>
+    <p class="instructions" style="margin-top:0.5em;">Then write when you CAN go out. Use <em>poder + infinitivo</em>.</p>
+    <div class="sentence-frame"><span lang="es">Puedo salir el ________ por la ________ porque estoy libre.</span></div>
+    <span class="write-line"></span>
+  </div>
+
+  <!-- PASO 2 -->
+  <div class="step-container" id="paso-2">
+    <p class="step-header">Paso 2 — <span lang="es">El horario de mi compañero/a</span></p>
+    <p class="instructions">Interview your partner. Ask when they are free and when they are busy. Record their answers below. Do NOT look at each other's role cards.</p>
+    <div class="model-dialogue">
+      <span class="speaker">A:</span> <span lang="es">¿Cuándo estás libre este fin de semana?</span><br>
+      <span class="speaker">B:</span> <span lang="es">El ________ por la ________ estoy libre. ¿Y tú?</span><br>
+      <span class="speaker">A:</span> <span lang="es">Yo puedo salir el ________ por la ________.</span><br>
+      <span class="speaker">B:</span> <span lang="es">¿Por qué no puedes el domingo por la mañana?</span><br>
+      <span class="speaker">A:</span> <span lang="es">Porque tengo que ________________________.</span>
+    </div>
+    <table class="freq-table">
+      <tr>
+        <th>Day / Time</th>
+        <th><span lang="es">libre</span></th>
+        <th><span lang="es">ocupado/a</span></th>
+        <th>Reason (if busy)</th>
+      </tr>
+      <tr><td><span lang="es">el sábado por la mañana</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span lang="es">el sábado por la tarde</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span lang="es">el domingo por la mañana</span></td><td></td><td></td><td></td></tr>
+      <tr><td><span lang="es">el domingo por la tarde</span></td><td></td><td></td><td></td></tr>
+    </table>
+  </div>
+
+  <!-- PASO 3 -->
+  <div class="step-container" id="paso-3">
+    <p class="step-header">Paso 3 — <span lang="es">Negociamos un plan</span></p>
+    <p class="instructions"><strong>Use the information you wrote in Paso 1 and Paso 2.</strong> Student A proposes <span lang="es">el cine</span>; Student B proposes <span lang="es">el parque</span>. You must find ONE activity and ONE time slot that works for BOTH of you. Explain your preferences and constraints using <em>poder + infinitivo</em> and <em>tener que + infinitivo</em>.</p>
+    <div class="model-dialogue">
+      <span class="speaker">A:</span> <span lang="es">Quiero ir al cine. ¿Puedes el sábado por la tarde?</span><br>
+      <span class="speaker">B:</span> <span lang="es">No, no puedo. Tengo que ir al partido de fútbol. Prefiero ir al parque el domingo por la tarde. ¿Puedes?</span><br>
+      <span class="speaker">A:</span> <span lang="es">El domingo por la tarde no puedo porque tengo que ir al partido de fútbol también.</span><br>
+      <span class="speaker">B:</span> <span lang="es">¿Y el domingo por la mañana? ¿Estás libre?</span><br>
+      <span class="speaker">A:</span> <span lang="es">Sí, estoy libre el domingo por la mañana. ¿Puedes tú?</span><br>
+      <span class="speaker">B:</span> <span lang="es">No, tengo que hacer la tarea. ¿Qué tal el sábado por la tarde? Tú estás libre, ¿no?</span><br>
+      <span class="speaker">A:</span> <span lang="es">Sí, puedo el sábado por la tarde. ¿Adónde vamos — al cine o al parque?</span><br>
+      <span class="speaker">B:</span> <span lang="es">Vamos al parque. ¡De acuerdo!</span>
+    </div>
+    <p class="instructions">If your partner disagrees with your suggestion (<span lang="es">si tu compañero/a no está de acuerdo</span>), explain why using <em>tener que</em> and propose a new time. Keep negotiating until you agree.</p>
+    <span class="write-line-label">Our agreed plan:</span>
+    <span class="write-line"></span>
+    <span class="write-line-label">Activity we agreed on:</span>
+    <span class="write-line"></span>
+    <span class="write-line-label">Time slot we agreed on:</span>
+    <span class="write-line"></span>
+  </div>
+
+  <!-- PASO 4 -->
+  <div class="step-container" id="paso-4">
+    <p class="step-header">Paso 4 — <span lang="es">Evaluamos el plan</span></p>
+    <p class="instructions">How happy are you with the compromise? Circle your rating and explain why.</p>
+    <div class="rating-row">
+      <span class="rating-option">1 — <span lang="es">No me gusta</span></span>
+      <span class="rating-option">2 — <span lang="es">Está bien</span></span>
+      <span class="rating-option">3 — <span lang="es">¡Me gusta mucho!</span></span>
+    </div>
+    <div class="sentence-frame"><span lang="es">Mi calificación es ______ porque ________________________.</span></div>
+    <span class="write-line"></span>
+    <p class="instructions">Share your rating with your partner. Do you agree on how you both feel about the plan?</p>
+    <span class="write-line-label">Partner's rating:</span>
+    <span class="write-line"></span>
+  </div>
+
+  <!-- PASO 5 -->
+  <div class="step-container" id="paso-5">
+    <p class="step-header">Paso 5 — <span lang="es">Anunciamos nuestro plan</span></p>
+    <p class="instructions"><strong>Using the activity you agreed on in Paso 3 and the time from Paso 1 and Paso 2, write your plan sentence below. Then announce it to the class.</strong></p>
+    <div class="sentence-frame">
+      <span lang="es">El ________ [sábado/domingo] por la ________ [mañana/tarde] vamos a ________ [el cine / el parque / el partido de fútbol] porque ________________________.</span>
+    </div>
+    <span class="write-line-label">Our plan sentence:</span>
+    <span class="write-line"></span>
+    <span class="write-line"></span>
+    <p class="instructions" style="margin-top:0.6em;"><em>Public commitment:</em> Each pair reads their plan sentence aloud. Listen to find out which pair found the most creative solution!</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post-Task — Describe Members of the Family (s16)</title>
+  <style>
+    :root {
+      --font-family: 'Segoe UI', Arial, sans-serif;
+      --page-width: 21cm;
+      --primary-color: #6B2FA0;
+      --border-color: #C9A8E0;
+    }
+    @page { size: A4 portrait; margin: 1cm; }
+    @media print { body { font-size: 11pt; } }
+    body {
+      font-family: var(--font-family);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 1cm;
+      color: #1a1a1a;
+    }
+    .activity-header {
+      border-bottom: 3px solid var(--primary-color);
+      margin-bottom: 0.8cm;
+      padding-bottom: 0.4cm;
+    }
+    .activity-title {
+      font-size: 1.25em;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin: 0 0 0.2em 0;
+    }
+    .student-info {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 0.4cm;
+      margin-bottom: 0.7cm;
+    }
+    .info-field {
+      border-bottom: 1.5px solid #666;
+      padding-bottom: 0.15em;
+      font-size: 0.9em;
+    }
+    .info-label {
+      font-size: 0.78em;
+      color: #666;
+    }
+    /* Register Shift Table */
+    .register-shift-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0.8cm;
+      font-size: 0.9em;
+    }
+    .register-shift-table caption {
+      font-weight: bold;
+      color: var(--primary-color);
+      text-align: left;
+      margin-bottom: 0.3em;
+      font-size: 1em;
+      caption-side: top;
+    }
+    .register-shift-table th {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.3em 0.5em;
+      text-align: left;
+    }
+    .register-shift-table td {
+      border: 1px solid var(--border-color);
+      padding: 0.4em 0.5em;
+      vertical-align: top;
+    }
+    .register-shift-table tr:nth-child(even) td { background: #F8F2FF; }
+    .register-note {
+      font-size: 0.85em;
+      color: #555;
+      margin: 0 0 0.5cm 0;
+    }
+    /* Writing Task Container */
+    .writing-task-container {
+      break-inside: avoid;
+      border: 1.5px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.5cm;
+      margin-bottom: 0.7cm;
+    }
+    .writing-prompt-section {
+      margin-bottom: 0.5cm;
+    }
+    .writing-prompt-title {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 1.05em;
+      margin-bottom: 0.3em;
+    }
+    .prompt-scenario {
+      background: #F5EEFF;
+      border-left: 4px solid var(--primary-color);
+      padding: 0.4em 0.6em;
+      margin-bottom: 0.4em;
+      font-size: 0.95em;
+    }
+    .prompt-task {
+      font-size: 0.93em;
+      margin-bottom: 0.3em;
+    }
+    .prompt-requirements {
+      font-size: 0.9em;
+      margin: 0;
+      padding-left: 1.2em;
+    }
+    .prompt-requirements li {
+      margin-bottom: 0.15em;
+    }
+    .writing-lines {
+      margin-top: 0.4em;
+    }
+    .write-line {
+      border-bottom: 1px solid #aaa;
+      min-height: 1.5em;
+      margin-bottom: 0.3em;
+    }
+    .checklist-section {
+      border-top: 1.5px solid var(--border-color);
+      padding-top: 0.4em;
+    }
+    .checklist-title {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 0.95em;
+      margin-bottom: 0.3em;
+    }
+    .single-column-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4em;
+      margin-bottom: 0.3em;
+      font-size: 0.9em;
+    }
+    .list-item input[type="checkbox"] {
+      margin-top: 0.15em;
+      flex-shrink: 0;
+    }
+    .transfer-goal-echo {
+      background: #EDF5E1;
+      border: 1.5px solid #5A9A32;
+      border-radius: 6px;
+      padding: 0.4cm;
+      margin-bottom: 0.6cm;
+      font-size: 0.92em;
+    }
+    .transfer-goal-label {
+      font-weight: bold;
+      color: #3A6A1A;
+      margin-bottom: 0.2em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="activity-header">
+  <p class="activity-title">Post-Task — Describe Members of the Family</p>
+  <p style="margin:0; font-size:0.9em; color:#444;">9th Grade Spanish · Session s16 · 2026-05-23</p>
+</div>
+
+<div class="student-info">
+  <div>
+    <div class="info-label">Name / <em lang="es">Nombre</em></div>
+    <div class="info-field"></div>
+  </div>
+  <div>
+    <div class="info-label">Date / <em lang="es">Fecha</em></div>
+    <div class="info-field"></div>
+  </div>
+  <div>
+    <div class="info-label">Class / <em lang="es">Clase</em></div>
+    <div class="info-field"></div>
+  </div>
+</div>
+
+<!-- REGISTER SHIFT TABLE -->
+<table class="register-shift-table">
+  <caption>Part 1 — Register Shift Practice: Spoken → Formal Written <em lang="es">(Del español hablado al español escrito formal)</em></caption>
+  <thead>
+    <tr>
+      <th>Spoken / Informal <em lang="es">(hablado)</em></th>
+      <th>Formal Written <em lang="es">(escrito formal)</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em lang="es">Mi abuela es muy simpática.</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><em lang="es">Mi primo es tímido pero inteligente.</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><em lang="es">El suegro de Jorge es estricto y justo.</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><em lang="es">Mi hermana es extrovertida y generosa.</em></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="register-note">
+  For formal written Spanish, consider: replacing short spoken phrases with fuller formal verb phrases;
+  using <em lang="es">se caracteriza por</em>, <em lang="es">se distingue por</em>;
+  adding a formal connector like <em lang="es">Asimismo,</em> or <em lang="es">Cabe señalar que</em>.
+</p>
+
+<!-- WRITING TASK CONTAINER -->
+<div class="writing-task-container">
+  <div class="writing-prompt-section">
+    <div class="writing-prompt-title">Part 2 — Formal Email Writing Prompt <em lang="es">(Tarea de escritura formal)</em></div>
+
+    <div class="prompt-scenario">
+      <strong>Situation:</strong> During today's activity, you and your partner worked through a complication —
+      you needed to agree on exactly two adjectives to describe <em lang="es">el suegro</em> (Papá Roberto),
+      because each of you had different information. After negotiating, your pair reached a consensus description.
+      Now you will write a formal email to a pen pal from a partner school, describing the family you and
+      your partner constructed together — using your agreed-upon language, including the negotiated description
+      of <em lang="es">el suegro</em>.
+    </div>
+
+    <p class="prompt-task">
+      Write a <strong>formal email</strong> (minimum 6 sentences) to your pen pal, introducing the family
+      and describing at least four family members using <em lang="es">ser</em> + descriptive adjectives.
+      Include the description of <em lang="es">el suegro</em> that you and your partner agreed on in Paso 4.
+    </p>
+
+    <ul class="prompt-requirements">
+      <li>Use a formal salutation (e.g., <em lang="es">Estimado/a [nombre]:</em>)</li>
+      <li>Describe at least four family members using <em lang="es">Mi/Su [familiar] es [adjetivo].</em></li>
+      <li>Include the consensus description: <em lang="es">El suegro de Jorge es ___ y ___.</em></li>
+      <li>Use at least one of the formal written phrases from Part 1's register shift table.</li>
+      <li>Close with a formal closing (e.g., <em lang="es">Atentamente, [nombre]</em>)</li>
+    </ul>
+
+    <div class="writing-lines">
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- SELF-CORRECTION CHECKLIST -->
+  <div class="checklist-section">
+    <div class="checklist-title">Self-Correction Checklist — Before you submit, check:</div>
+    <ul class="single-column-list">
+      <li class="list-item">
+        <input type="checkbox">
+        <span>I used <em lang="es">ser</em> (not <em lang="es">estar</em>) for all permanent descriptions (<em lang="es">es alto/a, es simpático/a</em>).</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>My adjectives agree with the gender of each family member (e.g., <em lang="es">la hermana es generosa</em>, not <em lang="es">generoso</em>).</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>I included the negotiated description of <em lang="es">el suegro</em> that my partner and I agreed on in Paso 4.</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>I used a formal salutation and a formal closing phrase in my email.</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>I included at least one formal written phrase from the register shift table in Part 1.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- TRANSFER GOAL ECHO -->
+<div class="transfer-goal-echo">
+  <div class="transfer-goal-label">Connecting to Real Language Use / <em lang="es">Conexión con el mundo real</em></div>
+  <p style="margin:0; font-size:0.92em;">
+    Describing family members accurately is one of the first things you need to do when writing formally
+    in Spanish — whether in an email to a pen pal, a letter to a Spanish-speaking organization, or a
+    school application for a study-abroad program. The ability to use <em lang="es">ser</em> + adjective
+    with correct gender agreement is foundational to all formal written Spanish description.
+    Keep your email today as a model for future formal writing tasks.
+  </p>
+</div>
+
+</body>
+</html>

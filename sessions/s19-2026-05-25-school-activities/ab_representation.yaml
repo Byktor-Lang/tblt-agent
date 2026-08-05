@@ -1,0 +1,144 @@
+---
+session_id: s19-2026-05-25-school-activities
+course_id: spanish_general
+class_id: spanish_general_9th
+gap_type: oral
+date: "2026-05-25"
+
+topic: "School activities and subject preferences"
+paso_structure: opinion_ranking_debate
+complication_pattern: resource_scarcity
+
+grammar_1: "Present tense of gustar (me gusta, te gusta, le gusta, nos gusta + noun/infinitive)"
+grammar_2: "The verb ser in the present tense (es, son) for describing school subjects and activities"
+
+pvs:
+  - la clase de matemáticas
+  - la educación física
+  - la historia
+  - la música
+  - las ciencias naturales
+  - interesante
+  - aburrido/a
+  - difícil
+  - fácil
+  - el recreo
+  - el proyecto escolar
+  - la tarea
+
+# Oral gap: single student.html (no student_a / student_b)
+student_file: student.html
+teacher_file: teacher_key.html
+
+pasos:
+  - id: 1
+    title: "Paso 1 — Mi ranking personal"
+    description: >
+      Each student individually ranks six school subjects from #1 (favourite) to #6 (least
+      favourite) on their own sheet, using gustar + noun and ser + adjective to justify their
+      top and bottom choices in writing. PVS Paso-1 cap applied: six subjects used.
+    pvs_items_used:
+      - la clase de matemáticas
+      - la educación física
+      - la historia
+      - la música
+      - las ciencias naturales
+      - la tarea
+    target_structures: [gustar + noun, ser + adjective]
+
+  - id: 2
+    title: "Paso 2 — ¿Por qué te gusta?"
+    description: >
+      Each student extends their top-2 and bottom-2 ranked subjects with a written sentence
+      for each using both grammar structures, then shares their justifications aloud with
+      their partner. Partner records the justifications heard.
+    pvs_items_used:
+      - la clase de matemáticas
+      - la educación física
+      - la historia
+      - la música
+      - las ciencias naturales
+      - la tarea
+      - interesante
+      - aburrido/a
+      - difícil
+      - fácil
+    target_structures: [gustar + noun, ser + adjective]
+
+  - id: 3
+    title: "Paso 3 — Debate: ¿Cuál es la mejor?"
+    description: >
+      Partners compare their individual rankings. For each subject where they disagree on
+      placement, they take turns arguing their position using gustar and ser. Multi-turn
+      dialogue required; at least two exchanges per disagreement point.
+    pvs_items_used:
+      - la clase de matemáticas
+      - la educación física
+      - la historia
+      - la música
+      - las ciencias naturales
+      - interesante
+      - aburrido/a
+      - difícil
+      - fácil
+      - el recreo
+      - el proyecto escolar
+      - la tarea
+    target_structures: [gustar + noun, ser + adjective]
+
+  - id: 4
+    title: "Paso 4 — El conflicto del #1 (complication)"
+    description: >
+      COMPLICATION: Both partners want their own favourite subject as the poster's #1 ranking.
+      Only one subject can occupy #1. Students must negotiate and reach agreement on a single
+      #1 subject, each defending their choice. They record the agreed #1 with a shared written
+      justification of at least two reasons.
+    complication: resource_scarcity
+    pvs_items_used:
+      - la clase de matemáticas
+      - la educación física
+      - la historia
+      - la música
+      - las ciencias naturales
+      - interesante
+      - difícil
+      - fácil
+      - el proyecto escolar
+    target_structures: [gustar + noun, ser + adjective]
+
+  - id: 5
+    title: "Paso 5 — La declaración de la clase"
+    description: >
+      Each pair reads their Paso 1 individual rankings and their Paso 4 agreed #1 aloud, then
+      produces the class declaration sentence. The class (or teacher) tallies all pairs' agreed
+      #1 choices on the board. Pairs whose subject did not win the class tally must justify in
+      one sentence why their subject deserves reconsideration.
+    ending_type: tally_profile
+    pvs_items_used:
+      - la clase de matemáticas
+      - la educación física
+      - la historia
+      - la música
+      - las ciencias naturales
+      - interesante
+      - aburrido/a
+      - difícil
+      - fácil
+      - el proyecto escolar
+      - el recreo
+      - la tarea
+    target_structures: [gustar + noun, ser + adjective]
+    class_declaration_frame: "Nuestra clase piensa que [materia] es la mejor porque..."
+
+novelty_signature:
+  paso_structure:
+    label: opinion_ranking_debate
+    count_in_last_5_sessions: 0
+  complication_pattern:
+    label: resource_scarcity
+    count_in_last_5_sessions: 0
+
+register_shift_pair_count: 4
+checklist_item_count: 5
+
+structural_validation_passed: true

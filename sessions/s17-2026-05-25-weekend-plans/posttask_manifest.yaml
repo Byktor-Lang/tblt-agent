@@ -1,0 +1,44 @@
+session_id: s17-2026-05-25-weekend-plans
+course_id: spanish_general
+round: 3
+
+writing_genre: formal_email
+register_shift_pattern: informal_to_formal_verb_phrase
+transfer_goal_echoed: true
+
+register_shift_pair_count: 4
+checklist_item_count: 5
+
+grammar_targets:
+  grammar_1: "poder + infinitive"
+  grammar_2: "tener que + infinitive"
+  matches_frozen_scb: true
+
+coherence_audit:
+  coverage:
+    - adb_key: activity_pvs_items_used
+      covered: true
+      rationale: "Register shift table uses el parque, el sábado, el domingo, poder, tener que from the PVS; writing prompt instruction 4 requires naming the agreed activity and day — all 10 PVS items touched across Part 1 and Part 2 combined."
+    - adb_key: confirmed_complication
+      covered: true
+      rationale: "Scenario anchor in teacher copy names values_conflict explicitly; writing prompt instruction 2 requires students to explain a schedule constraint — the constraint is the direct product of the negotiation that resolved the values conflict."
+    - adb_key: confirmed_outcome
+      covered: true
+      rationale: "Writing prompt instruction item 4 says explicitly: 'State the agreed activity, day, and time from your Paso 5 plan sentence' — direct echo of the Main Task outcome."
+    - adb_key: gap_summary
+      covered: true
+      rationale: "Register shift table converts poder + infinitivo and tener que + infinitivo from informal spoken to formal written — precisely the structures used in the gap negotiation. Checklist items 2 and 3 assess their deployment in the email."
+  f7_passed: true
+
+adr_0019_compliance:
+  posttask_html_has_no_teacher_page: true
+  posttask_teacher_html_written: true
+
+dialect_excluded_feature_detected: false
+
+structural_validation_passed: true
+log_write: ok
+cross_course_feed_write: ok
+phase_5a_quality: null
+phase_5a_engagement: null
+phase_5a_note: null

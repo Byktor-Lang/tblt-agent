@@ -1,0 +1,111 @@
+{
+  "session_id": "s20-2026-05-27-past-times",
+  "course_id": "spanish_general",
+  "class_id": "spanish_general_9th",
+  "created_at": "2026-05-27T00:00:00Z",
+  "last_updated_at": "2026-05-27T23:59:00Z",
+  "transition_log": [
+    { "phase": "gate_a", "at": "2026-05-27T00:01:00Z", "event": "gate_a_confirmed" },
+    { "phase": "gate_b", "at": "2026-05-27T00:15:00Z", "event": "gate_b_confirmed" },
+    { "phase": "gate_c", "at": "2026-05-27T00:30:00Z", "event": "gate_c_confirmed" },
+    { "phase": "gate_d", "at": "2026-05-27T00:50:00Z", "event": "gate_d_confirmed" }
+  ],
+  "scb": {
+    "status": "frozen",
+    "course_id": "spanish_general",
+    "class_id": "spanish_general_9th",
+    "topic": "Past-times and hobbies (los pasatiempos)",
+    "grammar_1": "Present tense of gustar (me gusta, te gusta, le gusta, nos gusta + noun/infinitive)",
+    "grammar_2": "Verb ser + descriptive adjectives (es/son + adjective) for describing hobbies",
+    "pvs": [
+      "el fútbol",
+      "la natación",
+      "el dibujo",
+      "bailar",
+      "leer",
+      "cocinar",
+      "el senderismo",
+      "emocionante",
+      "relajante",
+      "creativo/a",
+      "activo/a",
+      "divertido/a"
+    ],
+    "task_type": "oral_gap",
+    "complication_candidate": "values_conflict",
+    "register": "informal spoken (classroom pair negotiation) → formal written recommendation",
+    "transfer_goal": "Write a formal recommendation letter to the school activities coordinator proposing the hobby your pair agreed on, with at least three reasons using gustar and ser + adjective, rewritten in formal Spanish",
+    "success_criteria": [
+      "Use gustar + noun/infinitive at least three times to express hobby preferences (e.g., 'Me gusta el fútbol porque es emocionante')",
+      "Use ser + adjective at least three times to characterize hobbies (e.g., 'El senderismo es activo y relajante')",
+      "Negotiate a joint top hobby recommendation using evidence from both students' private rankings",
+      "Resolve the Paso 4 values conflict: agree on one hobby despite having different value priorities (creative vs. active)",
+      "Produce the Paso 5 class recommendation statement: 'Nuestra pareja recomienda [hobby] para el programa porque es [adj1] y [adj2]...'"
+    ],
+    "writing_genre": "formal_recommendation",
+    "register_shift_pattern": "informal_to_formal_verb_phrase"
+  },
+  "adb": {
+    "activity_pvs_items_used": [
+      "el fútbol",
+      "la natación",
+      "el dibujo",
+      "bailar",
+      "leer",
+      "cocinar",
+      "el senderismo",
+      "emocionante",
+      "relajante",
+      "creativo/a",
+      "activo/a",
+      "divertido/a"
+    ],
+    "confirmed_complication": "Values conflict — students each privately rank 5 hobbies and discover in Paso 4 that they value different qualities: one partner prioritizes creative/expressive activities (creativo/a, divertido/a), the other prioritizes active/physical activities (activo/a, emocionante). Only one hobby can fill the after-school program slot; students must negotiate across incompatible value systems and produce a shared justification using gustar and ser.",
+    "confirmed_outcome": "Partners agree on ONE hobby to recommend for the after-school program and produce a Paso 5 class declaration sentence with at least two reasons using gustar and ser. The declaration is shared with the class for comparison.",
+    "gap_summary": "Oral gap — each student holds a private hobby ranking (Paso 1) that cannot be shown to the partner; rankings are exchanged verbally (Paso 2), compared (Paso 3), and reconciled despite a values conflict (Paso 4). The communicative stake is exclusive program slot occupancy — only one hobby can be recommended, so both students must persuade the other or accept a principled compromise before any agreement is possible."
+  },
+  "rounds": {
+    "round_1": {
+      "status": "passed_gate_B",
+      "rejection_count": 0,
+      "paso_structure": "opinion_ranking_debate",
+      "complication_pattern": "values_conflict",
+      "gap_type": "oral",
+      "artifacts": ["student.html", "teacher_key.html", "ab_representation.yaml"],
+      "lee_schell_total": 27,
+      "lee_schell_denominator": 27,
+      "inspector_verdict": "CONVERGED",
+      "inspector_revision_count": 0,
+      "structural_validation_passed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    },
+    "round_2": {
+      "status": "passed_gate_C",
+      "rejection_count": 0,
+      "exercise_types": ["ASSOC", "MC", "FREQ"],
+      "pvs_subset_count": 12,
+      "artifacts": ["pretask_student.html", "pretask_teacher.html"],
+      "f7_passed": true,
+      "structural_validation_passed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    },
+    "round_3": {
+      "status": "passed_gate_D",
+      "rejection_count": 0,
+      "writing_genre": "formal_recommendation",
+      "register_shift_pattern": "informal_to_formal_verb_phrase",
+      "transfer_goal_echoed": true,
+      "artifacts": ["posttask.html", "posttask_teacher.html"],
+      "f7_passed": true,
+      "structural_validation_passed": true,
+      "log_write": "ok",
+      "cross_course_feed_write": "ok"
+    }
+  },
+  "gate_d": {
+    "status": "passed",
+    "rejection_count": 0
+  }
+}

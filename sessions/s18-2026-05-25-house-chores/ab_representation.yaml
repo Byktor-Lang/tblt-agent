@@ -1,0 +1,90 @@
+session_id: s18-2026-05-25-house-chores
+course_id: spanish_general
+round: 1
+gap_type: resource
+paso_structure: categorization_interview_synthesis
+complication_pattern: role_asymmetry
+
+pasos:
+  - id: 1
+    type: categorization
+    label: "Paso 1 — Clasifica los quehaceres"
+    description: "Students sort 6 chores (from PVS) into two columns: Quehaceres del hogar and Rutinas personales"
+    pvs_items_deployed: ["barrer el piso", "lavar los platos", "limpiar el baño", "hacer la cama", "ducharse", "lavarse las manos"]
+    cognitive_demand: 1
+  - id: 2
+    type: personal_list
+    label: "Paso 2 — Mis quehaceres en casa"
+    description: "Each student adds 2 chores from the full PVS that match their own daily routine, using sentence frames with reflexive verbs and gustar"
+    pvs_items_deployed: ["pasar la aspiradora", "sacar la basura", "ordenar el cuarto", "cocinar la cena", "levantarse temprano", "la tarea doméstica"]
+    cognitive_demand: 2
+  - id: 3
+    type: role_interview
+    label: "Paso 3 — La negociación en casa"
+    description: "Role-play: Student A = parent (does most chores), Student B = teenager (does very few). Each holds private information about their schedule and preferences. They interview each other using gustar + infinitive and reflexive verbs to reveal who does what and negotiate fair redistribution."
+    pvs_items_deployed: ["barrer el piso", "lavar los platos", "limpiar el baño", "pasar la aspiradora", "sacar la basura", "hacer la cama", "ordenar el cuarto", "cocinar la cena", "levantarse temprano", "lavarse las manos", "ducharse", "la tarea doméstica"]
+    cognitive_demand: 3
+  - id: 4
+    type: evaluation_rating
+    label: "Paso 4 — ¿Es justo?"
+    description: "Pairs evaluate the proposed redistribution: rating fairness 1–5 and providing at least one justification using gustar and one reflexive verb sentence"
+    pvs_items_deployed: ["la tarea doméstica", "levantarse temprano", "cocinar la cena", "sacar la basura"]
+    cognitive_demand: 4
+  - id: 5
+    type: class_synthesis
+    label: "Paso 5 — La casa ideal"
+    description: "Each pair reports their negotiated chore plan to the class using the synthesis frame. Class votes on the fairest plan. Ending type: public commitment (each pair states their agreed assignment)"
+    pvs_items_deployed: ["la tarea doméstica", "levantarse temprano", "barrer el piso", "lavar los platos", "limpiar el baño", "hacer la cama"]
+    cognitive_demand: 5
+
+roles:
+  student_a:
+    role_name: "El/La padre/madre"
+    role_description: "Currently does most household chores. Works full-time. Feels overwhelmed. Uses gustar to express frustration and reflexive verbs to describe their exhausting daily routine."
+    private_info: "Does: barrer el piso, lavar los platos, limpiar el baño, pasar la aspiradora, sacar la basura, cocinar la cena. Schedule: levantarse a las 5:30, ducharse rápido. Complaint: No me gusta limpiar el baño todos los días."
+    open_chores: ["barrer el piso", "lavar los platos", "limpiar el baño", "pasar la aspiradora", "sacar la basura", "cocinar la cena"]
+  student_b:
+    role_name: "El/La hijo/a adolescente"
+    role_description: "Currently does very few chores. Has after-school activities. Uses gustar to express preferences and reflexive verbs to describe their daily routine."
+    private_info: "Does: ordenar el cuarto (a veces), lavarse las manos. Schedule: levantarse a las 7:00, ducharse por la mañana. Preference: Me gusta cocinar pero no me gusta barrer el piso."
+    open_chores: ["ordenar el cuarto", "lavarse las manos"]
+
+student_a_resources: "Role card: El/La padre/madre. Private schedule and chore list — 6 chores, full-time work constraints, reflexive verb routine, gustar complaints. Negotiation goal: redistribute 3 chores fairly."
+student_b_resources: "Role card: El/La hijo/a adolescente. Private schedule and chore list — 2 chores, after-school activities, reflexive verb routine, gustar preferences. Negotiation goal: accept some chores while protecting study time."
+
+complication:
+  pattern: role_asymmetry
+  description: "Student A (parent) holds structural authority and bears most of the chore burden; Student B (teenager) has structural dependence and does very little. The power imbalance shapes the negotiation — the teenager cannot simply refuse, and the parent cannot simply assign. Both must use Spanish to navigate."
+
+synthesis_frame: "En nuestra casa ideal, [persona] se encarga de [quehacer] porque [razón]."
+
+grammar_targets:
+  grammar_1: "Present tense of reflexive verbs: levantarse, ducharse, lavarse, vestirse, acostarse"
+  grammar_2: "gustar + infinitive: me gusta / no me gusta / le gusta + verb"
+
+pvs_items_used:
+  - barrer el piso
+  - lavar los platos
+  - limpiar el baño
+  - pasar la aspiradora
+  - sacar la basura
+  - hacer la cama
+  - ordenar el cuarto
+  - cocinar la cena
+  - levantarse temprano
+  - lavarse las manos
+  - ducharse
+  - la tarea doméstica
+
+novelty_signature:
+  paso_structure:
+    label: categorization_interview_synthesis
+    count_in_last_5_sessions: 0
+  complication_pattern:
+    label: role_asymmetry
+    count_in_last_5_sessions: 0
+  double_freshness: true
+
+register_shift_pair_count: 4
+checklist_item_count: 5
+structural_validation_passed: true

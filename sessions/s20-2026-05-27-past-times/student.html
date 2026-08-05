@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Main Task: Los pasatiempos — Hobby Recommendation Negotiation</title>
+<style>
+  :root {
+    --font-family: 'Segoe UI', Arial, sans-serif;
+    --page-width: 21cm;
+    --primary-color: #2c5f8a;
+    --border-color: #c8d8e8;
+    --accent-color: #e8f2fb;
+    --warn-color: #b71c1c;
+  }
+  @page { size: A4 portrait; margin: 1cm; }
+  @media print { .paso-container { break-inside: avoid; } }
+  body {
+    font-family: var(--font-family);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0.5cm 1cm;
+    color: #1a1a1a;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+  .activity-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.35cm;
+    margin-bottom: 0.5cm;
+  }
+  .activity-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.1cm 0;
+  }
+  .activity-subtitle {
+    font-size: 10.5pt;
+    color: #555;
+    margin: 0;
+  }
+  .student-info {
+    display: flex;
+    gap: 1.5cm;
+    margin-bottom: 0.5cm;
+    font-size: 10pt;
+  }
+  .student-info span {
+    border-bottom: 1px solid #888;
+    min-width: 5cm;
+    padding-bottom: 2px;
+  }
+  .paso-container {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 0.5cm;
+    padding: 0.4cm 0.5cm;
+    background: #fff;
+    break-inside: avoid;
+  }
+  .paso-header {
+    font-size: 11.5pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.25cm 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.15cm;
+  }
+  .paso-instruction {
+    margin: 0.2cm 0;
+    font-size: 10.5pt;
+  }
+  .write-line {
+    border-bottom: 1px solid #aaa;
+    min-height: 0.65cm;
+    margin: 0.12cm 0;
+    width: 100%;
+    display: block;
+  }
+  .private-box {
+    border: 2px dashed var(--warn-color);
+    border-radius: 6px;
+    padding: 0.3cm 0.5cm;
+    background: #fff8f8;
+    margin: 0.25cm 0;
+  }
+  .private-label {
+    font-size: 9pt;
+    font-weight: bold;
+    color: var(--warn-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.15cm;
+  }
+  .ranking-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4cm;
+    margin: 0.12cm 0;
+    font-size: 10.5pt;
+  }
+  .rank-num {
+    font-weight: bold;
+    color: var(--primary-color);
+    min-width: 0.6cm;
+  }
+  .rank-hobby {
+    border-bottom: 1px solid #aaa;
+    min-width: 4cm;
+  }
+  .rank-sentence {
+    border-bottom: 1px solid #aaa;
+    flex: 1;
+  }
+  .reporting-frame {
+    background: var(--accent-color);
+    border-left: 3px solid var(--primary-color);
+    padding: 0.2cm 0.4cm;
+    font-size: 10.5pt;
+    font-style: italic;
+    margin: 0.15cm 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .complication-box {
+    border: 2px solid var(--warn-color);
+    border-radius: 6px;
+    padding: 0.35cm 0.5cm;
+    background: #fff3f3;
+    margin: 0.25cm 0;
+  }
+  .complication-label {
+    font-size: 10pt;
+    font-weight: bold;
+    color: var(--warn-color);
+    margin-bottom: 0.15cm;
+  }
+  .hobby-checklist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.15cm 0.5cm;
+    margin: 0.2cm 0;
+    font-size: 10pt;
+  }
+  .hobby-item {
+    display: flex;
+    align-items: center;
+    gap: 0.2cm;
+  }
+  .declaration-box {
+    background: #f0f7f0;
+    border-left: 3px solid #388e3c;
+    border-radius: 0 6px 6px 0;
+    padding: 0.3cm 0.5cm;
+    margin: 0.2cm 0;
+  }
+  .declaration-frame {
+    font-size: 11pt;
+    font-style: italic;
+    color: #2e7d32;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="activity-header">
+  <div class="activity-title">Main Task: <span lang="es">Los pasatiempos</span> — Hobby Recommendation Negotiation</div>
+  <div class="activity-subtitle">Oral gap · Opinion ranking debate · Approximately 18 minutes</div>
+</div>
+
+<div class="student-info">
+  <span>Name: ___________________________</span>
+  <span>Date: _______________</span>
+  <span>Class: _______________</span>
+</div>
+
+<!-- PASO 1 -->
+<div class="paso-container">
+  <div class="paso-header">Paso 1 — <span lang="es">Mi lista privada</span> (3 min) · INDIVIDUAL, no talking yet</div>
+  <p class="paso-instruction">Choose 5 hobbies from the list below and rank them <strong>1 (me gusta más)</strong> to <strong>5 (me gusta menos)</strong>. For each hobby, write one sentence using <em lang="es">me gusta</em> or <em lang="es">es/son</em> + adjective. Write your reasons honestly — they matter in Paso 4!</p>
+
+  <p class="paso-instruction" style="font-size:9.5pt; color:#555; margin-bottom:0.2cm;">
+    <strong>Hobby vocabulary:</strong> <span lang="es">el fútbol &nbsp;·&nbsp; la natación &nbsp;·&nbsp; el dibujo &nbsp;·&nbsp; bailar &nbsp;·&nbsp; leer &nbsp;·&nbsp; cocinar &nbsp;·&nbsp; el senderismo</span><br>
+    <strong>Adjectives:</strong> <span lang="es">emocionante &nbsp;·&nbsp; relajante &nbsp;·&nbsp; creativo/a &nbsp;·&nbsp; activo/a &nbsp;·&nbsp; divertido/a</span>
+  </p>
+
+  <div class="private-box">
+    <div class="private-label">&#128274; Private — ¡No muestres tu lista a tu compañero/a!</div>
+    <div class="ranking-row">
+      <span class="rank-num">1.</span>
+      <span class="rank-hobby">____________________</span>
+      <span class="rank-sentence">____________________________________</span>
+    </div>
+    <div class="ranking-row">
+      <span class="rank-num">2.</span>
+      <span class="rank-hobby">____________________</span>
+      <span class="rank-sentence">____________________________________</span>
+    </div>
+    <div class="ranking-row">
+      <span class="rank-num">3.</span>
+      <span class="rank-hobby">____________________</span>
+      <span class="rank-sentence">____________________________________</span>
+    </div>
+    <div class="ranking-row">
+      <span class="rank-num">4.</span>
+      <span class="rank-hobby">____________________</span>
+      <span class="rank-sentence">____________________________________</span>
+    </div>
+    <div class="ranking-row">
+      <span class="rank-num">5.</span>
+      <span class="rank-hobby">____________________</span>
+      <span class="rank-sentence">____________________________________</span>
+    </div>
+  </div>
+</div>
+
+<!-- PASO 2 -->
+<div class="paso-container">
+  <div class="paso-header">Paso 2 — <span lang="es">Comparte tu número 1</span> (4 min) · ORAL — do not show your list</div>
+  <p class="paso-instruction">Tell your partner your #1 hobby and give <strong>two reasons</strong> using the frames below. Then listen to your partner and record what they say.</p>
+
+  <div class="reporting-frame"><span lang="es">A mí me gusta [pasatiempo] porque es [adjetivo] y [adjetivo].</span></div>
+  <div class="reporting-frame"><span lang="es">Para mí, [pasatiempo] es el mejor porque es muy [adjetivo].</span></div>
+
+  <p class="paso-instruction"><strong>My partner's #1 hobby:</strong></p>
+  <span class="write-line"></span>
+  <p class="paso-instruction"><strong>My partner's reasons (write in Spanish):</strong></p>
+  <span class="write-line"></span>
+  <span class="write-line"></span>
+</div>
+
+<!-- PASO 3 -->
+<div class="paso-container">
+  <div class="paso-header">Paso 3 — <span lang="es">Compara las listas</span> (4 min) · ORAL — still do not show your list</div>
+  <p class="paso-instruction">Take turns sharing your complete ranking verbally. Use: <em lang="es">"Mi número [1–5] es [pasatiempo] porque es [adjetivo]."</em> After you hear your partner's full list, note agreements and differences below.</p>
+
+  <p class="paso-instruction"><strong>Hobbies we BOTH have in our top 3:</strong></p>
+  <span class="write-line"></span>
+  <p class="paso-instruction"><strong>Hobbies where we DISAGREE (I ranked high / partner ranked low, or vice versa):</strong></p>
+  <span class="write-line"></span>
+  <span class="write-line"></span>
+</div>
+
+<!-- PASO 4 COMPLICATION -->
+<div class="paso-container">
+  <div class="paso-header">Paso 4 — <span lang="es">El problema: ¡solo hay un lugar!</span> (5 min) · NEGOTIATE</div>
+  <div class="complication-box">
+    <div class="complication-label">&#128680; Complication — Read this together:</div>
+    <p class="paso-instruction" style="margin:0;">Your school can add <strong>only ONE</strong> new after-school hobby program this year. You and your partner must agree on ONE hobby to recommend. The challenge: you each care about <em>different</em> things in a hobby — one of you prefers hobbies that are <strong lang="es">creativos y expresivos</strong>, and the other prefers hobbies that are <strong lang="es">activos y emocionantes</strong>. You must negotiate and find a hobby you can <em>both</em> defend with gustar and ser.</p>
+  </div>
+  <p class="paso-instruction">Negotiate using these frames:</p>
+  <div class="reporting-frame"><span lang="es">Pienso que [pasatiempo] es mejor porque es más [adjetivo] que [otro pasatiempo].</span></div>
+  <div class="reporting-frame"><span lang="es">Pero para mí, [pasatiempo] es importante porque es [adjetivo] y [adjetivo].</span></div>
+  <div class="reporting-frame"><span lang="es">Podemos recomendar [pasatiempo] porque nos gusta y es [adjetivo] y [adjetivo].</span></div>
+  <p class="paso-instruction"><strong>Our agreed hobby:</strong></p>
+  <span class="write-line"></span>
+  <p class="paso-instruction"><strong>Our shared justification (two reasons using gustar and ser):</strong></p>
+  <span class="write-line"></span>
+  <span class="write-line"></span>
+</div>
+
+<!-- PASO 5 -->
+<div class="paso-container">
+  <div class="paso-header">Paso 5 — <span lang="es">La recomendación de la clase</span> (2 min) · WRITE TOGETHER</div>
+  <p class="paso-instruction">Write your pair's recommendation sentence below. You will share this with the class.</p>
+
+  <div class="declaration-box">
+    <div class="declaration-frame" lang="es">Nuestra pareja recomienda <span style="border-bottom:2px solid #388e3c; min-width:4cm; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> para el programa porque es <span style="border-bottom:2px solid #388e3c; min-width:3cm; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> y <span style="border-bottom:2px solid #388e3c; min-width:3cm; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>, y a nosotros nos gusta porque <span style="border-bottom:2px solid #388e3c; min-width:4cm; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.</div>
+  </div>
+  <p class="paso-instruction" style="font-size:9.5pt; color:#555;">Be ready to share your sentence with the class — your teacher will call on pairs to compare recommendations!</p>
+</div>
+
+</body>
+</html>

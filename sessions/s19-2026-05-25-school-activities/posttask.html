@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Post-Task: Formal Complaint Letter — School Subject Preferences</title>
+<style>
+  :root {
+    --font-family: 'Segoe UI', Arial, sans-serif;
+    --page-width: 21cm;
+    --primary-color: #2c5f8a;
+    --border-color: #c8d8e8;
+    --accent-color: #e8f2fb;
+  }
+  @page { size: A4 portrait; margin: 1cm; }
+  @media print {
+    .step-container { break-inside: avoid; }
+    .writing-task-container { break-inside: avoid; }
+  }
+  body {
+    font-family: var(--font-family);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0.5cm 1cm;
+    color: #1a1a1a;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  .activity-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.35cm;
+    margin-bottom: 0.5cm;
+  }
+  .activity-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.1cm 0;
+  }
+  .student-info {
+    display: flex;
+    gap: 1.5cm;
+    margin-bottom: 0.5cm;
+    font-size: 10pt;
+  }
+  .student-info span {
+    border-bottom: 1px solid #888;
+    min-width: 5cm;
+    padding-bottom: 2px;
+  }
+  .step-container {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 0.5cm;
+    padding: 0.4cm 0.5cm;
+    background: #fff;
+    break-inside: avoid;
+  }
+  .step-header {
+    font-size: 11.5pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.25cm 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.15cm;
+  }
+  .register-shift-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.25cm 0;
+    font-size: 10.5pt;
+  }
+  .register-shift-table th {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.2cm 0.4cm;
+    border: 1px solid var(--border-color);
+    text-align: left;
+  }
+  .register-shift-table td {
+    padding: 0.25cm 0.4cm;
+    border: 1px solid var(--border-color);
+    vertical-align: top;
+  }
+  .register-shift-table tr:nth-child(even) td {
+    background: #f7fbff;
+  }
+  .informal-col {
+    font-style: italic;
+    color: #555;
+    width: 45%;
+  }
+  .formal-col {
+    font-weight: bold;
+    color: var(--primary-color);
+    width: 55%;
+  }
+  .shift-note {
+    font-size: 9pt;
+    color: #888;
+    font-style: italic;
+    display: block;
+    margin-top: 0.05cm;
+  }
+  .writing-task-container {
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    padding: 0.4cm 0.5cm;
+    margin-top: 0.4cm;
+    break-inside: avoid;
+  }
+  .writing-task-container > * {
+    /* direct children only */
+  }
+  .writing-prompt-section {
+    margin-bottom: 0.4cm;
+  }
+  .writing-prompt-title {
+    font-size: 12pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.2cm 0;
+  }
+  .writing-prompt-text {
+    background: var(--accent-color);
+    border-left: 3px solid var(--primary-color);
+    padding: 0.25cm 0.4cm;
+    font-size: 11pt;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 0.25cm;
+  }
+  .letter-scaffold {
+    border: 1px dashed #aaa;
+    border-radius: 4px;
+    padding: 0.3cm 0.5cm;
+    font-size: 10.5pt;
+    background: #fafafa;
+  }
+  .letter-field {
+    margin: 0.1cm 0;
+  }
+  .letter-label {
+    font-size: 9.5pt;
+    color: #555;
+    font-style: italic;
+  }
+  .write-line {
+    border-bottom: 1px solid #aaa;
+    min-height: 0.65cm;
+    margin: 0.12cm 0;
+    width: 100%;
+    display: block;
+  }
+  .write-line-long {
+    border-bottom: 1px solid #aaa;
+    min-height: 0.65cm;
+    margin: 0.12cm 0;
+    width: 100%;
+    display: block;
+  }
+  .checklist-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.3cm;
+    margin-top: 0.3cm;
+  }
+  .checklist-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.15cm 0;
+  }
+  .single-column-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.3cm;
+    margin-bottom: 0.15cm;
+    font-size: 10.5pt;
+  }
+  .list-item input[type="checkbox"] {
+    margin-top: 0.1cm;
+    flex-shrink: 0;
+  }
+  .sentence-frame {
+    background: var(--accent-color);
+    border-left: 3px solid var(--primary-color);
+    padding: 0.15cm 0.35cm;
+    margin: 0.15cm 0;
+    font-size: 10pt;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="activity-header">
+  <div class="activity-title">Post-Task: <span lang="es">Carta de queja formal</span> — Formal Complaint Letter</div>
+</div>
+
+<div class="student-info">
+  <span>Name: ___________________________</span>
+  <span>Date: _______________</span>
+  <span>Class: _______________</span>
+</div>
+
+<!-- REGISTER SHIFT TABLE -->
+<div class="step-container">
+  <div class="step-header">Part A — Register Shift: From Spoken to Formal Written</div>
+
+  <p style="margin:0.1cm 0 0.2cm 0; font-size:10.5pt;">Study how the spoken phrases you used during the debate are rewritten as formal written openers for a complaint letter. Then use the formal versions in your letter below.</p>
+
+  <table class="register-shift-table">
+    <tr>
+      <th>Spoken / Informal (debate language)</th>
+      <th>Formal Written (complaint letter opener)</th>
+    </tr>
+    <tr>
+      <td class="informal-col">
+        <span lang="es">Bueno, creo que la historia es aburrida...</span>
+        <span class="shift-note">Spoken hedge + personal opinion opener</span>
+      </td>
+      <td class="formal-col">
+        <span lang="es">Considerando la opinión generalizada de los estudiantes, la historia es percibida como una materia poco motivadora.</span>
+        <span class="shift-note">Formal opener naming the reasoning basis; hedge removed</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="informal-col">
+        <span lang="es">O sea, no nos gusta la tarea porque es difícil...</span>
+        <span class="shift-note">Filler <em>o sea</em> + casual justification</span>
+      </td>
+      <td class="formal-col">
+        <span lang="es">En vista de lo expuesto, nos resulta importante señalar que la carga de tarea asignada es excesiva y difícil para los estudiantes.</span>
+        <span class="shift-note">Formal transition phrase replaces filler; passive construction used</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="informal-col">
+        <span lang="es">Sí, pero para mí las matemáticas son muy difíciles...</span>
+        <span class="shift-note">Concessive opener <em>sí, pero</em> + personal frame</span>
+      </td>
+      <td class="formal-col">
+        <span lang="es">Sin perjuicio de reconocer el valor formativo de las matemáticas, es preciso señalar que la dificultad de sus contenidos supera el nivel esperado para este grado.</span>
+        <span class="shift-note">Formal concessive construction; impersonal <em>es preciso</em> replaces personal frame</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="informal-col">
+        <span lang="es">¿Sabes qué? A nosotros no nos gusta nada esa clase...</span>
+        <span class="shift-note">Informal attention-getter <em>¿sabes qué?</em> + emphatic negation</span>
+      </td>
+      <td class="formal-col">
+        <span lang="es">Por lo anteriormente descrito, deseamos manifestar formalmente nuestra disconformidad con la manera en que dicha materia es impartida actualmente.</span>
+        <span class="shift-note">Summary transition + formal first-person plural declaration; attention-getter removed</span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- WRITING TASK CONTAINER -->
+<div class="writing-task-container">
+  <div class="writing-prompt-section">
+    <div class="writing-prompt-title">Part B — <span lang="es">Carta de queja formal</span> Writing Task</div>
+    <div class="writing-prompt-text">
+      <p style="margin:0.1cm 0;"><strong>Situation:</strong> Your pair ranked one subject last (#6) in today's debate. You and your partner were unable to convince the class that it should improve. Now, on behalf of your pair, write a formal complaint letter to the school principal (<span lang="es">el/la director/a</span>) arguing that the subject ranked last should either be improved or given less weight in the schedule.</p>
+      <p style="margin:0.1cm 0;"><strong>Requirements:</strong> Include at least <strong>three reasons</strong> using <em lang="es">gustar</em> + noun and <em lang="es">ser</em> + adjective. Use at least two formal openers from the Register Shift Table in Part A. Follow the letter structure provided below.</p>
+    </div>
+
+    <div class="letter-scaffold">
+      <div class="letter-field">
+        <span class="letter-label">City, date / <span lang="es">Ciudad y fecha:</span></span>
+        <span class="write-line"></span>
+      </div>
+      <div class="letter-field">
+        <span class="letter-label">Recipient / <span lang="es">Destinatario:</span></span>
+        <div class="sentence-frame"><span lang="es">Estimado/a Director/a:</span></div>
+      </div>
+      <div class="letter-field">
+        <span class="letter-label">Opening paragraph (introduce yourself and the purpose) / <span lang="es">Párrafo de introducción:</span></span>
+        <div class="sentence-frame"><span lang="es">Por medio de la presente, [nombre] y [nombre], estudiantes de noveno grado, deseamos expresar formalmente nuestra preocupación con respecto a [materia].</span></div>
+        <span class="write-line-long"></span>
+        <span class="write-line-long"></span>
+      </div>
+      <div class="letter-field">
+        <span class="letter-label">Body — Reason 1 (use a formal opener from Part A + gustar + ser) / <span lang="es">Razón 1:</span></span>
+        <span class="write-line-long"></span>
+        <span class="write-line-long"></span>
+      </div>
+      <div class="letter-field">
+        <span class="letter-label">Body — Reason 2 (gustar + ser) / <span lang="es">Razón 2:</span></span>
+        <span class="write-line-long"></span>
+        <span class="write-line-long"></span>
+      </div>
+      <div class="letter-field">
+        <span class="letter-label">Body — Reason 3 (use a second formal opener from Part A + gustar + ser) / <span lang="es">Razón 3:</span></span>
+        <span class="write-line-long"></span>
+        <span class="write-line-long"></span>
+      </div>
+      <div class="letter-field">
+        <span class="letter-label">Closing paragraph (request + courtesy close) / <span lang="es">Párrafo de cierre:</span></span>
+        <div class="sentence-frame"><span lang="es">En vista de lo expuesto, solicitamos respetuosamente que [se mejore / se reduzca el peso de] [materia]. Quedamos a su disposición. Atentamente,</span></div>
+        <span class="write-line-long"></span>
+        <span class="write-line-long"></span>
+      </div>
+      <div class="letter-field">
+        <span class="letter-label">Signature / <span lang="es">Firma:</span></span>
+        <span class="write-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="checklist-section">
+    <div class="checklist-title">Self-Check: Before you submit, verify:</div>
+    <ul class="single-column-list">
+      <li class="list-item">
+        <input type="checkbox">
+        <span>I used <em lang="es">gustar</em> + noun at least three times to express preferences (e.g., <span lang="es">"No nos gusta [materia] porque es [adjective]"</span>).</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>I used <em lang="es">ser</em> + adjective at least three times to characterize the subject (e.g., <span lang="es">"es difícil"</span>, <span lang="es">"es aburrida"</span>, <span lang="es">"son importantes"</span>).</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>My letter gives at least three distinct reasons why the subject should be improved or given less weight, each supported with evidence from today's ranking debate (Paso 3 and Paso 4).</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>I used at least two formal opener phrases from the Register Shift Table in Part A (no informal fillers like <span lang="es">"bueno"</span>, <span lang="es">"o sea"</span>, or <span lang="es">"¿sabes qué?"</span> in the letter).</span>
+      </li>
+      <li class="list-item">
+        <input type="checkbox">
+        <span>My letter follows the formal letter format: greeting, introduction paragraph, three reasons, closing paragraph, and signature.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

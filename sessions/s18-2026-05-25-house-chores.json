@@ -1,0 +1,144 @@
+{
+  "session_id": "s18-2026-05-25-house-chores",
+  "course_id": "spanish_general",
+  "class_id": "spanish_general_9th",
+  "created_at": "2026-05-25T00:00:00Z",
+  "last_updated_at": "2026-05-25T00:00:00Z",
+  "scb": {
+    "status": "frozen",
+    "frozen_at": "2026-05-25T00:00:00Z",
+    "topic": "House chores and household responsibilities",
+    "gap_type": "resource",
+    "grammar_1": "Present tense of reflexive verbs related to house chores (levantarse, ducharse, lavarse, vestirse, acostarse)",
+    "grammar_2": "The verb gustar (me gusta / no me gusta / le gusta + infinitive)",
+    "pvs": [
+      "barrer el piso",
+      "lavar los platos",
+      "limpiar el baño",
+      "pasar la aspiradora",
+      "sacar la basura",
+      "hacer la cama",
+      "ordenar el cuarto",
+      "cocinar la cena",
+      "levantarse temprano",
+      "lavarse las manos",
+      "ducharse",
+      "la tarea doméstica"
+    ],
+    "pvs_count": 12,
+    "complication_candidate": "role_asymmetry",
+    "register": "informal spoken (family negotiation) → formal written recommendation",
+    "transfer_goal": "Write a formal recommendation to a household committee proposing a fair weekly chore schedule, with at least three reasons drawn from the negotiation",
+    "success_criteria": [
+      "Use at least three reflexive verbs in present tense correctly",
+      "Use gustar + infinitive to express at least two preferences or complaints",
+      "Negotiate a specific chore assignment for each person in the scenario",
+      "Produce the Paso 5 class synthesis: En nuestra casa ideal, [person] se encarga de [chore] porque...",
+      "Write a formal recommendation using formal opening phrases and hedging-to-formal register shifts"
+    ],
+    "writing_genre": "formal_recommendation",
+    "register_shift_pattern": "frequency_to_formal_adverb",
+    "snapshot_hash_inventory": {
+      "tblt-orchestrator.md": "snapshot-hash-orchestrator",
+      "tblt-activity-specialist.md": "snapshot-hash-activity-specialist",
+      "tblt-inspector.md": "snapshot-hash-inspector",
+      "tblt-pretask-specialist.md": "snapshot-hash-pretask-specialist",
+      "tblt-reflective-specialist.md": "snapshot-hash-reflective-specialist",
+      "spanish_general_profile.md": "snapshot-hash-course-profile",
+      "spanish_general_9th_class_profile.md": "snapshot-hash-class-profile",
+      "lee-schell-framework.md": "snapshot-hash-lee-schell",
+      "shared-taxonomy.md": "snapshot-hash-taxonomy"
+    }
+  },
+  "rounds": {
+    "round_1": {
+      "status": "passed_gate_B",
+      "rejection_count": 0,
+      "inspector_verdict": "CONVERGED",
+      "inspector_revision_rounds": 0,
+      "lee_schell_total": "24/24",
+      "lee_schell_denominator": 24,
+      "double_freshness": true
+    },
+    "round_2": {
+      "status": "passed_gate_C",
+      "rejection_count": 0,
+      "exercise_types": ["RANK", "ODD", "WB"],
+      "f7_coherence_passed": true,
+      "pvs_subset_count": 10
+    },
+    "round_3": {
+      "status": "passed_gate_D",
+      "rejection_count": 0,
+      "writing_genre": "formal_recommendation",
+      "register_shift_pattern": "frequency_to_formal_adverb",
+      "transfer_goal_echoed": true,
+      "f7_coherence_passed": true,
+      "adr_0019_pair": true
+    }
+  },
+  "gate_d": {
+    "status": "passed"
+  },
+  "adb": {
+    "activity_pvs_items_used": [
+      "barrer el piso",
+      "lavar los platos",
+      "limpiar el baño",
+      "pasar la aspiradora",
+      "sacar la basura",
+      "hacer la cama",
+      "ordenar el cuarto",
+      "cocinar la cena",
+      "levantarse temprano",
+      "lavarse las manos",
+      "ducharse",
+      "la tarea doméstica"
+    ],
+    "confirmed_complication": "role_asymmetry — Student A (parent, does most chores) and Student B (teenager, does very few) negotiate a fair redistribution using gustar to express preferences and reflexive verbs to describe daily routines. The structural power imbalance (parental authority vs. teenage dependence) shapes the negotiation.",
+    "confirmed_outcome": "A negotiated chore distribution with at least 3 assigned chores (one per person minimum), a fairness rating with justification, and a Paso 5 public commitment synthesis sentence.",
+    "gap_summary": "Student A holds a full chore schedule (6 chores) and schedule details; Student B holds a light chore load and after-school activity constraints plus a cooking preference A does not know about. Neither can produce the full negotiated plan without the other's information. A must discover B's preferences using gustar; B must reveal schedule constraints using reflexive verbs."
+  },
+  "transition_log": [
+    {
+      "phase": "gate_a_confirmed",
+      "at": "2026-05-25T00:00:00Z",
+      "event": "scb_frozen"
+    },
+    {
+      "phase": "gate_b_confirmed",
+      "at": "2026-05-25T00:00:00Z",
+      "event": "round_1_passed_gate_B; ADB extracted"
+    },
+    {
+      "phase": "gate_c_confirmed",
+      "at": "2026-05-25T00:00:00Z",
+      "event": "round_2_passed_gate_C; coherence_audit=4/4"
+    },
+    {
+      "phase": "gate_d_confirmed",
+      "at": "2026-05-25T00:00:00Z",
+      "event": "round_3_passed_gate_D; gate_d=passed; writing_genre=formal_recommendation; register_shift_pattern=frequency_to_formal_adverb"
+    },
+    {
+      "phase": "session_completed",
+      "at": "2026-05-25T00:00:00Z",
+      "event": "phase_7_and_phase_8_complete; all_integrity_checks_passed; reach_in_free=false"
+    }
+  ],
+  "gates_passed": ["A", "B", "C", "D"],
+  "rejections_per_gate": {"B": 0, "C": 0, "D": 0},
+  "inspector_revision_count": 0,
+  "f6_halt_count": 0,
+  "f7_halt_count": 0,
+  "reach_in_free": false,
+  "checklist_flags": {
+    "all_criteria_met": true,
+    "pvs_drift": false,
+    "grammar_drift": false,
+    "dialect_excluded": false,
+    "double_freshness": true
+  },
+  "session_complete": true,
+  "last_updated_at": "2026-05-25T00:00:00Z"
+}

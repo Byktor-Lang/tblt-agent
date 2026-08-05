@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>School Activities and Subject Preferences — Student Activity</title>
+<style>
+  :root {
+    --font-family: 'Segoe UI', Arial, sans-serif;
+    --page-width: 21cm;
+    --primary-color: #2c5f8a;
+    --border-color: #c8d8e8;
+    --accent-color: #e8f2fb;
+    --complication-color: #fff3cd;
+    --complication-border: #e0a800;
+  }
+  @page { size: A4 portrait; margin: 1cm; }
+  @media print {
+    .step-container { break-inside: avoid; }
+    .no-print { display: none; }
+  }
+  body {
+    font-family: var(--font-family);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0.5cm 1cm;
+    color: #1a1a1a;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+  .activity-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.4cm;
+    margin-bottom: 0.5cm;
+  }
+  .activity-title {
+    font-size: 16pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.15cm 0;
+  }
+  .activity-subtitle {
+    font-size: 10pt;
+    color: #555;
+    margin: 0;
+  }
+  .student-info {
+    display: flex;
+    gap: 1.5cm;
+    margin-bottom: 0.5cm;
+    font-size: 10pt;
+  }
+  .student-info span {
+    border-bottom: 1px solid #888;
+    min-width: 5cm;
+    padding-bottom: 2px;
+  }
+  .step-container {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 0.5cm;
+    padding: 0.4cm 0.5cm;
+    background: #fff;
+    break-inside: avoid;
+  }
+  .step-header {
+    font-size: 11.5pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 0.25cm 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.15cm;
+  }
+  .step-instruction {
+    margin: 0.2cm 0;
+    font-size: 10.5pt;
+  }
+  .ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.3cm 0;
+    font-size: 10.5pt;
+  }
+  .ranking-table th {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.2cm 0.3cm;
+    text-align: left;
+    border: 1px solid var(--border-color);
+  }
+  .ranking-table td {
+    padding: 0.2cm 0.3cm;
+    border: 1px solid var(--border-color);
+    min-height: 0.7cm;
+    height: 0.75cm;
+  }
+  .ranking-table td.rank-num {
+    text-align: center;
+    font-weight: bold;
+    width: 1.2cm;
+    background: var(--accent-color);
+  }
+  .sentence-frame {
+    background: var(--accent-color);
+    border-left: 3px solid var(--primary-color);
+    padding: 0.2cm 0.4cm;
+    margin: 0.2cm 0;
+    font-size: 10pt;
+    font-style: italic;
+  }
+  .write-line {
+    border-bottom: 1px solid #aaa;
+    min-height: 0.65cm;
+    margin: 0.15cm 0;
+    width: 100%;
+    display: block;
+  }
+  .partner-record {
+    background: #f4f9f4;
+    border: 1px dashed #6aaa6a;
+    border-radius: 4px;
+    padding: 0.3cm 0.4cm;
+    margin: 0.25cm 0;
+  }
+  .partner-record-title {
+    font-size: 9.5pt;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 0.15cm;
+  }
+  .dialogue-model {
+    background: #f8f4ff;
+    border-left: 3px solid #7b5ea7;
+    padding: 0.2cm 0.4cm;
+    margin: 0.2cm 0;
+    font-size: 10pt;
+  }
+  .dialogue-speaker {
+    font-weight: bold;
+    color: #7b5ea7;
+  }
+  .complication-box {
+    background: var(--complication-color);
+    border: 2px solid var(--complication-border);
+    border-radius: 6px;
+    padding: 0.35cm 0.5cm;
+    margin: 0 0 0.5cm 0;
+    break-inside: avoid;
+  }
+  .complication-header {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #856404;
+    margin: 0 0 0.15cm 0;
+  }
+  .complication-instruction {
+    font-size: 10.5pt;
+    margin: 0.1cm 0;
+  }
+  .declaration-box {
+    background: #e8f5e9;
+    border: 2px solid #388e3c;
+    border-radius: 6px;
+    padding: 0.35cm 0.5cm;
+    margin: 0.3cm 0;
+  }
+  .declaration-frame {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #1b5e20;
+    font-style: italic;
+    margin: 0.2cm 0;
+  }
+  ul.subject-list {
+    margin: 0.15cm 0 0.15cm 0.8cm;
+    padding: 0;
+    font-size: 10.5pt;
+  }
+  ul.subject-list li {
+    margin-bottom: 0.1cm;
+  }
+  .vocab-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2cm;
+    margin: 0.2cm 0;
+  }
+  .vocab-chip {
+    background: var(--accent-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.05cm 0.3cm;
+    font-size: 9.5pt;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="activity-header">
+  <div class="activity-title"><span lang="es">¿Cuál es la mejor clase?</span> — School Subject Ranking Debate</div>
+  <div class="activity-subtitle">9th Grade Spanish — Opinion Ranking Debate (Oral Gap)</div>
+</div>
+
+<div class="student-info">
+  <span>Name: ___________________________</span>
+  <span>Date: _______________</span>
+  <span>Class: _______________</span>
+</div>
+
+<!-- PASO 1 -->
+<div class="step-container">
+  <div class="step-header">Paso 1 — <span lang="es">Mi ranking personal</span> (Individual, 5 min)</div>
+
+  <p class="step-instruction">Rank the six subjects below from <strong>#1 (your favourite)</strong> to <strong>#6 (your least favourite)</strong>. Then write one sentence for your #1 and one for your #6 using the sentence frames.</p>
+
+  <ul class="subject-list">
+    <li><span lang="es">la clase de matemáticas</span></li>
+    <li><span lang="es">la educación física</span></li>
+    <li><span lang="es">la historia</span></li>
+    <li><span lang="es">la música</span></li>
+    <li><span lang="es">las ciencias naturales</span></li>
+    <li><span lang="es">la tarea</span></li>
+  </ul>
+
+  <table class="ranking-table">
+    <tr>
+      <th style="width:1.5cm;">Rank</th>
+      <th>Subject (<span lang="es">materia</span>)</th>
+      <th>One-word feeling (<span lang="es">interesante / aburrido/a / difícil / fácil</span>)</th>
+    </tr>
+    <tr><td class="rank-num">#1</td><td></td><td></td></tr>
+    <tr><td class="rank-num">#2</td><td></td><td></td></tr>
+    <tr><td class="rank-num">#3</td><td></td><td></td></tr>
+    <tr><td class="rank-num">#4</td><td></td><td></td></tr>
+    <tr><td class="rank-num">#5</td><td></td><td></td></tr>
+    <tr><td class="rank-num">#6</td><td></td><td></td></tr>
+  </table>
+
+  <p class="step-instruction"><strong>Write one sentence about your #1:</strong></p>
+  <div class="sentence-frame"><span lang="es">Me gusta [materia] porque es [adjective].</span></div>
+  <span class="write-line"></span>
+
+  <p class="step-instruction"><strong>Write one sentence about your #6:</strong></p>
+  <div class="sentence-frame"><span lang="es">No me gusta [materia] porque es [adjective].</span></div>
+  <span class="write-line"></span>
+</div>
+
+<!-- PASO 2 -->
+<div class="step-container">
+  <div class="step-header">Paso 2 — <span lang="es">¿Por qué te gusta?</span> (Pair share, 6 min)</div>
+
+  <p class="step-instruction">Write a sentence for each of your top 2 and bottom 2 ranked subjects using <em>both</em> grammar structures. Then share each sentence aloud with your partner. <strong>You will use these reasons in Paso 3.</strong></p>
+
+  <p class="step-instruction"><strong>My top 2 — why I like them:</strong></p>
+  <div class="sentence-frame"><span lang="es">Me gusta [materia] y es [adjective].</span></div>
+  <span class="write-line"></span>
+  <span class="write-line"></span>
+
+  <p class="step-instruction"><strong>My bottom 2 — why I don't like them:</strong></p>
+  <div class="sentence-frame"><span lang="es">No me gusta [materia] porque es [adjective].</span></div>
+  <span class="write-line"></span>
+  <span class="write-line"></span>
+
+  <div class="partner-record">
+    <div class="partner-record-title">Record your partner's reasons (listen — don't show your sheet):</div>
+    <p class="step-instruction"><em>Partner's #1:</em> <span class="write-line"></span></p>
+    <p class="step-instruction"><em>Partner's #6:</em> <span class="write-line"></span></p>
+  </div>
+</div>
+
+<!-- PASO 3 -->
+<div class="step-container">
+  <div class="step-header">Paso 3 — <span lang="es">El debate: ¿Cuál es la mejor?</span> (Pair debate, 8 min)</div>
+
+  <p class="step-instruction">Compare your Paso 1 rankings with your partner. For <strong>every subject where you disagree</strong> on placement (especially #1 and #6), take turns arguing your position. You must use <em lang="es">gustar</em> AND <em lang="es">ser</em> in each argument. Give at least two exchanges per disagreement point before moving on.</p>
+
+  <div class="dialogue-model">
+    <div><span class="dialogue-speaker">Student A:</span> <span lang="es">Para mí, la música es la mejor. Me gusta la música porque es interesante y es creativa. ¿Y para ti?</span></div>
+    <div><span class="dialogue-speaker">Student B:</span> <span lang="es">Para mí, la música es aburrida. Me gusta más la educación física porque es dinámica y es divertida.</span></div>
+    <div><span class="dialogue-speaker">Student A:</span> <span lang="es">¿Pero la educación física no es difícil? La música nos gusta porque es relajante...</span></div>
+    <div><span class="dialogue-speaker">Student B:</span> <span lang="es">La educación física es difícil, sí, pero es importante para la salud. No es aburrida.</span></div>
+  </div>
+
+  <p class="step-instruction"><strong>Track your disagreements below — use them in Paso 4:</strong></p>
+
+  <table class="ranking-table">
+    <tr>
+      <th>Subject</th>
+      <th>My rank</th>
+      <th>Partner's rank</th>
+      <th>Your main argument (<span lang="es">gustar</span> + <span lang="es">ser</span>)</th>
+    </tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <p class="step-instruction"><strong>Negotiate a joint top-3 ranking</strong> — write the three subjects you and your partner can both agree on:</p>
+
+  <div class="ranking-table" style="border: none;">
+    <table class="ranking-table">
+      <tr><th>#1 (best):</th><td></td><th>#2:</th><td></td><th>#3:</th><td></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PASO 4 -->
+<div class="step-container complication-box">
+  <div class="step-header complication-header">&#9888; Paso 4 — <span lang="es">El conflicto del #1</span> — COMPLICATION (Negotiation, 7 min)</div>
+
+  <p class="complication-instruction"><strong>Problem:</strong> You and your partner both want <em>your own favourite</em> subject to be #1 on the class ranking poster. There is only <strong>one #1 spot</strong> on the poster. You cannot both have it.</p>
+
+  <p class="complication-instruction"><strong>Task:</strong> Negotiate. Defend your choice using <em lang="es">gustar</em> and <em lang="es">ser</em>. Listen to your partner's arguments (from Paso 2 and Paso 3). Reach agreement on a <strong>single #1 subject</strong> that you can both justify.</p>
+
+  <div class="sentence-frame"><span lang="es">Creo que [materia] debe ser el #1 porque nos gusta y es [adjective].</span></div>
+  <div class="sentence-frame"><span lang="es">Entiendo, pero para mí [materia] es más [adjective] porque...</span></div>
+
+  <p class="complication-instruction"><strong>Our agreed #1 subject:</strong> <span class="write-line" style="display:inline-block;width:6cm;"></span></p>
+
+  <p class="complication-instruction"><strong>Our shared justification (at least 2 reasons — use gustar and ser):</strong></p>
+  <span class="write-line"></span>
+  <span class="write-line"></span>
+</div>
+
+
+<!-- PASO 5 -->
+<div class="step-container">
+  <div class="step-header">Paso 5 — <span lang="es">La declaración de la clase</span> (Class share, 6 min)</div>
+
+  <p class="step-instruction">Each pair reads their <strong>Paso 1 individual #1 choices</strong> and their <strong>Paso 4 agreed #1 choice</strong> aloud. The teacher tallies all pairs' agreed #1 choices on the board. Then complete the class declaration below using your pair's agreed #1.</p>
+
+  <div class="declaration-box">
+    <div class="declaration-frame"><span lang="es">Nuestra clase piensa que _____________ es la mejor porque _________________________.</span></div>
+  </div>
+
+  <p class="step-instruction">If your pair's #1 subject did not win the class tally, write one sentence arguing why it should be reconsidered:</p>
+  <div class="sentence-frame"><span lang="es">Aunque la clase prefiere [winning subject], nosotros pensamos que [our subject] es mejor porque es [adjective] y nos gusta más.</span></div>
+  <span class="write-line"></span>
+
+  <p class="step-instruction"><strong>Vocabulary bank:</strong></p>
+  <div class="vocab-strip">
+    <span class="vocab-chip" lang="es">interesante</span>
+    <span class="vocab-chip" lang="es">aburrido/a</span>
+    <span class="vocab-chip" lang="es">difícil</span>
+    <span class="vocab-chip" lang="es">fácil</span>
+    <span class="vocab-chip" lang="es">el recreo</span>
+    <span class="vocab-chip" lang="es">el proyecto escolar</span>
+    <span class="vocab-chip" lang="es">la tarea</span>
+    <span class="vocab-chip" lang="es">me gusta</span>
+    <span class="vocab-chip" lang="es">nos gusta</span>
+    <span class="vocab-chip" lang="es">es / son</span>
+  </div>
+</div>
+
+</body>
+</html>
